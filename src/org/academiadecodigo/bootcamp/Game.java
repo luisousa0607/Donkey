@@ -1,9 +1,8 @@
 package org.academiadecodigo.bootcamp;
 
 
-import org.academiadecodigo.bootcamp.GameObjects.Barrel;
-import org.academiadecodigo.bootcamp.GameObjects.Ladder;
-import org.academiadecodigo.bootcamp.GameObjects.Platform;
+import org.academiadecodigo.bootcamp.GameObjects.*;
+import org.academiadecodigo.bootcamp.keyboard.MarioKeyboardHandler;
 
 public class Game {
 
