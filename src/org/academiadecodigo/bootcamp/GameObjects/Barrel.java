@@ -1,7 +1,11 @@
 package org.academiadecodigo.bootcamp.GameObjects;
 
 
+import org.academiadecodigo.bootcamp.Collision.CollisionBox;
+import org.academiadecodigo.bootcamp.Collision.PlatformCollisionBox;
+import org.academiadecodigo.bootcamp.Interface.Collidable;
 import org.academiadecodigo.simplegraphics.graphics.Ellipse;
+import org.academiadecodigo.simplegraphics.graphics.Movable;
 
 public class Barrel extends GameObject implements Movable, Collidable {
 
@@ -68,4 +72,8 @@ public class Barrel extends GameObject implements Movable, Collidable {
         return this.barrel.getY();
     }
 
+    @Override
+    public void translate(double v, double v1) {
+
+    }
 }

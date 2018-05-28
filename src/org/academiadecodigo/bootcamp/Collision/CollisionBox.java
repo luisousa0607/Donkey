@@ -1,6 +1,7 @@
 package org.academiadecodigo.bootcamp.Collision;
 
 import org.academiadecodigo.bootcamp.GameObjects.*;
+import org.academiadecodigo.bootcamp.Interface.Collidable;
 
 
 public class CollisionBox {

@@ -1,6 +1,11 @@
 package org.academiadecodigo.bootcamp;
 
+import org.academiadecodigo.bootcamp.Collision.CollisionBox;
+import org.academiadecodigo.bootcamp.Collision.PlatformCollisionBox;
+import org.academiadecodigo.bootcamp.GameObjects.Platform;
+import org.academiadecodigo.bootcamp.lifeCounter.Lives;
 import org.academiadecodigo.simplegraphics.graphics.Color;
+import org.academiadecodigo.simplegraphics.graphics.Movable;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 import org.academiadecodigo.simplegraphics.keyboard.Keyboard;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardEvent;
@@ -8,7 +13,7 @@ import org.academiadecodigo.simplegraphics.keyboard.KeyboardEventType;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardHandler;
 import org.academiadecodigo.simplegraphics.pictures.Picture;
 
-public class Player implements Movable {
+public class Player extends Lives implements Movable  {
 
 
     private Rectangle mario;
@@ -20,8 +25,10 @@ public class Player implements Movable {
     private CollisionBox box;
     private boolean onLadder;
 
-    public Player(int x, int y) {
 
+    public Player(int x, int y,int lives) {
+
+        super(lives);
         this.m = 0;
         this.isJumping = false;
         this.onLadder = false;
@@ -29,6 +36,7 @@ public class Player implements Movable {
         this.mario = new Rectangle(x, y, 50, 50);
         this.mario.draw();
         this.box = new CollisionBox(x, y, this.mario.getWidth(), this.mario.getHeight());
+
 
     }
 
@@ -109,4 +117,8 @@ public class Player implements Movable {
     }
 
 
+    @Override
+    public void translate(double v, double v1) {
+
+    }
 }

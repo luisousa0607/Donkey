@@ -1,6 +1,8 @@
 package org.academiadecodigo.bootcamp.GameObjects;
 
 
+import org.academiadecodigo.bootcamp.Collision.CollisionBox;
+import org.academiadecodigo.bootcamp.Interface.Collidable;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 
 public class Ladder implements Collidable {

@@ -1,7 +1,8 @@
 package org.academiadecodigo.bootcamp.GameObjects;
 
+import org.academiadecodigo.bootcamp.Collision.PlatformCollisionBox;
 import org.academiadecodigo.simplegraphics.graphics.Line;
-import org.academiadecodigo.donkeyKong.Collision.*;
+
 
 public class Platform {
 

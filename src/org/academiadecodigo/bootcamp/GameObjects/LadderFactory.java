@@ -3,7 +3,7 @@ package org.academiadecodigo.bootcamp.GameObjects;
 public class LadderFactory {
 
 
-    private Platfor[] platforms;
+    private Platform[] platforms;
 
     public LadderFactory(Platform[] platforms) {
         this.platforms = platforms;

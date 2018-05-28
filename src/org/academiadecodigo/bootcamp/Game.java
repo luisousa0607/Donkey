@@ -1,9 +1,8 @@
 package org.academiadecodigo.bootcamp;
 
 
-import org.academiadecodigo.bootcamp.GameObjects.Barrel;
-import org.academiadecodigo.bootcamp.GameObjects.Ladder;
-import org.academiadecodigo.bootcamp.GameObjects.Platform;
+import org.academiadecodigo.bootcamp.GameObjects.*;
+import org.academiadecodigo.bootcamp.keyboard.MarioKeyboardHandler;
 
 public class Game {
 
@@ -21,7 +20,7 @@ public class Game {
     public Game() {
 
         Field field = new Field();
-        this.player = new Player(10, field.getWIDTH() - 80);
+        this.player = new Player(10, field.getWIDTH() - 80,3);
         this.handler = new MarioKeyboardHandler(this.player);
 
         this.barrels = createBarrels();
