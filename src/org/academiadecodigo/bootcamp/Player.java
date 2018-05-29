@@ -41,7 +41,7 @@ public  class Player implements Movable  {
 
     public void move(int x, int y) {
         this.mario.translate(x, y + m);
-        this.box.setBox(x, y + (int)m);
+        this.box.setBox(x, y + m);
     }
 
 
