@@ -23,6 +23,7 @@ public class Platform {
         this.m = ((((double) y1) - (double)y2) / ( (double)x1 - (double)x2));
         System.out.println( y1 + " " + y2 + " " + x1 + " " + x2 + " = " + (y1 - y2) + " " + (x1 - x2) );
         System.out.println("constructor m " + m);
+        this.createCollisionBox();
         this.line.draw();
 
     }

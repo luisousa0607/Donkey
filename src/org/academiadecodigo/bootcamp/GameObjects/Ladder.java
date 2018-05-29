@@ -11,15 +11,15 @@ public class Ladder implements Collidable {
     private Rectangle ladder;
     private int x;
     private int y;
-    private int lenght;
-    private static final int LADDER_WIDTH = 50;
+    private int length;
+    private static final int LADDER_WIDTH = 30;
     private CollisionBox box;
 
     public Ladder(int x, int y, int length) {
 
         this.x = x;
         this.y = y;
-        this.lenght = length;
+        this.length = length;
         this.ladder = new Rectangle(x, y, LADDER_WIDTH, length);
         this.ladder.draw();
         this.box = new CollisionBox(x,y,LADDER_WIDTH,length);
@@ -29,7 +29,7 @@ public class Ladder implements Collidable {
     @Override
     public void createCollisionBox() {
 
-        this.box = new CollisionBox(x,y,LADDER_WIDTH,lenght);
+        this.box = new CollisionBox(x,y,LADDER_WIDTH, length);
 
     }
 

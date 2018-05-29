@@ -38,4 +38,12 @@ public class PlatformCollisionBox {
         return this.top;
     }
 
+    public double getM(){
+        return this.m;
+    }
+
+    public double getB(){
+        return this.b;
+    }
+
 }
