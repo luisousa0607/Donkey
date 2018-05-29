@@ -2,6 +2,7 @@ package org.academiadecodigo.bootcamp;
 
 
 import org.academiadecodigo.bootcamp.GameObjects.*;
+import org.academiadecodigo.bootcamp.GameOver.GameOver;
 import org.academiadecodigo.bootcamp.ScoreCounter.Score;
 import org.academiadecodigo.bootcamp.keyboard.MarioKeyboardHandler;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
@@ -20,9 +21,8 @@ public class Game {
     private static final int JUMP_HEIGHT = -20;
     long timeCreation =System.currentTimeMillis();
 
-    private boolean gameOver = false;
-
     MarioKeyboardHandler handler;
+    private Game game;
 
     public Game() throws InterruptedException {
 
@@ -48,7 +48,7 @@ public class Game {
         Score.showScore();
 
 
-        while (!gameOver) {
+        while (!GameOver.isGameOver()) {
 
             if (System.currentTimeMillis() - time >= 1000) {
                 counter--;
@@ -59,7 +59,7 @@ public class Game {
 
 
                 if (counter == 0 || player.getLivesCounter() == 0) {
-                    gameOver = true;
+                    GameOver.setGameOver(true);
                 }
             }
 
@@ -88,7 +88,10 @@ public class Game {
         }
 
 
+
     }
+
+
 
     private void playerJump() throws InterruptedException {
         for (int i = 0; i < 20; i++) {
@@ -135,6 +138,7 @@ public class Game {
             if (a != null) {
                 if (this.player.getBox().hasCollided(a)) {
                     this.player.setColorRed();
+                    GameOver.setGameOver(true);
                 }
                 if (a.getY() == Field.getHEIGHT()) {
                     a.move(0, -Field.getHEIGHT());
@@ -161,4 +165,6 @@ public class Game {
             }
         }
     }
+
+
 }
