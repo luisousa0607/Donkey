@@ -43,4 +43,9 @@ public  class Lives {
             gainedLife(false);
         }
     }
+
+    public int getLivesCounter(){
+        return lives;
+
+    }
 }

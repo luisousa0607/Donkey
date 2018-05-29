@@ -58,7 +58,7 @@ public class Game {
 
 
 
-                if (counter == 0) {
+                if (counter == 0 || player.getLivesCounter() == 0) {
                     gameOver = true;
                 }
             }
