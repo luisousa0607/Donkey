@@ -20,6 +20,8 @@ public class Game {
     private static final int JUMP_HEIGHT = -20;
     long timeCreation =System.currentTimeMillis();
 
+    private boolean gameOver = false;
+
     MarioKeyboardHandler handler;
 
     public Game() throws InterruptedException {
@@ -43,10 +45,10 @@ public class Game {
         Text text = new Text((timerGFX.getWidth() / 2) + 3, (timerGFX.getHeight() / 2) + 3, counter.toString());
         text.draw();
         long time = System.currentTimeMillis();
+        Score.showScore();
 
 
-
-        while (true) {
+        while (!gameOver) {
 
             if (System.currentTimeMillis() - time >= 1000) {
                 counter--;
@@ -57,7 +59,7 @@ public class Game {
 
 
                 if (counter == 0) {
-                    // you lose
+                    gameOver = true;
                 }
             }
 
