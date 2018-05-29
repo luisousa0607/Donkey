@@ -15,23 +15,22 @@ public class PlatformCollisionBox {
 
         this.m = m;
         this.b = y - m*x;
+        this.top = new Point[width];
         this.createTopBox(x, y, width);
     }
 
-    private void createTopBox(int x, int y, int width) {
+    public void createBox(int x ,int y ,int width, int height, double m){
+        this.m = m;
+        this.b = y - m*x;
+        createTopBox(x,y,width);
+    }
 
-        this.top = new Point[width];
+    public void createTopBox(int x, int y, int width) {
 
         for (int i = 0; i < this.top.length; i++) {
 
             this.top[i] = new Point(x + i, (int)((x+i)*m + b) );
         }
-
-
-
-        Line line = new Line(x, y, x + this.top.length, this.top[width - 1].getY());
-        line.setColor(Color.RED);
-        line.draw();
     }
 
     public Point[] getTop() {

@@ -1,4 +1,4 @@
-package org.academiadecodigo.bootcamp;
+package org.academiadecodigo.bootcamp.Tests;
 
 import org.academiadecodigo.bootcamp.Collision.CollisionBox;
 import org.academiadecodigo.bootcamp.Collision.PlatformCollisionBox;
@@ -8,12 +8,9 @@ import org.academiadecodigo.simplegraphics.graphics.Color;
 import org.academiadecodigo.simplegraphics.graphics.Movable;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 import org.academiadecodigo.simplegraphics.keyboard.Keyboard;
-import org.academiadecodigo.simplegraphics.keyboard.KeyboardEvent;
-import org.academiadecodigo.simplegraphics.keyboard.KeyboardEventType;
-import org.academiadecodigo.simplegraphics.keyboard.KeyboardHandler;
-import org.academiadecodigo.simplegraphics.pictures.Picture;
 
-public class Player extends Lives implements Movable  {
+
+public class TestPlayer extends Lives implements Movable {
 
 
     private Rectangle mario;
@@ -26,7 +23,7 @@ public class Player extends Lives implements Movable  {
     private boolean onLadder;
 
 
-    public Player(int x, int y,int lives) {
+    public TestPlayer(int x, int y,int lives) {
 
         super(lives);
         this.m = 0;
@@ -91,8 +88,7 @@ public class Player extends Lives implements Movable  {
 
     public void createCollisionBox() {
 
-        this.box.newBox(this.mario.getX(), this.mario.getY(), this.mario.getWidth(), this.mario.getHeight());
-
+        this.box = new CollisionBox(this.mario.getX(), this.mario.getY(), this.mario.getWidth(), this.mario.getHeight());
     }
 
     public void setColorRed() {
@@ -114,6 +110,9 @@ public class Player extends Lives implements Movable  {
     }
 
     public CollisionBox getBox(){
+
+        this.createCollisionBox();
+
         return this.box;
     }
 

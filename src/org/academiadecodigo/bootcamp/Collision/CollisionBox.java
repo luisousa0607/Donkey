@@ -12,15 +12,24 @@ public class CollisionBox {
 
     public CollisionBox(int x, int y, int width, int height) {
 
+        this.top = new Point[width];
+        this.left = new Point[height];
+        this.right = new Point[height];
+        this.bottom = new Point[width];
+
+        this.newBox(x,y,width,height);
+    }
+
+    public void newBox(int x, int y, int width, int height){
+
         this.createTopBox(x, y, width);
         this.createLeftBox(x, y, height);
         this.createBottomBox(x, y, width, height);
         this.createRightBox(x, y, width, height);
+
     }
 
     private void createTopBox(int x, int y, int width) {
-
-        this.top = new Point[width];
 
         for (int i = 0; i < this.top.length; i++) {
             this.top[i] = new Point(x + i, y);
@@ -29,8 +38,6 @@ public class CollisionBox {
 
     private void createBottomBox(int x, int y, int width, int height) {
 
-        this.bottom = new Point[width];
-
         for (int i = 0; i < this.bottom.length; i++) {
             this.bottom[i] = new Point(x + i, y + height);
         }
@@ -38,16 +45,12 @@ public class CollisionBox {
 
     private void createLeftBox(int x, int y, int height) {
 
-        this.left = new Point[height];
-
         for (int i = 0; i < this.left.length; i++) {
             this.left[i] = new Point(x, y + i);
         }
     }
 
     private void createRightBox(int x, int y, int width, int height) {
-
-        this.right = new Point[height];
 
         for (int i = 0; i < this.right.length; i++) {
             this.right[i] = new Point(x + width, y + i);

@@ -31,7 +31,7 @@ public class Barrel extends GameObject implements Movable, Collidable {
 
     public void createCollisionBox() {
 
-        this.box = new CollisionBox(this.barrel.getX(), this.barrel.getY(), this.barrel.getWidth(), this.barrel.getHeight());
+        this.box.newBox(this.barrel.getX(), this.barrel.getY(), this.barrel.getWidth(), this.barrel.getHeight());
 
     }
 

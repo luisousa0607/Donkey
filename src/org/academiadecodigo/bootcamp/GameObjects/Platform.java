@@ -36,7 +36,8 @@ public class Platform {
 
     public PlatformCollisionBox getBox() {
 
-        return this.box;
+         this.box.createBox(x1, y1, this.line.getWidth(), this.line.getHeight(), this.m);
+         return this.box;
     }
 
     public void setM(int m) {
