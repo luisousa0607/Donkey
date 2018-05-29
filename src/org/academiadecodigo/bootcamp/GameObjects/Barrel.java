@@ -17,7 +17,7 @@ public class Barrel extends GameObject implements Movable, Collidable {
     private int direction;
 
     public Barrel() {
-        this.barrel = new Ellipse(50, 100, BARREL_SIZE, BARREL_SIZE);
+        this.barrel = new Ellipse(20, 30, BARREL_SIZE, BARREL_SIZE);
         this.box = new CollisionBox(50, 400, BARREL_RADIUS, BARREL_RADIUS);
         this.barrel.draw();
         this.isFalling = true;

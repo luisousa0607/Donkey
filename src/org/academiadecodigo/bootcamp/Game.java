@@ -2,7 +2,10 @@ package org.academiadecodigo.bootcamp;
 
 
 import org.academiadecodigo.bootcamp.GameObjects.*;
+import org.academiadecodigo.bootcamp.clock.GameTimer;
 import org.academiadecodigo.bootcamp.keyboard.MarioKeyboardHandler;
+import org.academiadecodigo.simplegraphics.graphics.Rectangle;
+import org.academiadecodigo.simplegraphics.graphics.Text;
 
 public class Game {
 
@@ -11,19 +14,21 @@ public class Game {
     private Barrel[] barrels;
     private Ladder[] ladders;
     private Platform[] platforms;
+    int barrelCounter = 0;
 
-    private static final int MAX_BARRELS = 1;
+    private static final int MAX_BARRELS = 10;
     private static final int JUMP_HEIGHT = -20;
+    long timeCreation =System.currentTimeMillis();
 
     MarioKeyboardHandler handler;
 
-    public Game() {
+    public Game() throws InterruptedException {
 
         Field field = new Field();
-        this.player = new Player(10, field.getWIDTH() - 80,3);
+        this.player = new Player(10, field.getWIDTH() - 80, 3);
         this.handler = new MarioKeyboardHandler(this.player);
 
-        this.barrels = createBarrels();
+        this.barrels = new Barrel[MAX_BARRELS];
 
 
         this.platforms = new PlatformFactory().createPlatform();
@@ -31,14 +36,39 @@ public class Game {
     }
 
     public void start() throws InterruptedException {
+        //(new Thread(new GameTimer())).start();
+        Integer counter = 60;
+        Rectangle timerGFX = new Rectangle(10, 10, 50, 15);
+        timerGFX.draw();
+        Text text = new Text((timerGFX.getWidth() / 2) + 3, (timerGFX.getHeight() / 2) + 3, counter.toString());
+        text.draw();
+        long time = System.currentTimeMillis();
+
 
         while (true) {
+
+            if (System.currentTimeMillis() - time >= 1000) {
+                counter--;
+                text.setText(counter.toString());
+                text.draw();
+                time = System.currentTimeMillis();
+
+
+
+                if (counter == 0) {
+                    // you lose
+                }
+            }
+
+            createBarrels();
 
             checkCollision();
 
             for (Barrel b : this.barrels) {
-                b.createCollisionBox();
-                b.abovePlatform(platforms);
+                if (b != null) {
+                    b.createCollisionBox();
+                    b.abovePlatform(platforms);
+                }
             }
 
             if (player.getIsJumping()) {
@@ -82,25 +112,30 @@ public class Game {
         this.player.setJumping(false);
     }
 
-    private Barrel[] createBarrels() {
+    private void createBarrels() throws InterruptedException {
 
-        Barrel[] barrels = new Barrel[MAX_BARRELS];
 
-        for (int i = 0; i < barrels.length; i++) {
-            barrels[i] = new Barrel();
+
+        if (System.currentTimeMillis() - timeCreation >= 3000) {
+
+
+            if (barrelCounter < barrels.length)
+                barrels[barrelCounter++] = new Barrel();
+
+            timeCreation = System.currentTimeMillis();
         }
-
-        return barrels;
     }
 
     private void checkCollision() {
 
         for (Barrel a : barrels) {
-            if (this.player.getBox().hasCollided(a)) {
-                this.player.setColorRed();
-            }
-            if (a.getY() == Field.getHEIGHT()) {
-                a.move(0, -Field.getHEIGHT());
+            if (a != null) {
+                if (this.player.getBox().hasCollided(a)) {
+                    this.player.setColorRed();
+                }
+                if (a.getY() == Field.getHEIGHT()) {
+                    a.move(0, -Field.getHEIGHT());
+                }
             }
         }
 
@@ -114,10 +149,12 @@ public class Game {
     private void moveBarrels() {
         for (Barrel b : this.barrels) {
 
-            if (b.getFalling()) {
-                b.move(0, 1);
-            } else {
-                b.move(1, 0);
+            if (b != null) {
+                if (b.getFalling()) {
+                    b.move(0, 1);
+                } else {
+                    b.move(1, 0);
+                }
             }
         }
     }

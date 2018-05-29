@@ -9,16 +9,9 @@ public class Test {
     public static void main(String[] args) {
 
 
-        Picture pic = new Picture(5, 5);
-
-        pic.load("resources/barrel.jpg");
-
-        pic.draw();
-
-        Game game = new Game();
 
         try {
-
+            Game game = new Game();
             game.start();
 
         } catch (InterruptedException e) {

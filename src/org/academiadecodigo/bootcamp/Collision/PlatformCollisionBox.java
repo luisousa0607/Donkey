@@ -28,7 +28,6 @@ public class PlatformCollisionBox {
         }
 
 
-
         Line line = new Line(x, y, x + this.top.length, this.top[width - 1].getY());
         line.setColor(Color.RED);
         line.draw();
