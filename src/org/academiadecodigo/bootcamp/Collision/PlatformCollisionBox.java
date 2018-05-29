@@ -31,6 +31,7 @@ public class PlatformCollisionBox {
 
             this.top[i] = new Point(x + i, (int)((x+i)*m + b) );
         }
+
     }
 
     public Point[] getTop() {

@@ -3,9 +3,10 @@ package org.academiadecodigo.bootcamp;
 import org.academiadecodigo.bootcamp.Collision.CollisionBox;
 import org.academiadecodigo.bootcamp.Collision.PlatformCollisionBox;
 import org.academiadecodigo.bootcamp.GameObjects.Platform;
+import org.academiadecodigo.bootcamp.ScoreCounter.Score;
 import org.academiadecodigo.bootcamp.lifeCounter.Lives;
 import org.academiadecodigo.simplegraphics.graphics.Color;
-import org.academiadecodigo.simplegraphics.graphics.Movable;
+import org.academiadecodigo.bootcamp.Interface.Movable;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 import org.academiadecodigo.simplegraphics.keyboard.Keyboard;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardEvent;
@@ -13,14 +14,14 @@ import org.academiadecodigo.simplegraphics.keyboard.KeyboardEventType;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardHandler;
 import org.academiadecodigo.simplegraphics.pictures.Picture;
 
-public class Player extends Lives implements org.academiadecodigo.bootcamp.Interface.Movable{
+public  class Player implements Movable  {
 
 
     private Rectangle mario;
     private Keyboard keyboard;
     private static final int SPEED = 10;
     private boolean isJumping;
-    private int m;
+    private double m;
     private boolean Collided;
     private CollisionBox box;
     private boolean onLadder;
@@ -28,7 +29,6 @@ public class Player extends Lives implements org.academiadecodigo.bootcamp.Inter
 
     public Player(int x, int y, int lives) {
 
-        super(lives);
         this.m = 0;
         this.isJumping = false;
         this.onLadder = false;
@@ -37,12 +37,11 @@ public class Player extends Lives implements org.academiadecodigo.bootcamp.Inter
         this.mario.draw();
         this.box = new CollisionBox(x, y, this.mario.getWidth(), this.mario.getHeight());
 
-
     }
 
     public void move(int x, int y) {
-        this.mario.translate(x, y);
-        this.box.setBox(x, y);
+        this.mario.translate(x, y + m);
+        this.box.setBox(x, y + (int)m);
     }
 
 
@@ -58,12 +57,12 @@ public class Player extends Lives implements org.academiadecodigo.bootcamp.Inter
 
     }
 
-    public int getM() {
+    public double getM() {
         return this.m;
     }
 
-    public void setM(int m) {
-        this.m = m;
+    public void setM(double m) {
+        this.m = m*10;
     }
 
     public void setJumping(boolean value) {
@@ -81,7 +80,7 @@ public class Player extends Lives implements org.academiadecodigo.bootcamp.Inter
             p.createCollisionBox();
             PlatformCollisionBox platform = p.getBox();
             if (this.box.abovePlatform(platform.getTop())) {
-                this.setM((int) p.getM());
+                this.setM(( -p.getM()));
                 return true;
             }
         }
@@ -109,4 +108,5 @@ public class Player extends Lives implements org.academiadecodigo.bootcamp.Inter
     public CollisionBox getBox() { return this.box; }
 
     public static int getPlayerwidth(){ return PLAYERWIDTH;}
+
 }
