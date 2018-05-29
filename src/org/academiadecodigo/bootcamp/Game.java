@@ -2,7 +2,7 @@ package org.academiadecodigo.bootcamp;
 
 
 import org.academiadecodigo.bootcamp.GameObjects.*;
-import org.academiadecodigo.bootcamp.clock.GameTimer;
+import org.academiadecodigo.bootcamp.ScoreCounter.Score;
 import org.academiadecodigo.bootcamp.keyboard.MarioKeyboardHandler;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 import org.academiadecodigo.simplegraphics.graphics.Text;
@@ -43,8 +43,7 @@ public class Game {
         Text text = new Text((timerGFX.getWidth() / 2) + 3, (timerGFX.getHeight() / 2) + 3, counter.toString());
         text.draw();
         long time = System.currentTimeMillis();
-        player.getLives();
-        player.lostLife(true);
+
 
 
         while (true) {

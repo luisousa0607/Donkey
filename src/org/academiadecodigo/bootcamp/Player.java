@@ -3,6 +3,7 @@ package org.academiadecodigo.bootcamp;
 import org.academiadecodigo.bootcamp.Collision.CollisionBox;
 import org.academiadecodigo.bootcamp.Collision.PlatformCollisionBox;
 import org.academiadecodigo.bootcamp.GameObjects.Platform;
+import org.academiadecodigo.bootcamp.ScoreCounter.Score;
 import org.academiadecodigo.bootcamp.lifeCounter.Lives;
 import org.academiadecodigo.simplegraphics.graphics.Color;
 import org.academiadecodigo.simplegraphics.graphics.Movable;
@@ -13,7 +14,7 @@ import org.academiadecodigo.simplegraphics.keyboard.KeyboardEventType;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardHandler;
 import org.academiadecodigo.simplegraphics.pictures.Picture;
 
-public class Player extends Lives implements Movable  {
+public final class Player extends Lives implements Movable  {
 
 
     private Rectangle mario;
@@ -26,6 +27,7 @@ public class Player extends Lives implements Movable  {
     private boolean onLadder;
 
 
+
     public Player(int x, int y,int lives) {
 
         super(lives);
@@ -36,6 +38,7 @@ public class Player extends Lives implements Movable  {
         this.mario = new Rectangle(x, y, 50, 50);
         this.mario.draw();
         this.box = new CollisionBox(x, y, this.mario.getWidth(), this.mario.getHeight());
+
 
 
     }
@@ -121,6 +124,7 @@ public class Player extends Lives implements Movable  {
     public void translate(double v, double v1) {
 
     }
+
 
 
 }
