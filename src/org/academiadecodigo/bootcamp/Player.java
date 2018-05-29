@@ -121,4 +121,6 @@ public class Player extends Lives implements Movable  {
     public void translate(double v, double v1) {
 
     }
+
+
 }
