@@ -22,4 +22,11 @@ public class Point {
         return this.x == a.getX() && this.y == a.getY();
     }
 
+    public void setPosition(double x, double y){
+
+        this.x += x;
+        this.y += y;
+
+    }
+
 }

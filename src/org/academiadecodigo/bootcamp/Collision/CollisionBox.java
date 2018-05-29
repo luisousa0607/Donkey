@@ -2,102 +2,96 @@ package org.academiadecodigo.bootcamp.Collision;
 
 import org.academiadecodigo.bootcamp.GameObjects.*;
 import org.academiadecodigo.bootcamp.Interface.Collidable;
+import org.academiadecodigo.simplegraphics.graphics.Rectangle;
+
+import java.awt.*;
 
 
 public class CollisionBox {
-    private Point[] top;
-    private Point[] left;
-    private Point[] right;
+
+    private Rectangle box;
     private Point[] bottom;
+
 
     public CollisionBox(int x, int y, int width, int height) {
 
-        this.top = new Point[width];
-        this.left = new Point[height];
-        this.right = new Point[height];
-        this.bottom = new Point[width];
+        this.box = new Rectangle(x, y, width, height);
+        this.box.draw();
 
-        this.newBox(x,y,width,height);
+        this.bottom = new Point[2];
+        bottom[0] = new Point(x, y + height);
+        bottom[1] = new Point(x + width, y + height);
     }
 
-    public void newBox(int x, int y, int width, int height){
+    public void setBox(int x, int y) {
 
-        this.createTopBox(x, y, width);
-        this.createLeftBox(x, y, height);
-        this.createBottomBox(x, y, width, height);
-        this.createRightBox(x, y, width, height);
+        this.box.translate(x, y);
+
+        bottom[0].setPosition(x, y);
+        bottom[1].setPosition(x, y);
 
     }
 
-    private void createTopBox(int x, int y, int width) {
 
-        for (int i = 0; i < this.top.length; i++) {
-            this.top[i] = new Point(x + i, y);
+    public boolean collides(CollisionBox otherBox) {
+
+        if (this.getX() > otherBox.getX() && this.getX() < otherBox.getX() + otherBox.getWidth()
+                && this.getY() > otherBox.getY() && this.getY() < otherBox.getY() + otherBox.getHeight()) {
+            return true;
         }
-    }
 
-    private void createBottomBox(int x, int y, int width, int height) {
-
-        for (int i = 0; i < this.bottom.length; i++) {
-            this.bottom[i] = new Point(x + i, y + height);
+        if (this.getX() + this.getWidth() > otherBox.getX() && this.getX() + this.getWidth() < otherBox.getX() + otherBox.getWidth()
+                && this.getY() > otherBox.getY() && this.getY() < otherBox.getY() + otherBox.getHeight()) {
+            return true;
         }
-    }
 
-    private void createLeftBox(int x, int y, int height) {
-
-        for (int i = 0; i < this.left.length; i++) {
-            this.left[i] = new Point(x, y + i);
+        if (this.getX() > otherBox.getX() && this.getX() < otherBox.getX() + otherBox.getWidth()
+                && this.getY() + this.getHeight() > otherBox.getY() && this.getY() + this.getHeight() < otherBox.getY() + otherBox.getHeight()) {
+            return true;
         }
-    }
 
-    private void createRightBox(int x, int y, int width, int height) {
-
-        for (int i = 0; i < this.right.length; i++) {
-            this.right[i] = new Point(x + width, y + i);
-        }
-    }
-
-    public Point[] getTop() {
-        return this.top;
-    }
-
-    public Point[] getLeft() {
-        return this.left;
-    }
-
-    public Point[] getBottom() {
-        return this.bottom;
-    }
-
-    public Point[] getRight() {
-        return this.right;
-    }
-
-    public boolean hasCollided(Collidable e) {
-
-        e.createCollisionBox();
-
-        CollisionBox gameObjectBox = e.getBox();
-
-        if (collides(this.getRight(), gameObjectBox.getLeft()) ||
-                collides(this.getTop(), gameObjectBox.getBottom()) ||
-                collides(this.getLeft(), gameObjectBox.getRight()) ||
-                collides(this.getBottom(), gameObjectBox.getTop())) {
+        if (this.getX() + this.getWidth() > otherBox.getX() && this.getX() + this.getWidth() < otherBox.getX() + otherBox.getWidth()
+                && this.getY() + this.getHeight() > otherBox.getY() && this.getY() + this.getHeight() < otherBox.getY() + otherBox.getHeight()) {
             return true;
         }
 
         return false;
     }
 
-    public boolean collides(Point[] l1, Point[] l2) {
-        for (Point a : l1) {
-            for (Point b : l2) {
-                if (a.compare(b)) {
+    public boolean abovePlatform(Point[] platform){
+        for( Point a : bottom){
+            for(Point b : platform){
+                if(a.compare(b)){
                     return true;
                 }
             }
         }
         return false;
+    }
+
+    public Rectangle getBox() {
+        return this.box;
+    }
+
+    public int getWidth() {
+        return this.box.getWidth();
+    }
+
+    public int getHeight() {
+        return this.box.getHeight();
+    }
+
+    public int getX() {
+        return this.box.getX();
+    }
+
+    public int getY() {
+        return this.box.getY();
+    }
+
+    public Point[] getBottom() {
+
+        return this.bottom;
     }
 
 }

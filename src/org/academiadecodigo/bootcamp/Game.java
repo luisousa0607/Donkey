@@ -37,7 +37,6 @@ public class Game {
             checkCollision();
 
             for (Barrel b : this.barrels) {
-                b.createCollisionBox();
                 b.abovePlatform(platforms);
             }
 
@@ -96,7 +95,7 @@ public class Game {
     private void checkCollision() {
 
         for (Barrel a : barrels) {
-            if (this.player.getBox().hasCollided(a)) {
+            if (this.player.getBox().collides(a.getBox())) {
                 this.player.setColorRed();
             }
             if (a.getY() == Field.getHEIGHT()) {
@@ -105,7 +104,7 @@ public class Game {
         }
 
         for (Ladder l : ladders) {
-            if (!this.player.getBox().hasCollided(l)) {
+            if (!this.player.getBox().collides(l.getBox())) {
                 this.player.setOnLadder(false);
             } else this.player.setOnLadder(true);
         }

@@ -7,9 +7,8 @@ import org.academiadecodigo.bootcamp.Interface.Collidable;
 import org.academiadecodigo.simplegraphics.graphics.Ellipse;
 import org.academiadecodigo.simplegraphics.graphics.Movable;
 
-public class Barrel extends GameObject implements Movable, Collidable {
+public class Barrel extends GameObject implements Movable {
 
-    private static final int BARREL_RADIUS = 15;
     private static final int BARREL_SIZE = 20;
     private Ellipse barrel;
     private CollisionBox box;
@@ -17,8 +16,8 @@ public class Barrel extends GameObject implements Movable, Collidable {
     private int direction;
 
     public Barrel() {
-        this.barrel = new Ellipse(50, 100, BARREL_SIZE, BARREL_SIZE);
-        this.box = new CollisionBox(50, 400, BARREL_RADIUS, BARREL_RADIUS);
+        this.barrel = new Ellipse(450, 10, BARREL_SIZE, BARREL_SIZE);
+        this.box = new CollisionBox(450, 10, BARREL_SIZE, BARREL_SIZE);
         this.barrel.draw();
         this.isFalling = true;
         this.direction = 0;
@@ -27,13 +26,9 @@ public class Barrel extends GameObject implements Movable, Collidable {
     public void move(int x, int y) {
 
         this.barrel.translate(x * direction, y);
+        this.box.setBox(x * direction,y);
     }
 
-    public void createCollisionBox() {
-
-        this.box.newBox(this.barrel.getX(), this.barrel.getY(), this.barrel.getWidth(), this.barrel.getHeight());
-
-    }
 
     public CollisionBox getBox() {
 
@@ -42,12 +37,10 @@ public class Barrel extends GameObject implements Movable, Collidable {
 
     public void abovePlatform(Platform[] platforms) {
 
-        this.createCollisionBox();
-
         for (Platform p : platforms) {
             p.createCollisionBox();
             PlatformCollisionBox platform = p.getBox();
-            if (this.getBox().collides(this.box.getBottom(), platform.getTop())) {
+            if (this.getBox().abovePlatform(platform.getTop())) {
                 this.isFalling = false;
                 this.setDirection(p.getDirection());
                 return;

@@ -1,10 +1,12 @@
 package org.academiadecodigo.bootcamp.GameObjects;
 
+import org.academiadecodigo.bootcamp.Player;
+
 public class PlatformFactory {
 
     private static final int MAX_PLATFORMS = 5;
-    private int playerWidth = 50;
-    private int jumpHeight = playerWidth -10;
+    private int playerWidth = Player.getPlayerwidth();
+    private int jumpHeight = Player.getPlayerwidth() -10;
     private static int platformHeightDifference;
     private int playerHeight = playerWidth;
 

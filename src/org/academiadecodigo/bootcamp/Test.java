@@ -1,6 +1,6 @@
 package org.academiadecodigo.bootcamp;
 
-import org.academiadecodigo.bootcamp.Tests.TestGame;
+
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 import org.academiadecodigo.simplegraphics.pictures.Picture;
 
@@ -16,7 +16,7 @@ public class Test {
 
         pic.draw();
 
-        TestGame game = new TestGame();
+        Game game = new Game();
 
         try {
 

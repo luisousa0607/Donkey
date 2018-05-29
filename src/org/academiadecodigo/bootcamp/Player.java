@@ -13,7 +13,7 @@ import org.academiadecodigo.simplegraphics.keyboard.KeyboardEventType;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardHandler;
 import org.academiadecodigo.simplegraphics.pictures.Picture;
 
-public class Player extends Lives implements Movable  {
+public class Player extends Lives implements org.academiadecodigo.bootcamp.Interface.Movable{
 
 
     private Rectangle mario;
@@ -24,16 +24,16 @@ public class Player extends Lives implements Movable  {
     private boolean Collided;
     private CollisionBox box;
     private boolean onLadder;
+    private static final int PLAYERWIDTH = 50;
 
-
-    public Player(int x, int y,int lives) {
+    public Player(int x, int y, int lives) {
 
         super(lives);
         this.m = 0;
         this.isJumping = false;
         this.onLadder = false;
         this.Collided = false;
-        this.mario = new Rectangle(x, y, 50, 50);
+        this.mario = new Rectangle(x, y, PLAYERWIDTH, PLAYERWIDTH);
         this.mario.draw();
         this.box = new CollisionBox(x, y, this.mario.getWidth(), this.mario.getHeight());
 
@@ -42,6 +42,7 @@ public class Player extends Lives implements Movable  {
 
     public void move(int x, int y) {
         this.mario.translate(x, y);
+        this.box.setBox(x, y);
     }
 
 
@@ -75,24 +76,16 @@ public class Player extends Lives implements Movable  {
 
     public boolean abovePlatform(Platform[] platforms) {
 
-        this.createCollisionBox();
 
         for (Platform p : platforms) {
             p.createCollisionBox();
             PlatformCollisionBox platform = p.getBox();
-            if (this.box.collides(this.box.getBottom(), platform.getTop())) {
+            if (this.box.abovePlatform(platform.getTop())) {
                 this.setM((int) p.getM());
                 return true;
             }
         }
         return false;
-    }
-
-
-    public void createCollisionBox() {
-
-        this.box.newBox(this.mario.getX(), this.mario.getY(), this.mario.getWidth(), this.mario.getHeight());
-
     }
 
     public void setColorRed() {
@@ -113,13 +106,7 @@ public class Player extends Lives implements Movable  {
         return SPEED;
     }
 
-    public CollisionBox getBox(){
-        return this.box;
-    }
+    public CollisionBox getBox() { return this.box; }
 
-
-    @Override
-    public void translate(double v, double v1) {
-
-    }
+    public static int getPlayerwidth(){ return PLAYERWIDTH;}
 }
