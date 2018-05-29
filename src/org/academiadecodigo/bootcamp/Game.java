@@ -118,7 +118,7 @@ public class Game {
     private void createBarrels() throws InterruptedException {
 
 
-        if (System.currentTimeMillis() - timeCreation >= 3000) {
+        if (System.currentTimeMillis() - timeCreation >= 5000) {
 
 
             if (barrelCounter < barrels.length)
