@@ -1,6 +1,7 @@
 package org.academiadecodigo.bootcamp.lifeCounter;
 
 
+import org.academiadecodigo.bootcamp.GameOver.GameOver;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 import org.academiadecodigo.simplegraphics.graphics.Text;
 
@@ -32,6 +33,9 @@ public  class Lives {
             livesText.setText("Lives: "+Integer.toString(this.lives));
             lostLife(false);
         }
+
+        if (lives == 0)
+            GameOver.setGameOver(true);
     }
 
     public void gainedLife(boolean gainedLife) {
