@@ -2,18 +2,48 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f451fed-6cdb-414c-86ea-6fa381f39cad" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameOver/GameOver.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Interface/Scorable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/10.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/11.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/12.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/13.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/14.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/15.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/16.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/17.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/18.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/19.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/20.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/21.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/22.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/23.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/24.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/25.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/26.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/27.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/28.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/29.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/30.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/31.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/32.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/33.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/34.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/35.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/36.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/37.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/39.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/40.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/41.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/42.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/7.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/9.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Collision/CollisionBox.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Collision/CollisionBox.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Game.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Game.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/Barrel.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/Barrel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/Platform.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/Platform.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/PlatformFactory.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/PlatformFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Player.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Player.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/keyboard/MarioKeyboardHandler.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/keyboard/MarioKeyboardHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/lifeCounter/Lives.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/lifeCounter/Lives.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,7 +55,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Player.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Prize.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/Prize.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Vilain.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/Vilain.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Player.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-1175">
@@ -39,6 +89,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <push-targets>
+      <push-target-info target-remote="origin" target-branch="alex" repo="$PROJECT_DIR$" source="alex" />
+    </push-targets>
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -51,7 +104,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1920" />
     <option name="height" value="977" />
@@ -81,7 +134,7 @@
             <path>
               <item name="Donkey" type="b2602c69:ProjectViewProjectNode" />
               <item name="Donkey" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Donkey" type="b2602c69:ProjectViewProjectNode" />
@@ -93,55 +146,6 @@
               <item name="Donkey" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="bootcamp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Donkey" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Donkey" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="bootcamp" type="462c0819:PsiDirectoryNode" />
-              <item name="clock" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Donkey" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Donkey" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="bootcamp" type="462c0819:PsiDirectoryNode" />
-              <item name="Collision" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Donkey" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Donkey" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="bootcamp" type="462c0819:PsiDirectoryNode" />
-              <item name="GameObjects" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Donkey" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Donkey" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="bootcamp" type="462c0819:PsiDirectoryNode" />
-              <item name="GameOver" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Donkey" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Donkey" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="bootcamp" type="462c0819:PsiDirectoryNode" />
-              <item name="Interface" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Donkey" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Donkey" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="bootcamp" type="462c0819:PsiDirectoryNode" />
-              <item name="keyboard" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Donkey" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Donkey" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="bootcamp" type="462c0819:PsiDirectoryNode" />
-              <item name="lifeCounter" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -255,6 +259,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="7f451fed-6cdb-414c-86ea-6fa381f39cad" name="Default" comment="" />
@@ -262,15 +269,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1527710612555</updated>
-      <workItem from="1527710613805" duration="77000" />
+      <workItem from="1527710613805" duration="936000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77000" />
+    <option name="totallyTimeSpent" value="936000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="977" extended-state="1" />
+    <frame x="0" y="23" width="1920" height="977" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -342,6 +349,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1175">
           <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/Prize.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/Vilain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding />
         </state>
       </provider>
