@@ -131,8 +131,8 @@ public class Player implements Movable {
         return willScore;
     }
 
-    public void setHasCollided (){
-        hasCollided = true;
+    public void setHasCollided (boolean b){
+        hasCollided = b;
     }
 
     public boolean hasCollided(){

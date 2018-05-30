@@ -114,7 +114,9 @@ public class Game {
         if (!player.hasCollided()) {
             if (player.isScoring()) {
                 Score.increaseScore(player);
+                System.out.println("increasing score");
                 player.setWillScore(false);
+                player.setHasCollided(false);
             }
         }
         this.player.setJumping(false);
@@ -137,6 +139,11 @@ public class Game {
 
         for (Barrel a : barrels) {
             if (a != null) {
+                if (this.player.getBox().collides(a.getBox())) {
+                    this.player.setColorRed();
+                    player.setHasCollided(true);
+                    System.out.println("has collided");
+                }
                 if (a.getY() == Field.getHEIGHT()) {
                     a.move(0, -Field.getHEIGHT());
                 }
