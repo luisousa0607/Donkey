@@ -4,10 +4,11 @@ package org.academiadecodigo.bootcamp.GameObjects;
 import org.academiadecodigo.bootcamp.Collision.CollisionBox;
 import org.academiadecodigo.bootcamp.Collision.PlatformCollisionBox;
 import org.academiadecodigo.bootcamp.Interface.Collidable;
+import org.academiadecodigo.bootcamp.Interface.Scorable;
 import org.academiadecodigo.simplegraphics.graphics.Ellipse;
 import org.academiadecodigo.simplegraphics.graphics.Movable;
 
-public class Barrel extends GameObject implements Movable {
+public class Barrel extends GameObject implements Movable, Scorable {
 
     private static final int BARREL_SIZE = 20;
     private Ellipse barrel;

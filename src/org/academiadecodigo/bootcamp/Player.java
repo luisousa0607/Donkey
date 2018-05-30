@@ -26,6 +26,8 @@ public  class Player implements Movable  {
     private CollisionBox box;
     private boolean onLadder;
     private static final int PLAYERWIDTH = 50;
+    private boolean willScore;
+    private boolean hasCollided;
 
     public Player(int x, int y, int lives) {
 
@@ -108,5 +110,27 @@ public  class Player implements Movable  {
     public CollisionBox getBox() { return this.box; }
 
     public static int getPlayerwidth(){ return PLAYERWIDTH;}
+
+    public void setWillScore(boolean b){
+        willScore = b;
+    }
+
+    public boolean isScoring (){
+
+        return willScore;
+    }
+
+    public void setHasCollided (){
+        hasCollided = true;
+    }
+
+    public boolean hasCollided(){
+
+        return willScore;
+    }
+
+    public void increaseScore(Player player){
+
+    }
 
 }
