@@ -94,6 +94,16 @@ public class Game {
         for (int i = 0; i < 40; i++) {
             checkCollision();
             this.player.jumpUp();
+            if(!player.isOnLadder()) {
+                for (Barrel b : this.barrels) {
+                    if (b != null) {
+                        if(player.getBox().checkJumpOver(b)){
+                            System.out.println("jumped over and scored");
+                            Score.increaseScore(player);
+                        }
+                    }
+                }
+            }
             this.moveBarrels();
             Thread.sleep(10);
         }
