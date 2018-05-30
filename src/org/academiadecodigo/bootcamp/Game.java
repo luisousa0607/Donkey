@@ -10,7 +10,7 @@ import org.academiadecodigo.simplegraphics.graphics.Text;
 public class Game {
 
     private Player player;
-
+    private Vilain vilain;
     private Barrel[] barrels;
     private Ladder[] ladders;
     private Platform[] platforms;
@@ -29,7 +29,7 @@ public class Game {
         Field field = new Field();
         this.player = new Player(10, field.getWIDTH() - 80, 3);
         this.handler = new MarioKeyboardHandler(this.player);
-
+        this.vilain = new Vilain(40,40);
         this.barrels = new Barrel[MAX_BARRELS];
 
 
