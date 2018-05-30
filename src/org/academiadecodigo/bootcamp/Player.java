@@ -14,7 +14,7 @@ import org.academiadecodigo.simplegraphics.keyboard.KeyboardEventType;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardHandler;
 import org.academiadecodigo.simplegraphics.pictures.Picture;
 
-public  class Player implements Movable  {
+public class Player implements Movable {
 
 
     private Rectangle mario;
@@ -25,7 +25,8 @@ public  class Player implements Movable  {
     private boolean Collided;
     private CollisionBox box;
     private boolean onLadder;
-    private static final int PLAYERWIDTH = 50;
+    private int direction;
+    private static final int PLAYERWIDTH = 25;
     private boolean willScore;
     private boolean hasCollided;
 
@@ -38,33 +39,36 @@ public  class Player implements Movable  {
         this.mario = new Rectangle(x, y, PLAYERWIDTH, PLAYERWIDTH);
         this.mario.draw();
         this.box = new CollisionBox(x, y, this.mario.getWidth(), this.mario.getHeight());
+        this.direction = 1;
 
     }
 
     public void move(int x, int y) {
-        this.mario.translate(x, y + m);
-        this.box.setBox(x, y + m);
+
+        if (this.isJumping) {
+            this.mario.translate(x, y);
+            this.box.setBox(x, y);
+        } else {
+            this.mario.translate(x, y + (m*direction));
+            this.box.setBox(x, y + (m*direction));
+        }
     }
 
 
     public void jumpUp() throws InterruptedException {
 
-        this.move(0, -1);
+        this.move(direction, -1);
 
     }
 
     public void fall() {
 
-        this.move(0, 1);
+        this.move(direction, 1);
 
-    }
-
-    public double getM() {
-        return this.m;
     }
 
     public void setM(double m) {
-        this.m = m*10;
+        this.m = m * SPEED;
     }
 
     public void setJumping(boolean value) {
@@ -77,12 +81,11 @@ public  class Player implements Movable  {
 
     public boolean abovePlatform(Platform[] platforms) {
 
-
         for (Platform p : platforms) {
-            p.createCollisionBox();
             PlatformCollisionBox platform = p.getBox();
             if (this.box.abovePlatform(platform.getTop())) {
-                this.setM(( -p.getM()));
+                this.setM((-p.getM()));
+                System.out.println(-p.getM());
                 return true;
             }
         }
@@ -107,9 +110,17 @@ public  class Player implements Movable  {
         return SPEED;
     }
 
-    public CollisionBox getBox() { return this.box; }
+    public CollisionBox getBox() {
+        return this.box;
+    }
 
-    public static int getPlayerwidth(){ return PLAYERWIDTH;}
+    public static int getPlayerwidth() {
+        return PLAYERWIDTH;
+    }
+
+    public void setDirection(int direction) {
+        this.direction = direction;
+    }
 
     public void setWillScore(boolean b){
         willScore = b;

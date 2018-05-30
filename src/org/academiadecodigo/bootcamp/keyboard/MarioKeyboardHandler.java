@@ -23,12 +23,14 @@ public class MarioKeyboardHandler implements org.academiadecodigo.simplegraphics
             case KeyboardEvent.KEY_RIGHT: {
                 if (!this.player.isOnLadder()) {
                     this.player.move(this.player.getSpeed(), 0);
+                    this.player.setDirection(1);
                 }
                 break;
             }
             case KeyboardEvent.KEY_LEFT: {
                 if (!this.player.isOnLadder()) {
                     this.player.move(-this.player.getSpeed(), 0);
+                    this.player.setDirection(-1);
                 }
                 break;
             }

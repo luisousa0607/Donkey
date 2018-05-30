@@ -29,8 +29,8 @@ public class CollisionBox {
 
         this.box.translate(x, y);
 
-        bottom[0].setPosition(x, y);
-        bottom[1].setPosition(x, y);
+        bottom[0].setPosition((int)x, (int)y);
+        bottom[1].setPosition((int)x, (int)y);
 
     }
 
@@ -60,10 +60,10 @@ public class CollisionBox {
         return false;
     }
 
-    public boolean abovePlatform(Point[] platform){
-        for( Point a : bottom){
-            for(Point b : platform){
-                if(a.compare(b)){
+    public boolean abovePlatform(Point[] platform) {
+        for (Point a : bottom) {
+            for (Point b : platform) {
+                if (a.compare(b)) {
                     return true;
                 }
             }
