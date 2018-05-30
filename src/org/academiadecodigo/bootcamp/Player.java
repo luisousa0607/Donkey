@@ -48,10 +48,20 @@ public class Player implements Movable {
         if (this.isJumping) {
             this.mario.translate(x, y);
             this.box.setBox(x, y);
+            return;
         } else {
 
-            this.mario.translate(x, y );
-            this.box.setBox(x, y + m);
+            if(m > 0) {
+                this.mario.translate(x, -1 * direction);
+                this.box.setBox(x, -1 * direction);
+                return;
+            }
+            else
+                this.mario.translate(x, 1 * direction);
+                this.box.setBox(x, 1 * direction);
+                return;
+            
+
         }
     }
 
@@ -69,7 +79,7 @@ public class Player implements Movable {
     }
 
     public void setM(double m) {
-        this.m = m * SPEED;
+        this.m = m;
     }
 
     public void setJumping(boolean value) {

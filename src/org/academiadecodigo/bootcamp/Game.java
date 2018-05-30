@@ -66,7 +66,7 @@ public class Game {
 
             checkCollision();
 
-            if(!player.abovePlatform(platforms))
+            if (!player.abovePlatform(platforms))
                 this.playerFall();
 
             if (player.getIsJumping()) {
