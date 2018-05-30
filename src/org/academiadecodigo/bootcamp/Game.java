@@ -70,19 +70,25 @@ public class Game {
             if (!player.abovePlatform(platforms)) {
                 playerFall();
             }
+
+            if (player.getIsJumping()) {
+                this.playerJump();
+            }
+
             if (player.hasCollided()) {
                 player.lostLives();
+                player.setHasCollided(false);
+                player.setWillScore(false);
+            } else if (player.shouldScore()) {
+                Score.increaseScore(player);
+                System.out.println("increasing score");
+                player.setWillScore(false);
                 player.setHasCollided(false);
             }
 
 
-
-                if (player.getIsJumping()) {
-                    this.playerJump();
-                }
-
-                this.moveBarrels();
-                Thread.sleep(10);
+            this.moveBarrels();
+            Thread.sleep(10);
 
         }
     }
@@ -92,7 +98,6 @@ public class Game {
         for (int i = 0; i < 60; i++) {
             checkCollision();
             this.player.jumpUp();
-
             checkJumpedOver();
             this.moveBarrels();
             Thread.sleep(10);
@@ -109,7 +114,7 @@ public class Game {
             Thread.sleep(10);
         }
 
-        if (!player.hasCollided()) {
+        /*if (!player.hasCollided()) {
             if (player.shouldScore()) {
                 Score.increaseScore(player);
                 System.out.println("increasing score");
@@ -122,7 +127,7 @@ public class Game {
         if (player.hasCollided()) {
             player.lostLives();
             player.setHasCollided(false);
-        }
+        }*/
         this.player.setJumping(false);
     }
 

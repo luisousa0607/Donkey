@@ -11,8 +11,8 @@ public class CollisionBox {
 
     private Rectangle box;
     private Point[] bottom;
-    private int minBufferScore = 1;
-    private int maxBufferScore = 100;
+    private int minBufferScore = 0;
+    private int maxBufferScore = 70;
 
 
     public CollisionBox(int x, int y, int width, int height) {
@@ -104,9 +104,9 @@ public class CollisionBox {
                     &&
                     bottom[i].getX() < object.getBox().getX() + object.getBox().getWidth()) {
 
-                if (bottom[i].getY() > object.getBox().getY() + minBufferScore
+                if (bottom[i].getY() < object.getBox().getY() - minBufferScore
                         &&
-                        bottom[i].getY() < object.getBox().getY() + maxBufferScore) {
+                        bottom[i].getY() > object.getBox().getY() - maxBufferScore) {
                     return true;
                 }
             }

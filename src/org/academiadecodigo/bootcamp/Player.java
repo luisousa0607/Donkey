@@ -99,7 +99,7 @@ public class Player implements Movable {
             PlatformCollisionBox platform = p.getBox();
             if (this.box.abovePlatform(platform.getTop())) {
                 this.setM((-p.getM()));
-                System.out.println(-p.getM());
+                //System.out.println(-p.getM());
                 return true;
             }
         }
