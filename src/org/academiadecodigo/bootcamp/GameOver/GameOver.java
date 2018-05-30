@@ -10,9 +10,9 @@ public class GameOver {
     private static boolean isGameOver = false;
 
 
-    public static boolean isGameOver() {
+    /*public static boolean isGameOver() {
         return isGameOver;
-    }
+    }*/
 
     public static void setGameOver(boolean gameOver) {
         isGameOver = gameOver;
