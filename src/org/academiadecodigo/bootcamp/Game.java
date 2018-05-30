@@ -113,7 +113,7 @@ public class Game {
         }
          if (!player.hasCollided()){
              if(player.isScoring()){
-                 player.increaseScore(player);
+                 Score.increaseScore(player);
                  player.setWillScore(false);
              }
          }
