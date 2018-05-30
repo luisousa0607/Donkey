@@ -95,9 +95,7 @@ public class Game {
         for (int i = 0; i < 40; i++) {
             checkCollision();
             this.player.jumpUp();
-            if(!player.isOnLadder()) {
-                checkJumpedOver();
-            }
+            checkJumpedOver();
             this.moveBarrels();
             Thread.sleep(10);
         }
@@ -107,16 +105,18 @@ public class Game {
 
         while (!this.player.abovePlatform(platforms)) {
             this.player.fall();
+            checkJumpedOver();
             this.moveBarrels();
             checkCollision();
             Thread.sleep(10);
         }
-         if (!player.hasCollided()){
-             if(player.isScoring()){
-                 player.increaseScore(player);
-                 player.setWillScore(false);
-             }
-         }
+
+        if (!player.hasCollided()) {
+            if (player.isScoring()) {
+                Score.increaseScore(player);
+                player.setWillScore(false);
+            }
+        }
         this.player.setJumping(false);
     }
 
@@ -137,7 +137,6 @@ public class Game {
 
         for (Barrel a : barrels) {
             if (a != null) {
-               
                 if (a.getY() == Field.getHEIGHT()) {
                     a.move(0, -Field.getHEIGHT());
                 }
@@ -165,13 +164,15 @@ public class Game {
     }
 
     private void checkJumpedOver() {
-        for (Barrel b : this.barrels) {
-            if (b != null) {
-                if(player.getBox().checkJumpOver(b)){
-                    System.out.println("jumped over and scored");
-                    player.setWillScore(true);
-                    break;
+        if (!player.isOnLadder()) {
+            for (Barrel b : this.barrels) {
+                if (b != null) {
+                    if (player.getBox().checkJumpOver(b)) {
+                        System.out.println("jumped over and scored");
+                        player.setWillScore(true);
+                        break;
 
+                    }
                 }
             }
         }

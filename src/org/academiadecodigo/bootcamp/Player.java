@@ -137,11 +137,9 @@ public class Player implements Movable {
 
     public boolean hasCollided(){
 
-        return willScore;
+        return hasCollided;
     }
 
-    public void increaseScore(Player player){
 
-    }
 
 }
