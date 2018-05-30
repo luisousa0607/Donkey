@@ -100,6 +100,7 @@ public class Game {
                         if(player.getBox().checkJumpOver(b)){
                             System.out.println("jumped over and scored");
                             Score.increaseScore(player);
+                            break;
                         }
                     }
                 }
