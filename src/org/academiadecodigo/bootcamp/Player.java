@@ -51,17 +51,18 @@ public class Player implements Movable {
             return;
         } else {
 
-            if(m > 0) {
+            if (m > 0) {
                 this.mario.translate(x, -1 * direction);
                 this.box.setBox(x, -1 * direction);
                 return;
-            }
-            else
+            } else if (m < 0) {
                 this.mario.translate(x, 1 * direction);
                 this.box.setBox(x, 1 * direction);
                 return;
-            
-
+            } else {
+                this.mario.translate(x, 0);
+                this.box.setBox(x, 0);
+            }
         }
     }
 
