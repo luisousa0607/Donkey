@@ -96,16 +96,7 @@ public class Game {
             checkCollision();
             this.player.jumpUp();
             if(!player.isOnLadder()) {
-                for (Barrel b : this.barrels) {
-                    if (b != null) {
-                        if(player.getBox().checkJumpOver(b)){
-                            System.out.println("jumped over and scored");
-                            player.setWillScore(true);
-                            break;
-                            //Score.increaseScore(player);
-                        }
-                    }
-                }
+                checkJumpedOver();
             }
             this.moveBarrels();
             Thread.sleep(10);
@@ -146,10 +137,7 @@ public class Game {
 
         for (Barrel a : barrels) {
             if (a != null) {
-                if (this.player.getBox().collides(a.getBox())) {
-                    this.player.setColorRed();
-                    player.setHasCollided();
-                }
+               
                 if (a.getY() == Field.getHEIGHT()) {
                     a.move(0, -Field.getHEIGHT());
                 }
@@ -175,4 +163,19 @@ public class Game {
             }
         }
     }
+
+    private void checkJumpedOver() {
+        for (Barrel b : this.barrels) {
+            if (b != null) {
+                if(player.getBox().checkJumpOver(b)){
+                    System.out.println("jumped over and scored");
+                    player.setWillScore(true);
+                    break;
+
+                }
+            }
+        }
+
+    }
 }
+
