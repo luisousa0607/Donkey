@@ -49,8 +49,8 @@ public class Player implements Movable {
             this.mario.translate(x, y);
             this.box.setBox(x, y);
         } else {
-            this.mario.translate(x, y + (m*direction));
-            this.box.setBox(x, y + (m*direction));
+            this.mario.translate(x, y + m);
+            this.box.setBox(x, y + m);
         }
     }
 
@@ -122,25 +122,25 @@ public class Player implements Movable {
         this.direction = direction;
     }
 
-    public void setWillScore(boolean b){
+    public void setWillScore(boolean b) {
         willScore = b;
     }
 
-    public boolean isScoring (){
+    public boolean isScoring() {
 
         return willScore;
     }
 
-    public void setHasCollided (){
+    public void setHasCollided() {
         hasCollided = true;
     }
 
-    public boolean hasCollided(){
+    public boolean hasCollided() {
 
         return willScore;
     }
 
-    public void increaseScore(Player player){
+    public void increaseScore(Player player) {
 
     }
 
