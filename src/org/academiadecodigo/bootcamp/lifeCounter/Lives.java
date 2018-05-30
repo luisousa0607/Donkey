@@ -16,6 +16,7 @@ public  class Lives {
         this.lives=lives;
         this.lostLife = false;
         this.gainedLife = false;
+        getLives();
     }
 
     public void getLives() {
@@ -25,13 +26,13 @@ public  class Lives {
         livesText.draw();
     }
 
-    public void lostLife(boolean lostLife) {
-        this.lostLife = lostLife;
+    public void lostLife() {
+        this.lostLife = true;
 
         if(lostLife == true){
             this.lives--;
             livesText.setText("Lives: "+Integer.toString(this.lives));
-            lostLife(false);
+            this.lostLife = false;
         }
 
         if (lives == 0)

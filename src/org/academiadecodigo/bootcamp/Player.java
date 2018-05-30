@@ -29,6 +29,7 @@ public class Player implements Movable {
     private static final int PLAYERWIDTH = 25;
     private boolean willScore;
     private boolean hasCollided;
+    private Lives life;
 
     public Player(int x, int y, int lives) {
 
@@ -40,6 +41,7 @@ public class Player implements Movable {
         this.mario.draw();
         this.box = new CollisionBox(x, y, this.mario.getWidth(), this.mario.getHeight());
         this.direction = 1;
+        this.life =new Lives(lives);
 
     }
 
@@ -126,7 +128,7 @@ public class Player implements Movable {
         willScore = b;
     }
 
-    public boolean isScoring() {
+    public boolean shouldScore() {
 
         return willScore;
     }
@@ -139,6 +141,11 @@ public class Player implements Movable {
     public boolean hasCollided() {
 
         return hasCollided;
+    }
+
+    public void lostLives(){
+        life.lostLife();
+
     }
 
 

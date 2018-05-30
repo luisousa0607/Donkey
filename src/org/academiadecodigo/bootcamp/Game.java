@@ -2,6 +2,7 @@ package org.academiadecodigo.bootcamp;
 
 
 import org.academiadecodigo.bootcamp.GameObjects.*;
+import org.academiadecodigo.bootcamp.GameOver.GameOver;
 import org.academiadecodigo.bootcamp.ScoreCounter.Score;
 import org.academiadecodigo.bootcamp.keyboard.MarioKeyboardHandler;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
@@ -66,6 +67,11 @@ public class Game {
 
             checkCollision();
 
+            if(player.hasCollided()) {
+                player.lostLives();
+                player.setHasCollided(false);
+            }
+
             if (player.getIsJumping()) {
 
                 this.playerJump();
@@ -95,7 +101,7 @@ public class Game {
     }
 
     private void playerFall() throws InterruptedException {
-
+        System.out.println("player falling");
         while (!this.player.abovePlatform(platforms)) {
             this.player.fall();
             checkJumpedOver();
@@ -105,12 +111,18 @@ public class Game {
         }
 
         if (!player.hasCollided()) {
-            if (player.isScoring()) {
+            if (player.shouldScore()) {
                 Score.increaseScore(player);
                 System.out.println("increasing score");
                 player.setWillScore(false);
                 player.setHasCollided(false);
             }
+
+
+        }
+        if(player.hasCollided()) {
+            player.lostLives();
+            player.setHasCollided(false);
         }
         this.player.setJumping(false);
     }
@@ -136,12 +148,16 @@ public class Game {
                     this.player.setColorRed();
                     player.setHasCollided(true);
                     System.out.println("has collided");
+                    break;
+
                 }
+
                 if (a.getY() == Field.getHEIGHT()) {
                     a.move(0, -Field.getHEIGHT());
                 }
             }
         }
+        
 
         for (Ladder l : ladders) {
             if (!this.player.getBox().collides(l.getBox())) {
@@ -168,7 +184,7 @@ public class Game {
             for (Barrel b : this.barrels) {
                 if (b != null) {
                     if (player.getBox().checkJumpOver(b)) {
-                        System.out.println("jumped over and scored");
+                        System.out.println("jumped over and should scored");
                         player.setWillScore(true);
                         break;
 
