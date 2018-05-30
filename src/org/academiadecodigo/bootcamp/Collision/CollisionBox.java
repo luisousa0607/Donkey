@@ -11,8 +11,8 @@ public class CollisionBox {
 
     private Rectangle box;
     private Point[] bottom;
-    private int minBufferScore = 4;
-    private int maxBufferScore = 15;
+    private int minBufferScore = 1;
+    private int maxBufferScore = 100;
 
 
     public CollisionBox(int x, int y, int width, int height) {
@@ -29,8 +29,8 @@ public class CollisionBox {
 
         this.box.translate(x, y);
 
-        bottom[0].setPosition((int)x, (int)y);
-        bottom[1].setPosition((int)x, (int)y);
+        bottom[0].setPosition((int) x, (int) y);
+        bottom[1].setPosition((int) x, (int) y);
 
     }
 
@@ -96,17 +96,17 @@ public class CollisionBox {
         return this.bottom;
     }
 
-    public boolean checkJumpOver(Barrel object){
+    public boolean checkJumpOver(Barrel object) {
 
-        for(int i= 0; i< bottom.length; i++) {
+        for (int i = 0; i < bottom.length; i++) {
 
             if (bottom[i].getX() > object.getBox().getX()
                     &&
                     bottom[i].getX() < object.getBox().getX() + object.getBox().getWidth()) {
 
-                if(bottom[i].getY() > object.getBox().getY() + minBufferScore
+                if (bottom[i].getY() > object.getBox().getY() + minBufferScore
                         &&
-                        bottom[i].getY() < object.getBox().getY() + maxBufferScore){
+                        bottom[i].getY() < object.getBox().getY() + maxBufferScore) {
                     return true;
                 }
             }

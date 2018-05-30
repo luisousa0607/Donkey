@@ -66,14 +66,6 @@ public class Game {
 
             checkCollision();
 
-            for (Barrel b : this.barrels) {
-                if (b != null) {
-                    b.abovePlatform(platforms);
-
-                    //b.abovePlatform(platforms);
-                }
-            }
-
             if (player.getIsJumping()) {
 
                 this.playerJump();
@@ -95,6 +87,7 @@ public class Game {
         for (int i = 0; i < 40; i++) {
             checkCollision();
             this.player.jumpUp();
+
             checkJumpedOver();
             this.moveBarrels();
             Thread.sleep(10);
@@ -161,7 +154,7 @@ public class Game {
         for (Barrel b : this.barrels) {
 
             if (b != null) {
-                if (b.getFalling()) {
+                if (b.abovePlatform(platforms)) {
                     b.move(0, 1);
                 } else {
                     b.move(1, 0);
