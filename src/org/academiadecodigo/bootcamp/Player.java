@@ -25,8 +25,10 @@ public class Player implements Movable {
     private boolean Collided;
     private CollisionBox box;
     private boolean onLadder;
-    private static final int PLAYERWIDTH = 25;
     private int direction;
+    private static final int PLAYERWIDTH = 25;
+    private boolean willScore;
+    private boolean hasCollided;
 
     public Player(int x, int y, int lives) {
 
@@ -118,6 +120,28 @@ public class Player implements Movable {
 
     public void setDirection(int direction) {
         this.direction = direction;
+    }
+
+    public void setWillScore(boolean b){
+        willScore = b;
+    }
+
+    public boolean isScoring (){
+
+        return willScore;
+    }
+
+    public void setHasCollided (){
+        hasCollided = true;
+    }
+
+    public boolean hasCollided(){
+
+        return willScore;
+    }
+
+    public void increaseScore(Player player){
+
     }
 
 }

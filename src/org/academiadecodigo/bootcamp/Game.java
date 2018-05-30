@@ -70,7 +70,7 @@ public class Game {
                 if (b != null) {
                     b.abovePlatform(platforms);
 
-                    b.abovePlatform(platforms);
+                    //b.abovePlatform(platforms);
                 }
             }
 
@@ -90,6 +90,7 @@ public class Game {
 
     }
 
+    // poderia ficar no player? o método jumpUp, fall
     private void playerJump() throws InterruptedException {
         for (int i = 0; i < 40; i++) {
             checkCollision();
@@ -99,8 +100,9 @@ public class Game {
                     if (b != null) {
                         if(player.getBox().checkJumpOver(b)){
                             System.out.println("jumped over and scored");
-                            Score.increaseScore(player);
+                            player.setWillScore(true);
                             break;
+                            //Score.increaseScore(player);
                         }
                     }
                 }
@@ -118,7 +120,12 @@ public class Game {
             checkCollision();
             Thread.sleep(10);
         }
-
+         if (!player.hasCollided()){
+             if(player.isScoring()){
+                 player.increaseScore(player);
+                 player.setWillScore(false);
+             }
+         }
         this.player.setJumping(false);
     }
 
@@ -141,6 +148,7 @@ public class Game {
             if (a != null) {
                 if (this.player.getBox().collides(a.getBox())) {
                     this.player.setColorRed();
+                    player.setHasCollided();
                 }
                 if (a.getY() == Field.getHEIGHT()) {
                     a.move(0, -Field.getHEIGHT());
