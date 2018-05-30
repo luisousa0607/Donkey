@@ -49,7 +49,8 @@ public class Player implements Movable {
             this.mario.translate(x, y);
             this.box.setBox(x, y);
         } else {
-            this.mario.translate(x, y + m);
+
+            this.mario.translate(x, y );
             this.box.setBox(x, y + m);
         }
     }

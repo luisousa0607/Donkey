@@ -66,12 +66,11 @@ public class Game {
 
             checkCollision();
 
-            if (player.getIsJumping()) {
-
-                this.playerJump();
-
+            if(!player.abovePlatform(platforms))
                 this.playerFall();
 
+            if (player.getIsJumping()) {
+                this.playerJump();
             }
 
             this.moveBarrels();
