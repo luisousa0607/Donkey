@@ -7,17 +7,20 @@ import org.academiadecodigo.bootcamp.Interface.Collidable;
 import org.academiadecodigo.bootcamp.Interface.Scorable;
 import org.academiadecodigo.simplegraphics.graphics.Ellipse;
 import org.academiadecodigo.simplegraphics.graphics.Movable;
+import org.academiadecodigo.simplegraphics.pictures.Picture;
 
 public class Barrel extends GameObject implements Movable, Scorable {
 
-    private static final int BARREL_SIZE = 20;
-    private Ellipse barrel;
+    private static final int BARREL_SIZE = 17;
+    private Picture barrel;
     private CollisionBox box;
     private int direction;
+    private int x;
+    private int y;
 
     public Barrel() {
 
-        this.barrel = new Ellipse(450, 10, BARREL_SIZE, BARREL_SIZE);
+        this.barrel = new Picture(450, 10, "resources/Accesories/Batata1.png");
         this.box = new CollisionBox(450, 10, BARREL_SIZE, BARREL_SIZE);
         this.barrel.draw();
         this.direction = 0;

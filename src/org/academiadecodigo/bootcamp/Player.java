@@ -18,7 +18,7 @@ import org.academiadecodigo.simplegraphics.pictures.Picture;
 public class Player implements Movable {
 
 
-    private Rectangle mario;
+    private Picture mario;
     private Keyboard keyboard;
     private static final int SPEED = 10;
     private boolean isJumping;
@@ -38,7 +38,7 @@ public class Player implements Movable {
         this.isJumping = false;
         this.onLadder = false;
         this.Collided = false;
-        this.mario = new Rectangle(x, y, PLAYERWIDTH, PLAYERWIDTH);
+        this.mario = new Picture(x, y, "resources/Mario/Mario2.png");
         this.mario.draw();
         this.box = new CollisionBox(x, y, this.mario.getWidth(), this.mario.getHeight());
         this.direction = 1;
@@ -126,8 +126,8 @@ public class Player implements Movable {
 
     public void setColorRed() {
 
-        this.mario.setColor(Color.RED);
-        this.mario.fill();
+       //this.mario.
+        //this.mario.fill();
     }
 
     public void setOnLadder(boolean onLadder) {

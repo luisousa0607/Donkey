@@ -1,5 +1,7 @@
 package org.academiadecodigo.bootcamp.GameObjects;
 
+
+import org.academiadecodigo.simplegraphics.graphics.Color;
 import org.academiadecodigo.bootcamp.Player;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 
@@ -16,7 +18,9 @@ public class Field {
 
         this.canvas = new Rectangle(PADDING, PADDING, HEIGHT, WIDTH);
 
-        this.canvas.draw();
+        canvas.setColor(Color.WHITE);
+        canvas.draw();
+        canvas.fill();
     }
 
     public static int getHEIGHT() {
@@ -42,6 +46,5 @@ public class Field {
         }
 
     }
-
 
 }
