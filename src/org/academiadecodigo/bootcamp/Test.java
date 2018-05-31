@@ -21,8 +21,6 @@ public class Test {
             e.printStackTrace();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
-        } catch (JavaLayerException e) {
-            e.printStackTrace();
         }
 
     }
