@@ -76,11 +76,11 @@ public class Game {
             }
 
             if (player.hasCollided()) {
-                player.lostLives();
                 for(int i = 0; i < 20; i++){
                     this.moveBarrels();
                     Thread.sleep(10);
                 }
+                player.lostLives();
                 System.out.println("lost 1 live");
                 player.setHasCollided(false);
                 player.setWillScore(false);
@@ -112,7 +112,6 @@ public class Game {
     private void playerFall() throws InterruptedException {
         while (!player.abovePlatform(platforms)) {
             player.fall();
-            checkJumpedOver();
             moveBarrels();
             checkCollision();
             Thread.sleep(10);
@@ -141,6 +140,7 @@ public class Game {
                 if (this.player.getBox().collides(a.getBox())) {
                     this.player.setColorRed();
                     player.setHasCollided(true);
+                    System.out.println("collided");
                     break;
 
                 }
