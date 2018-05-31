@@ -1,6 +1,6 @@
 package org.academiadecodigo.bootcamp.GameOver;
 
-import org.academiadecodigo.bootcamp.GameObjects.Field;
+import org.academiadecodigo.bootcamp.Sound.Bgm;
 import org.academiadecodigo.simplegraphics.graphics.Color;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 import org.academiadecodigo.simplegraphics.graphics.Text;
@@ -18,15 +18,20 @@ public class GameOver {
         isGameOver = gameOver;
 
         if(isGameOver){
+
             Rectangle gameOverGFX = new Rectangle(0, 0, 500,500);
             gameOverGFX.setColor(Color.WHITE);
             gameOverGFX.fill();
             //gameOverGFX.draw();
             Text gameOverText = new Text(255,255,"This Game is over you butter fingers");
             gameOverText.draw();
+            Bgm.bgm.stop();
+            Bgm.youLost.start();
 
         }
     }
 
-
+    public static boolean isIsGameOver() {
+        return isGameOver;
+    }
 }
