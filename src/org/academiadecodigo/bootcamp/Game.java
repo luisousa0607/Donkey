@@ -205,7 +205,6 @@ public class Game {
             for (Barrel b : this.barrels) {
                 if (b != null) {
                     if (player.getBox().checkJumpOver(b)) {
-                        Bgm.overBarrel.run();
                         player.setWillScore(true);
                         System.out.println("shouldScore");
                         break;
