@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="be3db08e-64fc-4e04-afe7-ab5c4322548b" name="Default" comment="">
+    <list default="true" id="d4da08c0-0f8c-43c8-87f3-155ce84fb54d" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Donkey.iml" afterPath="$PROJECT_DIR$/Donkey.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Collision/CollisionBox.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Collision/CollisionBox.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Collision/LadderCollisionBox.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Collision/LadderCollisionBox.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Game.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Game.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameOver/GameOver.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameOver/GameOver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/lifeCounter/Lives.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/lifeCounter/Lives.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/Ladder.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/Ladder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/PlatformFactory.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/PlatformFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/Prize.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/Prize.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Interface/Collidable.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Interface/Collidable.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Player.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Player.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Test.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Test.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/keyboard/MarioKeyboardHandler.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/keyboard/MarioKeyboardHandler.java" />
     </list>
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,11 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Game.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="64" column="49" lean-forward="true" selection-start-line="64" selection-start-column="49" selection-end-line="64" selection-end-column="49" />
+            <state relative-caret-position="525">
+              <caret line="198" column="0" lean-forward="false" selection-start-line="198" selection-start-column="0" selection-end-line="198" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -31,7 +39,7 @@
         <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameOver/GameOver.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="465">
-              <caret line="34" column="28" lean-forward="true" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
+              <caret line="34" column="28" lean-forward="false" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
               <folding>
                 <element signature="e#1228#1229#0" expanded="true" />
                 <element signature="e#1261#1262#0" expanded="true" />
@@ -44,13 +52,13 @@
         <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/lifeCounter/Lives.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="472">
-              <caret line="39" column="31" lean-forward="true" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="31" />
+              <caret line="39" column="31" lean-forward="false" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="YouWin_GameOver.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="YouWin_GameOver.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameOver/YouWin_GameOver.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
@@ -97,7 +105,22 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
               <caret line="14" column="35" lean-forward="false" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
-              <folding />
+              <folding>
+                <marker date="1527795313264" expanded="true" signature="952:2094" ph="{...}" />
+                <marker date="1527795313264" expanded="true" signature="2147:2359" ph="{...}" />
+                <marker date="1527795313264" expanded="false" signature="2390:2401" ph=" { " />
+                <marker date="1527795313264" expanded="false" signature="2417:2423" ph=" }" />
+                <marker date="1527795313264" expanded="false" signature="2450:2461" ph=" { " />
+                <marker date="1527795313264" expanded="false" signature="2488:2494" ph=" }" />
+                <marker date="1527795313264" expanded="false" signature="2522:2533" ph=" { " />
+                <marker date="1527795313264" expanded="false" signature="2561:2567" ph=" }" />
+                <marker date="1527795313264" expanded="false" signature="2590:2601" ph=" { " />
+                <marker date="1527795313264" expanded="false" signature="2624:2630" ph=" }" />
+                <marker date="1527795313264" expanded="false" signature="2653:2664" ph=" { " />
+                <marker date="1527795313264" expanded="false" signature="2687:2693" ph=" }" />
+                <marker date="1527795313264" expanded="true" signature="2726:2762" ph="{...}" />
+                <marker date="1527795313264" expanded="true" signature="2812:3336" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -119,9 +142,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
               <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-              <folding>
-                <marker date="1527792391680" expanded="true" signature="535:584" ph="{...}" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -146,13 +167,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Sound/Bgm.java" />
-        <option value="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/ScoreCounter/Score.java" />
-        <option value="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Collision/CollisionBox.java" />
-        <option value="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/lifeCounter/Lives.java" />
-        <option value="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameOver/GameOver.java" />
         <option value="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Game.java" />
-        <option value="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameOver/YouWin_GameOver.java" />
       </list>
     </option>
   </component>
@@ -185,6 +200,11 @@
             <path>
               <item name="Donkey" type="b2602c69:ProjectViewProjectNode" />
               <item name="Donkey" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Donkey" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Donkey" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Donkey" type="b2602c69:ProjectViewProjectNode" />
@@ -375,11 +395,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4177000" />
+    <option name="totallyTimeSpent" value="82000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="332" y="24" width="1441" height="977" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -394,7 +413,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2494639" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2494639" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32993197" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -443,9 +462,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <marker date="1527792391680" expanded="true" signature="535:584" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -489,9 +506,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <marker date="1527792391680" expanded="true" signature="535:584" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -524,14 +539,29 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="14" column="35" lean-forward="false" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
-          <folding />
+          <folding>
+            <marker date="1527795313264" expanded="true" signature="952:2094" ph="{...}" />
+            <marker date="1527795313264" expanded="true" signature="2147:2359" ph="{...}" />
+            <marker date="1527795313264" expanded="false" signature="2390:2401" ph=" { " />
+            <marker date="1527795313264" expanded="false" signature="2417:2423" ph=" }" />
+            <marker date="1527795313264" expanded="false" signature="2450:2461" ph=" { " />
+            <marker date="1527795313264" expanded="false" signature="2488:2494" ph=" }" />
+            <marker date="1527795313264" expanded="false" signature="2522:2533" ph=" { " />
+            <marker date="1527795313264" expanded="false" signature="2561:2567" ph=" }" />
+            <marker date="1527795313264" expanded="false" signature="2590:2601" ph=" { " />
+            <marker date="1527795313264" expanded="false" signature="2624:2630" ph=" }" />
+            <marker date="1527795313264" expanded="false" signature="2653:2664" ph=" { " />
+            <marker date="1527795313264" expanded="false" signature="2687:2693" ph=" }" />
+            <marker date="1527795313264" expanded="true" signature="2726:2762" ph="{...}" />
+            <marker date="1527795313264" expanded="true" signature="2812:3336" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/lifeCounter/Lives.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="472">
-          <caret line="39" column="31" lean-forward="true" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="31" />
+          <caret line="39" column="31" lean-forward="false" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="31" />
           <folding />
         </state>
       </provider>
@@ -539,20 +569,10 @@
     <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameOver/GameOver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
-          <caret line="34" column="28" lean-forward="true" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
+          <caret line="34" column="28" lean-forward="false" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
           <folding>
             <element signature="e#1228#1229#0" expanded="true" />
             <element signature="e#1261#1262#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="64" column="49" lean-forward="true" selection-start-line="64" selection-start-column="49" selection-end-line="64" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -577,6 +597,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="43" lean-forward="false" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="198" column="0" lean-forward="false" selection-start-line="198" selection-start-column="0" selection-end-line="198" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
