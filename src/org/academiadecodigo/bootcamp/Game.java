@@ -126,6 +126,7 @@ public class Game {
         }
         if (player.hasCollided()) {
             player.lostLives();
+
             player.setHasCollided(false);
         }*/
         this.player.setJumping(false);
