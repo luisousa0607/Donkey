@@ -3,21 +3,22 @@ package org.academiadecodigo.bootcamp.GameObjects;
 import org.academiadecodigo.bootcamp.Collision.CollisionBox;
 import org.academiadecodigo.bootcamp.Interface.Collidable;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
+import org.academiadecodigo.simplegraphics.pictures.Picture;
 
 public class Prize extends GameObject implements Collidable {
 
-    private Rectangle prize;
+    private Picture prize;
     private int x = 250;
-    private int y = 40;
+    private int y = 250;
     private int h;
     private int w;
     private CollisionBox box;
 
-    public Prize(int x, int y, int h, int w) {
+    public Prize(int x, int y/*, int h, int w*/) {
         this.x = x;
         this.y = y;
         this.h = h;
-        this.prize = new Rectangle(x, y, h, w);
+        this.prize = new Picture (x, y, "resources/Accesories/beer.png");
         this.prize.draw();
         this.box = new CollisionBox(x,y,h,w);
 

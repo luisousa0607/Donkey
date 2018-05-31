@@ -11,7 +11,7 @@ import org.academiadecodigo.simplegraphics.pictures.Picture;
 
 public class Barrel extends GameObject implements Movable, Scorable {
 
-    private static final int BARREL_SIZE = 20;
+    private static final int BARREL_SIZE = 17;
     private Picture barrel;
     private CollisionBox box;
     private int direction;

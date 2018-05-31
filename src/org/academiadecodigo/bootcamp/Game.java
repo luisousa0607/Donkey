@@ -5,6 +5,7 @@ import org.academiadecodigo.bootcamp.GameObjects.*;
 import org.academiadecodigo.bootcamp.GameOver.GameOver;
 import org.academiadecodigo.bootcamp.ScoreCounter.Score;
 import org.academiadecodigo.bootcamp.keyboard.MarioKeyboardHandler;
+import org.academiadecodigo.simplegraphics.graphics.Color;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 import org.academiadecodigo.simplegraphics.graphics.Text;
 
@@ -12,6 +13,7 @@ public class Game {
 
     private Player player;
     private Vilain vilain;
+    private Prize prize;
     private Barrel[] barrels;
     private Ladder[] ladders;
     private Platform[] platforms;
@@ -32,6 +34,7 @@ public class Game {
         this.handler = new MarioKeyboardHandler(this.player);
         this.vilain = new Vilain(40,40);
         this.barrels = new Barrel[MAX_BARRELS];
+        this.prize = new Prize(250,40);
 
 
         this.platforms = new PlatformFactory().createPlatform();
