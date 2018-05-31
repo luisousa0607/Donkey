@@ -1,5 +1,6 @@
 package org.academiadecodigo.bootcamp.GameObjects;
 
+import org.academiadecodigo.simplegraphics.graphics.Color;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 
 public class Field {
@@ -14,6 +15,7 @@ public class Field {
     public Field() {
 
         this.canvas = new Rectangle(PADDING, PADDING, HEIGHT, WIDTH);
+
     }
 
     public static int getHEIGHT() {
@@ -25,4 +27,5 @@ public class Field {
     public static int getWIDTH() {
         return WIDTH;
     }
+
 }
