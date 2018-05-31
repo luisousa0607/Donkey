@@ -78,7 +78,7 @@ public class Game {
             }
 
             if (player.hasCollided()) {
-                for(int i = 0; i < 25; i++){
+                for(int i = 0; i < 25/*barrelWidth+5*/; i++){
                     this.moveBarrels();
                     Thread.sleep(10);
                 }

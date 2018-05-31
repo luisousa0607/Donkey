@@ -4,7 +4,7 @@ import org.academiadecodigo.bootcamp.Player;
 
 public class PlatformFactory {
 
-    private static final int MAX_PLATFORMS = 10;
+    private static final int MAX_PLATFORMS = 7;
     private int playerWidth = Player.getPlayerwidth();
     private int jumpHeight = Player.getPlayerwidth() -10;
     private static int platformHeightDifference;
@@ -38,7 +38,7 @@ public class PlatformFactory {
             if (i % 2 == 0) {
                platforms[i] = new Platform(
                        Field.getPadding(),
-                       Field.getHEIGHT()-(i+1)*(platformHeightDifference + jumpHeight),
+                       Field.getHEIGHT()-(i+1)*(platformHeightDifference) -(i)* (jumpHeight),
 
 
                         Field.getWIDTH() - playerWidth -10,
@@ -52,7 +52,7 @@ public class PlatformFactory {
                         Field.getPadding() + playerWidth + 10,
                         Field.getHEIGHT()-jumpHeight*(i+1)-platformHeightDifference*i,
                         Field.getWIDTH(),
-                        Field.getHEIGHT() - (i + 1) * (platformHeightDifference + jumpHeight));
+                        Field.getHEIGHT() - (i + 1) * (platformHeightDifference) -(i)* jumpHeight);
                // platforms[i].setM(1);
                 platforms[i].setDirection(-1);
             }

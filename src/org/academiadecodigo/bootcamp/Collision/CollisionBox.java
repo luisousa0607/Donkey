@@ -2,6 +2,7 @@ package org.academiadecodigo.bootcamp.Collision;
 
 import org.academiadecodigo.bootcamp.GameObjects.*;
 import org.academiadecodigo.bootcamp.Interface.Collidable;
+import org.academiadecodigo.simplegraphics.graphics.Color;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 
 import java.awt.*;
@@ -12,13 +13,14 @@ public class CollisionBox implements Collidable {
     private Rectangle box;
     private Point[] bottom;
     private int minBufferScore = 0;
-    private int maxBufferScore = 25;
+    private int maxBufferScore = 20;
 
 
     public CollisionBox(int x, int y, int width, int height) {
 
         this.box = new Rectangle(x, y, width, height);
-        //this.box.draw();
+        this.box.setColor(Color.WHITE);
+        this.box.draw();
 
         this.bottom = new Point[2];
         bottom[0] = new Point(x, y + height);
