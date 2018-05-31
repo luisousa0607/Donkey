@@ -124,11 +124,7 @@ public class Player implements Movable {
         return false;
     }
 
-    public void setColorRed() {
 
-       //this.mario.
-        //this.mario.fill();
-    }
 
     public void setOnLadder(boolean onLadder) {
         this.onLadder = onLadder;
@@ -180,6 +176,11 @@ public class Player implements Movable {
 
     public void gainedLives() {
         life.gainedLife(true);
+    }
+
+    public void setPicture(String picture){
+        mario.load(picture);
+        mario.translate(0, -mario.getHeight()/2);
     }
 
 
