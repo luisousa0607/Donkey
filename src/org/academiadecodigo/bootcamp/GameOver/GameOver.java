@@ -26,7 +26,7 @@ public class GameOver {
             Text gameOverText = new Text(255,255,"This Game is over you butter fingers");
             gameOverText.draw();
             Bgm.bgm.stop();
-            Bgm.youLost.start();
+            Bgm.lost.play(true);
 
         }
     }

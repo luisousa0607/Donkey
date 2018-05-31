@@ -41,32 +41,10 @@ public class Bgm implements Runnable{
 
         }});
 
-    public static Thread youLost = new Thread(new Runnable() {
-        public void run()
-        {
-            try {
-                Bgm bm = new Bgm("resources/Music/lost.mp3");
-                bm.run();
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            } catch (JavaLayerException e) {
-                e.printStackTrace();
-            }
 
-        }});
-    public static Thread overBarrel = new Thread(new Runnable() {
-        public void run()
-        {
-            try {
-                Bgm bm = new Bgm("resources/Music/overBarrel.mp3");
-                bm.run();
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            } catch (JavaLayerException e) {
-                e.printStackTrace();
-            }
+    public static SoundPlayer lost = new SoundPlayer("/resources/Music/lost.wav");
 
-        }});
+    public static SoundPlayer overBarrel = new SoundPlayer("/resources/Music/overBarrel.wav");
 
 
 
