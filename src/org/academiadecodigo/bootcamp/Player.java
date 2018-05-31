@@ -48,6 +48,7 @@ public class Player implements Movable {
 
     public void move(int x, int y) {
 
+
         if (this.isJumping) {
             if (!Field.canMove(direction, this.getBox().getX() + x)) {
                 this.mario.translate(0, y);
@@ -167,6 +168,10 @@ public class Player implements Movable {
     public void lostLives() {
         life.lostLife();
 
+    }
+
+    public void gainedLives(){
+        life.gainedLife(true);
     }
 
 

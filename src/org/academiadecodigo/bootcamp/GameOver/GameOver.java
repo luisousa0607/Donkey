@@ -18,7 +18,7 @@ public class GameOver {
         isGameOver = gameOver;
 
         if(isGameOver){
-            Rectangle gameOverGFX = new Rectangle(10, 10, 500,500);
+            Rectangle gameOverGFX = new Rectangle(0, 0, 500,500);
             gameOverGFX.setColor(Color.WHITE);
             gameOverGFX.fill();
             //gameOverGFX.draw();

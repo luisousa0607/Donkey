@@ -134,7 +134,7 @@ public class Game {
         }
     }
 
-    private void checkCollision() {
+    private void checkCollision() throws InterruptedException {
 
         for (Barrel a : barrels) {
             if (a != null) {

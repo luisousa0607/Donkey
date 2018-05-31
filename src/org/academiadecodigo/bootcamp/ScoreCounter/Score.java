@@ -27,6 +27,9 @@ public class Score {
         scoreText.setText("Score: "+ score);
         showScore();
 
+        if (score%1500 == 0)
+            player.gainedLives();
+
     }
 
     public void setScore(int score) {
