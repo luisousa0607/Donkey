@@ -71,6 +71,14 @@ public class Game {
             }
 
             if (player.getIsJumping()) {
+
+                if(this.player.getDirection() > 0){
+                    this.player.setPicture("resources/Mario/Mario4.png");
+                }else{
+                    this.player.setPicture("resources/Mario/Mario3.png");
+                }
+
+
                 this.playerJump();
             }
 
@@ -118,6 +126,13 @@ public class Game {
         }
 
         this.player.setJumping(false);
+
+        if(this.player.getDirection() > 0){
+            this.player.setPicture("resources/Mario/Mario2.png");
+        }
+        else this.player.setPicture("resources/Mario/Mario1.png");
+
+
     }
 
     private void createBarrels() throws InterruptedException {

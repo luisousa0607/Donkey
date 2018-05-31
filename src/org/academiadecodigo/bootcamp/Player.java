@@ -161,6 +161,12 @@ public class Player implements Movable {
     }
 
     public void setDirection(int direction) {
+
+        if(direction > 0){
+            this.mario.load("resources/Mario/Mario2.png");
+        }else
+            this.mario.load("resources/Mario/Mario1.png");
+
         this.direction = direction;
     }
 
@@ -188,13 +194,17 @@ public class Player implements Movable {
 
     }
 
+    public int getDirection(){
+        return this.direction;
+    }
+
     public void gainedLives() {
         life.gainedLife(true);
     }
 
     public void setPicture(String picture){
         mario.load(picture);
-        mario.translate(0, -mario.getHeight()/2);
+     //   mario.translate(0, -mario.getHeight()/2);
     }
 
 
