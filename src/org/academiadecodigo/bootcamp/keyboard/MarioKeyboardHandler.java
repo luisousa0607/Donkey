@@ -22,7 +22,12 @@ public class MarioKeyboardHandler implements org.academiadecodigo.simplegraphics
 
             case KeyboardEvent.KEY_RIGHT: {
                 if (!this.player.getIsJumping()) {
-                    this.player.setOnLadder(false);
+                    if (this.player.isOnLadder()) {
+                        this.player.setOnLadder(false);
+                        this.player.move(1 * this.player.getSpeed(), 0);
+                        this.player.setDirection(1);
+                        return;
+                    }
                     this.player.move(this.player.getSpeed(), 0);
                     this.player.setDirection(1);
                 }
@@ -31,6 +36,12 @@ public class MarioKeyboardHandler implements org.academiadecodigo.simplegraphics
             case KeyboardEvent.KEY_LEFT: {
                 if (!this.player.getIsJumping()) {
                     this.player.setOnLadder(false);
+                    if (this.player.isOnLadder()) {
+                        this.player.setOnLadder(false);
+                        this.player.move(-1 * this.player.getSpeed(), 0);
+                        this.player.setDirection(-1);
+                        return;
+                    }
                     this.player.move(-this.player.getSpeed(), 0);
                     this.player.setDirection(-1);
                 }

@@ -92,7 +92,6 @@ public class Game {
             checkCollision();
             this.player.setOnLadder(false);
             checkLadders();
-            System.out.println(this.player.isOnLadder());
             Thread.sleep(10);
 
         }

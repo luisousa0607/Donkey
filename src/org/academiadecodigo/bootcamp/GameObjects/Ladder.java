@@ -20,7 +20,7 @@ public class Ladder {
     public Ladder(int x, int y, int length) {
 
         this.x = x;
-        this.y = (y - 5) ;
+        this.y = y;
         this.length = length;
 
         this.ladder = new Picture(x, y, "resources/Accesories/Ladder.png");
