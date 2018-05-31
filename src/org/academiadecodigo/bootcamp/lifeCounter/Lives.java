@@ -36,7 +36,8 @@ public  class Lives {
         }
 
         if (lives == 0)
-            GameOver.setGameOver(true);
+            //GameOver.setGameOver(true);
+            GameOver.youLost();
     }
 
     public void gainedLife(boolean gainedLife) {

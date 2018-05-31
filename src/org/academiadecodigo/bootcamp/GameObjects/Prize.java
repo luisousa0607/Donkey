@@ -5,7 +5,7 @@ import org.academiadecodigo.bootcamp.Interface.Collidable;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 import org.academiadecodigo.simplegraphics.pictures.Picture;
 
-public class Prize extends GameObject implements Collidable {
+public class Prize extends GameObject  {
 
     private Picture prize;
     private int x = 250;
@@ -22,17 +22,6 @@ public class Prize extends GameObject implements Collidable {
         this.prize.draw();
         this.box = new CollisionBox(x,y,h,w);
 
-    }
-
-    @Override
-    public void createCollisionBox() {
-
-        this.box = new CollisionBox(x,y,h, w);
-
-    }
-    @Override
-    public CollisionBox getBox() {
-        return this.box;
     }
 
 }

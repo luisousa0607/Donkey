@@ -1,6 +1,8 @@
 package org.academiadecodigo.bootcamp.GameObjects;
 
+
 import org.academiadecodigo.simplegraphics.graphics.Color;
+import org.academiadecodigo.bootcamp.Player;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 
 public class Field {
@@ -15,20 +17,34 @@ public class Field {
     public Field() {
 
         this.canvas = new Rectangle(PADDING, PADDING, HEIGHT, WIDTH);
+
         canvas.setColor(Color.WHITE);
         canvas.draw();
         canvas.fill();
-
     }
 
     public static int getHEIGHT() {
         return HEIGHT;
     }
 
-    public static int getPadding(){return PADDING;}
+    public static int getPadding() {
+        return PADDING;
+    }
 
     public static int getWIDTH() {
         return WIDTH;
+    }
+
+    public static boolean canMove(int direction, int x) {
+
+        switch (direction) {
+            case 1:
+                return x + Player.getPlayerwidth() < WIDTH;
+
+            default:
+                return x > PADDING;
+        }
+
     }
 
 }

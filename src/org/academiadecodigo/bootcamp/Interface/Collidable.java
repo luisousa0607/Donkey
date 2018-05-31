@@ -5,10 +5,11 @@ import org.academiadecodigo.bootcamp.Collision.CollisionBox;
 public interface Collidable {
 
 
-    void createCollisionBox();
+    int getX();
 
-    CollisionBox getBox();
+    int getY();
 
+    int getWidth();
 
-
+    int getHeight();
 }
