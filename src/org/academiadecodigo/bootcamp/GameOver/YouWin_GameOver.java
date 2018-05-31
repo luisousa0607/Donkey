@@ -3,6 +3,7 @@ package org.academiadecodigo.bootcamp.GameOver;
 import org.academiadecodigo.bootcamp.GameObjects.Field;
 import org.academiadecodigo.bootcamp.GameObjects.Prize;
 import org.academiadecodigo.bootcamp.Player;
+import org.academiadecodigo.bootcamp.Sound.Bgm;
 import org.academiadecodigo.simplegraphics.graphics.Color;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 import org.academiadecodigo.simplegraphics.graphics.Text;
@@ -26,6 +27,9 @@ public class YouWin_GameOver {
                     Field.getWIDTH() / 2 - gameOverText.getWidth() / 2,
                     Field.getHEIGHT() / 2 - gameOverText.getHeight() / 2
             );
+
+         Bgm.bgm.stop();
+         Bgm.win.play(true);
 
             gameOverText.draw();
 

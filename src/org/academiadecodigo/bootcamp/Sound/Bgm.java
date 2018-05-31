@@ -44,8 +44,9 @@ public class Bgm implements Runnable{
 
     public static SoundPlayer lost = new SoundPlayer("/resources/Music/lost.wav");
 
+
     public static SoundPlayer overBarrel = new SoundPlayer("/resources/Music/overBarrel.wav");
 
-
+    public static SoundPlayer win = new SoundPlayer("/resources/Music/win.wav");
 
 }
