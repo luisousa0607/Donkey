@@ -1,9 +1,9 @@
 package org.academiadecodigo.bootcamp;
 
 
-import org.academiadecodigo.bootcamp.lifeCounter.Lives;
-import org.academiadecodigo.simplegraphics.graphics.Rectangle;
-import org.academiadecodigo.simplegraphics.pictures.Picture;
+import javazoom.jl.decoder.JavaLayerException;
+
+import java.io.FileNotFoundException;
 
 public class Test {
 
@@ -17,6 +17,10 @@ public class Test {
 
         } catch (InterruptedException e) {
             System.out.println("This is an Interrupted Exception");
+            e.printStackTrace();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (JavaLayerException e) {
             e.printStackTrace();
         }
     }

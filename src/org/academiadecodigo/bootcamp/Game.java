@@ -1,12 +1,16 @@
 package org.academiadecodigo.bootcamp;
 
 
+import javazoom.jl.decoder.JavaLayerException;
 import org.academiadecodigo.bootcamp.GameObjects.*;
 import org.academiadecodigo.bootcamp.GameOver.GameOver;
 import org.academiadecodigo.bootcamp.ScoreCounter.Score;
+import org.academiadecodigo.bootcamp.Sound.Bgm;
 import org.academiadecodigo.bootcamp.keyboard.MarioKeyboardHandler;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 import org.academiadecodigo.simplegraphics.graphics.Text;
+
+import java.io.FileNotFoundException;
 
 public class Game {
 
@@ -25,7 +29,11 @@ public class Game {
 
     MarioKeyboardHandler handler;
 
+
+
     public Game() throws InterruptedException {
+
+
 
         Field field = new Field();
         this.player = new Player(10, field.getWIDTH() - 280, 3);
@@ -38,8 +46,13 @@ public class Game {
         this.ladders = new LadderFactory(platforms).createLadders();
     }
 
-    public void start() throws InterruptedException {
-        //(new Thread(new GameTimer())).start();
+    public void start() throws InterruptedException, FileNotFoundException, JavaLayerException {
+
+
+
+
+
+
         Integer counter = 60;
         Rectangle timerGFX = new Rectangle(10, 10, 50, 15);
         timerGFX.draw();
@@ -47,9 +60,23 @@ public class Game {
         text.draw();
         long time = System.currentTimeMillis();
         Score.showScore();
+        Bgm.bgm.start();
 
 
-        while (!gameOver) {
+
+
+
+
+
+
+
+
+
+
+
+        while (!GameOver.isIsGameOver()) {
+
+
 
             if (System.currentTimeMillis() - time >= 1000) {
                 counter--;
@@ -59,6 +86,7 @@ public class Game {
 
 
                 if (counter == 0 /*|| player.getLivesCounter() == 0*/) {
+
                     gameOver = true;
                 }
             }
@@ -88,6 +116,7 @@ public class Game {
 
 
             this.moveBarrels();
+
             Thread.sleep(10);
 
         }
@@ -184,12 +213,14 @@ public class Game {
         }
     }
 
-    private void checkJumpedOver() {
+    private void checkJumpedOver() throws InterruptedException {
         if (!player.isOnLadder()) {
             for (Barrel b : this.barrels) {
                 if (b != null) {
                     if (player.getBox().checkJumpOver(b)) {
                         System.out.println("jumped over and should scored");
+                        Bgm.overBarrel.run();
+
                         player.setWillScore(true);
                         break;
 
