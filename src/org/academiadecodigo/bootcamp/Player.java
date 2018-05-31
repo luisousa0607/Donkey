@@ -194,7 +194,7 @@ public class Player implements Movable {
 
     public void setPicture(String picture){
         mario.load(picture);
-        mario.translate(0, -mario.getHeight()/2);
+        mario.translate(0, 0);
     }
 
 

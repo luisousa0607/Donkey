@@ -29,7 +29,6 @@ public class Game {
     private static final int JUMP_HEIGHT = -20;
     long timeCreation = System.currentTimeMillis();
 
-    private boolean gameOver = false;
 
     MarioKeyboardHandler handler;
 

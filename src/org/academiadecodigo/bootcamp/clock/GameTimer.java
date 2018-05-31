@@ -11,13 +11,15 @@ public class GameTimer {
     private static Timer timer;
     private Text text;
     private Integer counter = 60;
-    private static Rectangle timerGFX = new Rectangle(10,10,50,15);
+    //private static Rectangle timerGFX = new Rectangle(10,10,50,15);
 
     public GameTimer(){
-        timerGFX=new Rectangle(10,10,50,15);
-        timerGFX.setColor(Color.WHITE);
-        timerGFX.fill();
-        text = new Text((timerGFX.getWidth() / 2) + 3, (timerGFX.getHeight() / 2) + 3, counter.toString());
+        //timerGFX=new Rectangle(10,10,50,15);
+        //timerGFX.setColor(Color.WHITE);
+        //timerGFX.fill();
+        //text = new Text((timerGFX.getWidth() / 2) + 3, (timerGFX.getHeight() / 2) + 3, counter.toString());
+        text = new Text(10,10,"Time Remaining: " + counter.toString());
+        text.setColor(Color.WHITE);
         text.draw();
         showTime();
 
@@ -25,7 +27,7 @@ public class GameTimer {
 
     public void showTime(){
         counter--;
-            text.setText(counter.toString());
+            text.setText("Time Remaining: "+ counter.toString());
             text.draw();
         if (counter == 0) {
 
