@@ -28,15 +28,15 @@ public  class Lives {
             livesText.setText("Lives: "+this.lives);
             livesText.draw();
 
-        if (lives == 0)
+        if (lives == 0){
             GameOver.youLost();
+        }
     }
 
     public void gainedLife(boolean gainedLife) {
             this.lives++;
             livesText.setText("Lives: "+this.lives);
             livesText.draw();
-            gainedLife(false);
     }
 
 }

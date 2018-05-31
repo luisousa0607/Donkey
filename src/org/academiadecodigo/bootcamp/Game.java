@@ -1,7 +1,6 @@
 package org.academiadecodigo.bootcamp;
 
 
-import javazoom.jl.decoder.JavaLayerException;
 import org.academiadecodigo.bootcamp.GameObjects.*;
 import org.academiadecodigo.bootcamp.GameOver.GameOver;
 import org.academiadecodigo.bootcamp.GameOver.YouWin_GameOver;
@@ -9,9 +8,6 @@ import org.academiadecodigo.bootcamp.ScoreCounter.Score;
 import org.academiadecodigo.bootcamp.Sound.Bgm;
 import org.academiadecodigo.bootcamp.clock.GameTimer;
 import org.academiadecodigo.bootcamp.keyboard.MarioKeyboardHandler;
-import org.academiadecodigo.simplegraphics.graphics.Color;
-import org.academiadecodigo.simplegraphics.graphics.Rectangle;
-import org.academiadecodigo.simplegraphics.graphics.Text;
 
 import java.io.FileNotFoundException;
 
@@ -83,6 +79,7 @@ public class Game {
                 player.setWillScore(false);
             } else if (player.shouldScore()) {
                 Score.increaseScore(player);
+                System.out.println("increasing score");
                 player.setWillScore(false);
             }
 
@@ -112,7 +109,6 @@ public class Game {
             checkJumpedOver();
             moveBarrels();
             checkCollision();
-
             Thread.sleep(10);
         }
 
@@ -138,7 +134,9 @@ public class Game {
             if (a != null) {
                 if (this.player.getBox().collides(a.getBox())) {
                     player.setHasCollided(true);
+                    System.out.println("collided");
                     break;
+
                 }
                 if (a.getY() == Field.getHEIGHT() - 50) {
                     a.move(0, -Field.getHEIGHT());
@@ -178,6 +176,7 @@ public class Game {
                 if (b != null) {
                     if (player.getBox().checkJumpOver(b)) {
                         player.setWillScore(true);
+                        System.out.println("shouldScore");
                         break;
 
                     }

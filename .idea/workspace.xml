@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e3ffe0d1-b6d9-4ef7-8ffa-3ff5ed9b2234" name="Default" comment="">
+    <list default="true" id="bac2c80a-db07-4583-a186-df7d86ee2dc5" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Music/lost.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Music/overBarrel.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Music/win.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Sound/SoundPlayer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Donkey.iml" afterPath="$PROJECT_DIR$/Donkey.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Collision/CollisionBox.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Collision/CollisionBox.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Game.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Game.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Player.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Player.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/Ladder.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/Ladder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameOver/GameOver.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameOver/GameOver.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameOver/YouWin_GameOver.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameOver/YouWin_GameOver.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/ScoreCounter/Score.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/ScoreCounter/Score.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Sound/Bgm.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Sound/Bgm.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Test.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Test.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/clock/GameTimer.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/clock/GameTimer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/lifeCounter/Lives.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/lifeCounter/Lives.java" />
     </list>
@@ -19,8 +30,40 @@
       <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="80" column="29" lean-forward="false" selection-start-line="80" selection-start-column="29" selection-end-line="80" selection-end-column="29" />
+            <state relative-caret-position="366">
+              <caret line="97" column="29" lean-forward="false" selection-start-line="97" selection-start-column="29" selection-end-line="97" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CollisionBox.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Collision/CollisionBox.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="14" column="34" lean-forward="false" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameOver.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameOver/GameOver.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="668">
+              <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameTimer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/clock/GameTimer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="263">
+              <caret line="41" column="55" lean-forward="false" selection-start-line="41" selection-start-column="55" selection-end-line="41" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -31,125 +74,11 @@
       <file leaf-file-name="YouWin_GameOver.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameOver/YouWin_GameOver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="14" column="20" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+            <state relative-caret-position="219">
+              <caret line="18" column="12" lean-forward="false" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Prize.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/Prize.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
-              <caret line="32" column="22" lean-forward="false" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
-              <folding>
-                <element signature="e#890#891#0" expanded="true" />
-                <element signature="e#916#917#0" expanded="true" />
-                <element signature="e#950#951#0" expanded="true" />
-                <element signature="e#980#981#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Platform.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/Platform.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Field.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/Field.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="20" column="35" lean-forward="false" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GameTimer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/clock/GameTimer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Lives.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/lifeCounter/Lives.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GameOver.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameOver/GameOver.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="34" column="28" lean-forward="false" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Player.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="186" column="18" lean-forward="true" selection-start-line="186" selection-start-column="18" selection-end-line="186" selection-end-column="18" />
-              <folding>
-                <element signature="e#3399#3400#0" expanded="true" />
-                <element signature="e#3425#3426#0" expanded="true" />
-                <element signature="e#3452#3453#0" expanded="true" />
-                <element signature="e#3481#3482#0" expanded="true" />
-                <element signature="e#3526#3527#0" expanded="true" />
-                <element signature="e#3564#3565#0" expanded="true" />
-                <element signature="e#3601#3602#0" expanded="true" />
-                <element signature="e#3638#3639#0" expanded="true" />
-                <element signature="e#4810#4811#0" expanded="true" />
-                <element signature="e#4847#4848#0" expanded="true" />
-                <marker date="1527804145342" expanded="false" signature="4024:4035" ph=" { " />
-                <marker date="1527804145342" expanded="false" signature="4060:4066" ph=" }" />
-                <marker date="1527804145342" expanded="false" signature="4099:4110" ph=" { " />
-                <marker date="1527804145342" expanded="false" signature="4131:4137" ph=" }" />
-                <marker date="1527804145342" expanded="false" signature="4164:4175" ph=" { " />
-                <marker date="1527804145342" expanded="false" signature="4188:4194" ph=" }" />
-                <marker date="1527804145342" expanded="false" signature="4228:4239" ph=" { " />
-                <marker date="1527804145342" expanded="false" signature="4255:4261" ph=" }" />
-                <marker date="1527804145342" expanded="false" signature="4301:4312" ph=" { " />
-                <marker date="1527804145342" expanded="false" signature="4331:4337" ph=" }" />
-                <marker date="1527804145342" expanded="false" signature="4382:4393" ph=" { " />
-                <marker date="1527804145342" expanded="false" signature="4420:4426" ph=" }" />
-                <marker date="1527804145342" expanded="false" signature="4467:4478" ph=" { " />
-                <marker date="1527804145342" expanded="false" signature="4492:4498" ph=" }" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Score.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/ScoreCounter/Score.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -167,12 +96,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameOver/YouWin_GameOver.java" />
-        <option value="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/clock/GameTimer.java" />
-        <option value="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Player.java" />
-        <option value="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Game.java" />
-        <option value="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/lifeCounter/Lives.java" />
         <option value="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/ScoreCounter/Score.java" />
+        <option value="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/lifeCounter/Lives.java" />
+        <option value="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Game.java" />
+        <option value="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Collision/CollisionBox.java" />
+        <option value="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameOver/GameOver.java" />
+        <option value="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/clock/GameTimer.java" />
       </list>
     </option>
   </component>
@@ -209,6 +138,11 @@
             <path>
               <item name="Donkey" type="b2602c69:ProjectViewProjectNode" />
               <item name="Donkey" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Donkey" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Donkey" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -221,6 +155,27 @@
               <item name="Donkey" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="bootcamp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Donkey" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Donkey" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="bootcamp" type="462c0819:PsiDirectoryNode" />
+              <item name="clock" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Donkey" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Donkey" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="bootcamp" type="462c0819:PsiDirectoryNode" />
+              <item name="Collision" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Donkey" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Donkey" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="bootcamp" type="462c0819:PsiDirectoryNode" />
+              <item name="GameOver" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Donkey" type="b2602c69:ProjectViewProjectNode" />
@@ -370,7 +325,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2391000" />
+    <option name="totallyTimeSpent" value="929000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="332" y="24" width="1441" height="977" extended-state="0" />
@@ -584,8 +539,8 @@
         <state relative-caret-position="465">
           <caret line="34" column="28" lean-forward="false" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
           <folding>
-            <element signature="e#1228#1229#0" expanded="true" />
-            <element signature="e#1261#1262#0" expanded="true" />
+            <element signature="e#1941#1942#0" expanded="false" />
+            <element signature="e#1974#1975#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -646,14 +601,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/simplegraphics.jar!/org/academiadecodigo/simplegraphics/pictures/Picture.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="143">
@@ -700,43 +647,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Collision/CollisionBox.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="20" column="10" lean-forward="false" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
-          <folding>
-            <marker date="1527802760340" expanded="false" signature="2392:2403" ph=" { " />
-            <marker date="1527802760340" expanded="false" signature="2419:2425" ph=" }" />
-            <marker date="1527802760340" expanded="false" signature="2452:2463" ph=" { " />
-            <marker date="1527802760340" expanded="false" signature="2490:2496" ph=" }" />
-            <marker date="1527802760340" expanded="false" signature="2524:2535" ph=" { " />
-            <marker date="1527802760340" expanded="false" signature="2563:2569" ph=" }" />
-            <marker date="1527802760340" expanded="false" signature="2592:2603" ph=" { " />
-            <marker date="1527802760340" expanded="false" signature="2626:2632" ph=" }" />
-            <marker date="1527802760340" expanded="false" signature="2655:2666" ph=" { " />
-            <marker date="1527802760340" expanded="false" signature="2689:2695" ph=" }" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/Platform.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/Field.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="20" column="35" lean-forward="false" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/clock/clockTester.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -753,10 +663,69 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameOver/GameOver.java">
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/ScoreCounter/Score.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="34" column="28" lean-forward="false" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
+        <state relative-caret-position="405">
+          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="186" column="18" lean-forward="false" selection-start-line="186" selection-start-column="18" selection-end-line="186" selection-end-column="18" />
+          <folding>
+            <element signature="e#3399#3400#0" expanded="true" />
+            <element signature="e#3425#3426#0" expanded="true" />
+            <element signature="e#3452#3453#0" expanded="true" />
+            <element signature="e#3481#3482#0" expanded="true" />
+            <element signature="e#3526#3527#0" expanded="true" />
+            <element signature="e#3564#3565#0" expanded="true" />
+            <element signature="e#3601#3602#0" expanded="true" />
+            <element signature="e#3638#3639#0" expanded="true" />
+            <element signature="e#4810#4811#0" expanded="true" />
+            <element signature="e#4847#4848#0" expanded="true" />
+            <marker date="1527805211327" expanded="false" signature="4024:4035" ph=" { " />
+            <marker date="1527805211327" expanded="false" signature="4060:4066" ph=" }" />
+            <marker date="1527805211327" expanded="false" signature="4099:4110" ph=" { " />
+            <marker date="1527805211327" expanded="false" signature="4131:4137" ph=" }" />
+            <marker date="1527805211327" expanded="false" signature="4164:4175" ph=" { " />
+            <marker date="1527805211327" expanded="false" signature="4188:4194" ph=" }" />
+            <marker date="1527805211327" expanded="false" signature="4228:4239" ph=" { " />
+            <marker date="1527805211327" expanded="false" signature="4255:4261" ph=" }" />
+            <marker date="1527805211327" expanded="false" signature="4301:4312" ph=" { " />
+            <marker date="1527805211327" expanded="false" signature="4331:4337" ph=" }" />
+            <marker date="1527805211327" expanded="false" signature="4382:4393" ph=" { " />
+            <marker date="1527805211327" expanded="false" signature="4420:4426" ph=" }" />
+            <marker date="1527805211327" expanded="false" signature="4467:4478" ph=" { " />
+            <marker date="1527805211327" expanded="false" signature="4492:4498" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/lifeCounter/Lives.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="411">
+          <caret line="32" column="8" lean-forward="false" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/Field.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="20" column="35" lean-forward="false" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/Platform.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -774,10 +743,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="97" column="29" lean-forward="false" selection-start-line="97" selection-start-column="29" selection-end-line="97" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Collision/CollisionBox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="14" column="34" lean-forward="false" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameOver/YouWin_GameOver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="14" column="20" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+        <state relative-caret-position="219">
+          <caret line="18" column="12" lean-forward="false" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -786,69 +781,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/clock/GameTimer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+        <state relative-caret-position="263">
+          <caret line="41" column="55" lean-forward="false" selection-start-line="41" selection-start-column="55" selection-end-line="41" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Game.java">
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameOver/GameOver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="80" column="29" lean-forward="false" selection-start-line="80" selection-start-column="29" selection-end-line="80" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="186" column="18" lean-forward="true" selection-start-line="186" selection-start-column="18" selection-end-line="186" selection-end-column="18" />
-          <folding>
-            <element signature="e#3399#3400#0" expanded="true" />
-            <element signature="e#3425#3426#0" expanded="true" />
-            <element signature="e#3452#3453#0" expanded="true" />
-            <element signature="e#3481#3482#0" expanded="true" />
-            <element signature="e#3526#3527#0" expanded="true" />
-            <element signature="e#3564#3565#0" expanded="true" />
-            <element signature="e#3601#3602#0" expanded="true" />
-            <element signature="e#3638#3639#0" expanded="true" />
-            <element signature="e#4810#4811#0" expanded="true" />
-            <element signature="e#4847#4848#0" expanded="true" />
-            <marker date="1527804145342" expanded="false" signature="4024:4035" ph=" { " />
-            <marker date="1527804145342" expanded="false" signature="4060:4066" ph=" }" />
-            <marker date="1527804145342" expanded="false" signature="4099:4110" ph=" { " />
-            <marker date="1527804145342" expanded="false" signature="4131:4137" ph=" }" />
-            <marker date="1527804145342" expanded="false" signature="4164:4175" ph=" { " />
-            <marker date="1527804145342" expanded="false" signature="4188:4194" ph=" }" />
-            <marker date="1527804145342" expanded="false" signature="4228:4239" ph=" { " />
-            <marker date="1527804145342" expanded="false" signature="4255:4261" ph=" }" />
-            <marker date="1527804145342" expanded="false" signature="4301:4312" ph=" { " />
-            <marker date="1527804145342" expanded="false" signature="4331:4337" ph=" }" />
-            <marker date="1527804145342" expanded="false" signature="4382:4393" ph=" { " />
-            <marker date="1527804145342" expanded="false" signature="4420:4426" ph=" }" />
-            <marker date="1527804145342" expanded="false" signature="4467:4478" ph=" { " />
-            <marker date="1527804145342" expanded="false" signature="4492:4498" ph=" }" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/lifeCounter/Lives.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/ScoreCounter/Score.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state relative-caret-position="668">
+          <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
           <folding />
         </state>
       </provider>
