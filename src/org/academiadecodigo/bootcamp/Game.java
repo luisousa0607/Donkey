@@ -48,11 +48,6 @@ public class Game {
 
     public void start() throws InterruptedException, FileNotFoundException, JavaLayerException {
 
-
-
-
-
-
         Integer counter = 60;
         Rectangle timerGFX = new Rectangle(10, 10, 50, 15);
         timerGFX.draw();
@@ -62,21 +57,7 @@ public class Game {
         Score.showScore();
         Bgm.bgm.start();
 
-
-
-
-
-
-
-
-
-
-
-
-
         while (!GameOver.isIsGameOver()) {
-
-
 
             if (System.currentTimeMillis() - time >= 1000) {
                 counter--;
@@ -130,7 +111,6 @@ public class Game {
         for (int i = 0; i < 40; i++) {
             checkCollision();
             player.jumpUp();
-            checkJumpedOver();
             moveBarrels();
             Thread.sleep(10);
         }
@@ -139,6 +119,7 @@ public class Game {
     private void playerFall() throws InterruptedException {
         while (!player.abovePlatform(platforms)) {
             player.fall();
+            checkJumpedOver();
             moveBarrels();
             checkCollision();
             Thread.sleep(10);
