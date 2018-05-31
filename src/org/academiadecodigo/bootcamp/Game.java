@@ -28,9 +28,9 @@ public class Game {
     public Game() throws InterruptedException {
 
         Field field = new Field();
-        this.player = new Player(10, field.getWIDTH() - 280, 3);
+        this.player = new Player(Field.getPadding(), Field.getHEIGHT() - Player.getPlayerwidth(), 3);
         this.handler = new MarioKeyboardHandler(this.player);
-        this.vilain = new Vilain(40,40);
+        this.vilain = new Vilain(40, 40);
         this.barrels = new Barrel[MAX_BARRELS];
 
 
@@ -58,16 +58,14 @@ public class Game {
                 time = System.currentTimeMillis();
 
 
-                if (counter == 0 /*|| player.getLivesCounter() == 0*/) {
+                if (counter == 0) {
                     gameOver = true;
                 }
             }
 
             createBarrels();
 
-            //checkCollision();
-
-            if (!player.abovePlatform(platforms)) {
+            if (!player.abovePlatform(platforms) && !player.isOnLadder()) {
                 playerFall();
             }
 
@@ -77,22 +75,21 @@ public class Game {
 
             if (player.hasCollided()) {
                 player.lostLives();
-                for(int i = 0; i < 20; i++){
+                for (int i = 0; i < 20; i++) {
                     this.moveBarrels();
                     Thread.sleep(10);
                 }
-                System.out.println("lost 1 live");
                 player.setHasCollided(false);
                 player.setWillScore(false);
             } else if (player.shouldScore()) {
                 Score.increaseScore(player);
-                System.out.println("increasing score");
                 player.setWillScore(false);
             }
 
 
             this.moveBarrels();
             checkCollision();
+            System.out.println(this.player.isOnLadder());
             Thread.sleep(10);
 
         }
@@ -151,11 +148,12 @@ public class Game {
             }
         }
 
-
         for (Ladder l : ladders) {
-            if (!this.player.getBox().collides(l.getBox())) {
-                this.player.setOnLadder(false);
-            } else this.player.setOnLadder(true);
+            if (this.player.getBox().collides(l.getBox())) {
+                this.player.setOnLadder(true);
+            }// else {
+               // this.player.setOnLadder(false);
+           // }
         }
     }
 

@@ -42,6 +42,14 @@ public class MarioKeyboardHandler implements org.academiadecodigo.simplegraphics
             case KeyboardEvent.KEY_UP: {
                 if (this.player.isOnLadder()) {
                     this.player.move(0, -1);
+
+                }
+                break;
+            }
+
+            case KeyboardEvent.KEY_DOWN:{
+                if(this.player.isOnLadder()){
+                    this.player.move(0,1);
                 }
                 break;
             }
@@ -88,6 +96,11 @@ public class MarioKeyboardHandler implements org.academiadecodigo.simplegraphics
         climb.setKeyboardEventType(KeyboardEventType.KEY_PRESSED);
         climb.setKey(KeyboardEvent.KEY_UP);
         keyboard.addEventListener(climb);
+
+        KeyboardEvent down = new KeyboardEvent();
+        down.setKeyboardEventType(KeyboardEventType.KEY_PRESSED);
+        down.setKey(KeyboardEvent.KEY_DOWN);
+        keyboard.addEventListener(down);
 
     }
 

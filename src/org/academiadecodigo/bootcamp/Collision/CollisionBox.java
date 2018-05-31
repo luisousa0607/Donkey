@@ -7,7 +7,7 @@ import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 import java.awt.*;
 
 
-public class CollisionBox {
+public class CollisionBox implements Collidable {
 
     private Rectangle box;
     private Point[] bottom;
@@ -35,7 +35,7 @@ public class CollisionBox {
     }
 
 
-    public boolean collides(CollisionBox otherBox) {
+    public boolean collides(Collidable otherBox) {
 
         if (this.getX() > otherBox.getX() && this.getX() < otherBox.getX() + otherBox.getWidth()
                 && this.getY() > otherBox.getY() && this.getY() < otherBox.getY() + otherBox.getHeight()) {
