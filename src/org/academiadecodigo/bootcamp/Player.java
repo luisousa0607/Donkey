@@ -49,8 +49,8 @@ public class Player implements Movable {
     public void move(int x, int y) {
 
         if (this.isOnLadder()) {
-            this.mario.translate(x, y);
-            this.box.setBox(x, y);
+            this.mario.translate(x, y * SPEED);
+            this.box.setBox(x, y * SPEED);
             return;
         }
 
@@ -82,6 +82,8 @@ public class Player implements Movable {
                 this.box.setBox(x, 0);
             }
         }
+
+        this.setOnLadder(false);
     }
 
 

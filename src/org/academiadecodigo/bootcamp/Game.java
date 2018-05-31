@@ -1,12 +1,16 @@
 package org.academiadecodigo.bootcamp;
 
 
+import javazoom.jl.decoder.JavaLayerException;
 import org.academiadecodigo.bootcamp.GameObjects.*;
 import org.academiadecodigo.bootcamp.GameOver.GameOver;
 import org.academiadecodigo.bootcamp.ScoreCounter.Score;
+import org.academiadecodigo.bootcamp.Sound.Bgm;
 import org.academiadecodigo.bootcamp.keyboard.MarioKeyboardHandler;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 import org.academiadecodigo.simplegraphics.graphics.Text;
+
+import java.io.FileNotFoundException;
 
 public class Game {
 
@@ -25,7 +29,9 @@ public class Game {
 
     MarioKeyboardHandler handler;
 
+
     public Game() throws InterruptedException {
+
 
         Field field = new Field();
         this.player = new Player(Field.getPadding(), Field.getHEIGHT() - Player.getPlayerwidth(), 3);
@@ -38,8 +44,9 @@ public class Game {
         this.ladders = new LadderFactory(platforms).createLadders();
     }
 
-    public void start() throws InterruptedException {
-        //(new Thread(new GameTimer())).start();
+    public void start() throws InterruptedException, FileNotFoundException {
+
+
         Integer counter = 60;
         Rectangle timerGFX = new Rectangle(10, 10, 50, 15);
         timerGFX.draw();
@@ -47,9 +54,11 @@ public class Game {
         text.draw();
         long time = System.currentTimeMillis();
         Score.showScore();
+        Bgm.bgm.start();
 
 
-        while (!gameOver) {
+        while (!GameOver.isIsGameOver()) {
+
 
             if (System.currentTimeMillis() - time >= 1000) {
                 counter--;
@@ -59,6 +68,7 @@ public class Game {
 
 
                 if (counter == 0) {
+
                     gameOver = true;
                 }
             }
@@ -66,6 +76,7 @@ public class Game {
             createBarrels();
 
             if (!player.abovePlatform(platforms) && !player.isOnLadder()) {
+
                 playerFall();
             }
 
@@ -74,11 +85,12 @@ public class Game {
             }
 
             if (player.hasCollided()) {
-                player.lostLives();
                 for (int i = 0; i < 20; i++) {
                     this.moveBarrels();
                     Thread.sleep(10);
                 }
+                player.lostLives();
+                System.out.println("lost 1 live");
                 player.setHasCollided(false);
                 player.setWillScore(false);
             } else if (player.shouldScore()) {
@@ -109,7 +121,6 @@ public class Game {
     private void playerFall() throws InterruptedException {
         while (!player.abovePlatform(platforms)) {
             player.fall();
-            checkJumpedOver();
             moveBarrels();
             checkCollision();
             Thread.sleep(10);
@@ -138,6 +149,7 @@ public class Game {
                 if (this.player.getBox().collides(a.getBox())) {
                     this.player.setColorRed();
                     player.setHasCollided(true);
+                    System.out.println("collided");
                     break;
 
                 }
@@ -151,9 +163,7 @@ public class Game {
         for (Ladder l : ladders) {
             if (this.player.getBox().collides(l.getBox())) {
                 this.player.setOnLadder(true);
-            }// else {
-               // this.player.setOnLadder(false);
-           // }
+            }
         }
     }
 
@@ -171,7 +181,7 @@ public class Game {
         }
     }
 
-    private void checkJumpedOver() {
+    private void checkJumpedOver() throws InterruptedException {
         if (!player.isOnLadder()) {
             for (Barrel b : this.barrels) {
                 if (b != null) {

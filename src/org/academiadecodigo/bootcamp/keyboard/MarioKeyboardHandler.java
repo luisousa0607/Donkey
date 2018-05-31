@@ -11,7 +11,7 @@ public class MarioKeyboardHandler implements org.academiadecodigo.simplegraphics
     private Player player;
     private Keyboard keyboard;
 
-    public MarioKeyboardHandler(Player player){
+    public MarioKeyboardHandler(Player player) {
         this.player = player;
         this.setKeyboard();
     }
@@ -21,21 +21,24 @@ public class MarioKeyboardHandler implements org.academiadecodigo.simplegraphics
         switch (event.getKey()) {
 
             case KeyboardEvent.KEY_RIGHT: {
-                if (!this.player.isOnLadder() && !this.player.getIsJumping()) {
+                if (!this.player.getIsJumping()) {
+                    this.player.setOnLadder(false);
                     this.player.move(this.player.getSpeed(), 0);
                     this.player.setDirection(1);
                 }
                 break;
             }
             case KeyboardEvent.KEY_LEFT: {
-                if (!this.player.isOnLadder() && !this.player.getIsJumping()) {
+                if (!this.player.getIsJumping()) {
+                    this.player.setOnLadder(false);
                     this.player.move(-this.player.getSpeed(), 0);
                     this.player.setDirection(-1);
                 }
                 break;
             }
             case KeyboardEvent.KEY_SPACE: {
-                this.player.setJumping(true);
+                if (!this.player.isOnLadder())
+                    this.player.setJumping(true);
                 break;
             }
 
@@ -47,9 +50,9 @@ public class MarioKeyboardHandler implements org.academiadecodigo.simplegraphics
                 break;
             }
 
-            case KeyboardEvent.KEY_DOWN:{
-                if(this.player.isOnLadder()){
-                    this.player.move(0,1);
+            case KeyboardEvent.KEY_DOWN: {
+                if (this.player.isOnLadder()) {
+                    this.player.move(0, 1);
                 }
                 break;
             }
