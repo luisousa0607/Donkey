@@ -51,6 +51,7 @@ public class Player implements Movable {
         if (this.isOnLadder() && !this.isJumping) {
             this.mario.translate(x, y * SPEED);
             this.box.setBox(x, y * SPEED);
+            System.out.println(1);
             return;
         }
 
@@ -59,10 +60,12 @@ public class Player implements Movable {
             if (!Field.canMove(direction, this.getBox().getX() + x)) {
                 this.mario.translate(0, y);
                 this.box.setBox(0, y);
+                System.out.println(2);
                 return;
             } else {
                 this.mario.translate(x, y);
                 this.box.setBox(x, y);
+                System.out.println(3);
                 return;
             }
         }
@@ -70,16 +73,19 @@ public class Player implements Movable {
         if (Field.canMove(direction, this.getBox().getX() + x)) {
 
             if (m > 0) {
-                this.mario.translate(x, -1 * direction);
-                this.box.setBox(x, -1 * direction);
+                this.mario.translate(x, -y * direction);
+                this.box.setBox(x, -y * direction);
+                System.out.println(4);
                 return;
             } else if (m < 0) {
-                this.mario.translate(x, 1 * direction);
-                this.box.setBox(x, 1 * direction);
+                this.mario.translate(x, y * direction);
+                this.box.setBox(x, y * direction);
+                System.out.println(5);
                 return;
             } else {
-                this.mario.translate(x, 0);
-                this.box.setBox(x, 0);
+                this.mario.translate(x, y);
+                this.box.setBox(x, y);
+                System.out.println(6);
             }
         }
 
@@ -89,18 +95,27 @@ public class Player implements Movable {
 
     public void jumpUp() throws InterruptedException {
 
+
         this.move(direction, -1);
+
 
     }
 
     public void fall() {
 
+        if(isJumping)
         this.move(direction, 1);
 
+        else
+            this.move(0,1);
     }
 
     public void setM(double m) {
         this.m = m;
+    }
+
+    public double getM(){
+        return this.m;
     }
 
     public void setJumping(boolean value) {
@@ -117,18 +132,13 @@ public class Player implements Movable {
             PlatformCollisionBox platform = p.getBox();
             if (this.box.abovePlatform(platform.getTop())) {
                 this.setM((-p.getM()));
-                //System.out.println(-p.getM());
                 return true;
             }
         }
         return false;
     }
 
-    public void setColorRed() {
 
-       //this.mario.
-        //this.mario.fill();
-    }
 
     public void setOnLadder(boolean onLadder) {
         this.onLadder = onLadder;
@@ -151,6 +161,12 @@ public class Player implements Movable {
     }
 
     public void setDirection(int direction) {
+
+        if(direction > 0){
+            this.mario.load("resources/Mario/Mario2.png");
+        }else
+            this.mario.load("resources/Mario/Mario1.png");
+
         this.direction = direction;
     }
 
@@ -178,8 +194,16 @@ public class Player implements Movable {
 
     }
 
+    public int getDirection(){
+        return this.direction;
+    }
+
     public void gainedLives() {
         life.gainedLife(true);
+    }
+
+    public void setPicture(String picture){
+        mario.load(picture);
     }
 
 

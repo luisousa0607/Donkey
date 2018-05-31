@@ -12,13 +12,13 @@ public class CollisionBox implements Collidable {
     private Rectangle box;
     private Point[] bottom;
     private int minBufferScore = 0;
-    private int maxBufferScore = 10;
+    private int maxBufferScore = 25;
 
 
     public CollisionBox(int x, int y, int width, int height) {
 
         this.box = new Rectangle(x, y, width, height);
-        this.box.draw();
+        //this.box.draw();
 
         this.bottom = new Point[2];
         bottom[0] = new Point(x, y + height);

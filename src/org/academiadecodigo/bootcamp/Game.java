@@ -1,16 +1,13 @@
 package org.academiadecodigo.bootcamp;
 
 
-import javazoom.jl.decoder.JavaLayerException;
 import org.academiadecodigo.bootcamp.GameObjects.*;
 import org.academiadecodigo.bootcamp.GameOver.GameOver;
 import org.academiadecodigo.bootcamp.GameOver.YouWin_GameOver;
 import org.academiadecodigo.bootcamp.ScoreCounter.Score;
 import org.academiadecodigo.bootcamp.Sound.Bgm;
+import org.academiadecodigo.bootcamp.clock.GameTimer;
 import org.academiadecodigo.bootcamp.keyboard.MarioKeyboardHandler;
-import org.academiadecodigo.simplegraphics.graphics.Color;
-import org.academiadecodigo.simplegraphics.graphics.Rectangle;
-import org.academiadecodigo.simplegraphics.graphics.Text;
 
 import java.io.FileNotFoundException;
 
@@ -28,7 +25,6 @@ public class Game {
     private static final int JUMP_HEIGHT = -20;
     long timeCreation = System.currentTimeMillis();
 
-    private boolean gameOver = false;
 
     MarioKeyboardHandler handler;
 
@@ -37,11 +33,11 @@ public class Game {
 
 
         Field field = new Field();
-        this.player = new Player(Field.getPadding(), Field.getHEIGHT() - Player.getPlayerwidth()-20, 3);
+        this.player = new Player(Field.getWIDTH()/2, Field.getHEIGHT() - Player.getPlayerwidth()-20, 3);
         this.handler = new MarioKeyboardHandler(this.player);
-        this.vilain = new Vilain(40, 40);
+        this.vilain = new Vilain();
         this.barrels = new Barrel[MAX_BARRELS];
-        this.prize = new Prize(250,40);
+        this.prize = new Prize();
 
 
         this.platforms = new PlatformFactory().createPlatform();
@@ -50,11 +46,7 @@ public class Game {
 
     public void start() throws InterruptedException, FileNotFoundException {
 
-        Integer counter = 60;
-        Rectangle timerGFX = new Rectangle(10, 10, 50, 15);
-        timerGFX.draw();
-        Text text = new Text((timerGFX.getWidth() / 2) + 3, (timerGFX.getHeight() / 2) + 3, counter.toString());
-        text.draw();
+        GameTimer timer = new GameTimer();
         long time = System.currentTimeMillis();
         Score.showScore();
         Bgm.bgm.start();
@@ -62,16 +54,8 @@ public class Game {
         while (!GameOver.isItGameOver()) {
 
             if (System.currentTimeMillis() - time >= 1000) {
-                counter--;
-                text.setText(counter.toString());
-                text.draw();
+                timer.showTime();
                 time = System.currentTimeMillis();
-
-
-                if (counter == 0) {
-
-                    gameOver = true;
-                }
             }
 
             createBarrels();
@@ -82,6 +66,14 @@ public class Game {
             }
 
             if (player.getIsJumping()) {
+
+                if(this.player.getDirection() > 0){
+                    this.player.setPicture("resources/Mario/Mario4.png");
+                }else{
+                    this.player.setPicture("resources/Mario/Mario3.png");
+                }
+
+
                 this.playerJump();
             }
 
@@ -95,6 +87,7 @@ public class Game {
                 player.setWillScore(false);
             } else if (player.shouldScore()) {
                 Score.increaseScore(player);
+                System.out.println("increasing score");
                 player.setWillScore(false);
             }
 
@@ -103,7 +96,6 @@ public class Game {
             checkCollision();
             this.player.setOnLadder(false);
             checkLadders();
-            System.out.println(this.player.isOnLadder());
             Thread.sleep(10);
 
         }
@@ -125,11 +117,17 @@ public class Game {
             checkJumpedOver();
             moveBarrels();
             checkCollision();
-
             Thread.sleep(10);
         }
 
         this.player.setJumping(false);
+
+        if(this.player.getDirection() > 0){
+            this.player.setPicture("resources/Mario/Mario2.png");
+        }
+        else this.player.setPicture("resources/Mario/Mario1.png");
+
+
     }
 
     private void createBarrels() throws InterruptedException {
@@ -150,14 +148,18 @@ public class Game {
         for (Barrel a : barrels) {
             if (a != null) {
                 if (this.player.getBox().collides(a.getBox())) {
-                    this.player.setColorRed();
                     player.setHasCollided(true);
+                    System.out.println("collided");
                     break;
+
                 }
                 if (a.getY() == Field.getHEIGHT() - 50) {
                     a.move(0, -Field.getHEIGHT());
                 }
             }
+        }
+        if(this.player.getBox().collides(Prize.getBox())){
+            YouWin_GameOver.youWin(this.player);
         }
     }
 
@@ -189,6 +191,7 @@ public class Game {
                 if (b != null) {
                     if (player.getBox().checkJumpOver(b)) {
                         player.setWillScore(true);
+                        System.out.println("shouldScore");
                         break;
 
                     }

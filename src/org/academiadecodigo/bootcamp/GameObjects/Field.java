@@ -18,7 +18,7 @@ public class Field {
 
         this.canvas = new Rectangle(PADDING, PADDING, HEIGHT, WIDTH);
 
-        canvas.setColor(Color.WHITE);
+        canvas.setColor(Color.BLACK);
         canvas.draw();
         canvas.fill();
     }

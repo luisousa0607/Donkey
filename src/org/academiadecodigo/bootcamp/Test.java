@@ -2,6 +2,7 @@ package org.academiadecodigo.bootcamp;
 
 
 import javazoom.jl.decoder.JavaLayerException;
+import org.academiadecodigo.bootcamp.Sound.SoundPlayer;
 
 import java.io.FileNotFoundException;
 
@@ -22,7 +23,7 @@ public class Test {
             e.printStackTrace();
         }
 
-        }
+    }
     }
 
 

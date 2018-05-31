@@ -4,7 +4,7 @@ import org.academiadecodigo.bootcamp.Player;
 
 public class PlatformFactory {
 
-    private static final int MAX_PLATFORMS = 8;
+    private static final int MAX_PLATFORMS = 10;
     private int playerWidth = Player.getPlayerwidth();
     private int jumpHeight = Player.getPlayerwidth() -10;
     private static int platformHeightDifference;
@@ -13,7 +13,7 @@ public class PlatformFactory {
     public Platform[] createPlatform() {
 
 
-        this.platformHeightDifference = (Field.getHEIGHT()-playerHeight - Field.getPadding() - MAX_PLATFORMS*(jumpHeight))/
+        this.platformHeightDifference = (Field.getHEIGHT()-Vilain.getHeight() - Field.getPadding() - MAX_PLATFORMS*(jumpHeight))/
                 (MAX_PLATFORMS-1);
 
         Platform[] platforms = new Platform[MAX_PLATFORMS];
@@ -24,8 +24,16 @@ public class PlatformFactory {
                 Field.getWIDTH() ,
                 Field.getHEIGHT()
         );
+        platforms [1]=new Platform(
+                Field.getPadding() + playerWidth + 10,
+                Field.getHEIGHT()-jumpHeight*2,
+                Field.getWIDTH(),
+                Field.getHEIGHT() - (2) * (platformHeightDifference + jumpHeight));
+        // platforms[i].setM(1);
+        platforms[1].setDirection(-1);
 
-        for (int i = 1; i < platforms.length-1 ; i++) {
+
+        for (int i = 2; i < platforms.length-1 ; i++) {
 
             if (i % 2 == 0) {
                platforms[i] = new Platform(
@@ -33,7 +41,7 @@ public class PlatformFactory {
                        Field.getHEIGHT()-(i+1)*(platformHeightDifference + jumpHeight),
 
 
-                        Field.getWIDTH() - playerWidth,
+                        Field.getWIDTH() - playerWidth -10,
                        Field.getHEIGHT()-jumpHeight*(i+1)-platformHeightDifference*i);
                //platforms[i].setM(-1);
                platforms[i].setDirection(1);
@@ -41,7 +49,7 @@ public class PlatformFactory {
             }else {
 
                 platforms[i] = new Platform(
-                        Field.getPadding() + playerWidth,
+                        Field.getPadding() + playerWidth + 10,
                         Field.getHEIGHT()-jumpHeight*(i+1)-platformHeightDifference*i,
                         Field.getWIDTH(),
                         Field.getHEIGHT() - (i + 1) * (platformHeightDifference + jumpHeight));
