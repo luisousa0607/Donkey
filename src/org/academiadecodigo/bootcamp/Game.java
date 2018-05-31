@@ -33,7 +33,7 @@ public class Game {
 
 
         Field field = new Field();
-        this.player = new Player(Field.getPadding(), Field.getHEIGHT() - Player.getPlayerwidth()-20, 3);
+        this.player = new Player(Field.getWIDTH()/2, Field.getHEIGHT() - Player.getPlayerwidth()-20, 3);
         this.handler = new MarioKeyboardHandler(this.player);
         this.vilain = new Vilain();
         this.barrels = new Barrel[MAX_BARRELS];
