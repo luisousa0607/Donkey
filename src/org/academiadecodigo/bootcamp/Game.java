@@ -4,6 +4,7 @@ package org.academiadecodigo.bootcamp;
 import javazoom.jl.decoder.JavaLayerException;
 import org.academiadecodigo.bootcamp.GameObjects.*;
 import org.academiadecodigo.bootcamp.GameOver.GameOver;
+import org.academiadecodigo.bootcamp.GameOver.YouWin_GameOver;
 import org.academiadecodigo.bootcamp.ScoreCounter.Score;
 import org.academiadecodigo.bootcamp.Sound.Bgm;
 import org.academiadecodigo.bootcamp.keyboard.MarioKeyboardHandler;
@@ -57,7 +58,7 @@ public class Game {
         Score.showScore();
         Bgm.bgm.start();
 
-        while (!GameOver.isIsGameOver()) {
+        while (!GameOver.isItGameOver()) {
 
             if (System.currentTimeMillis() - time >= 1000) {
                 counter--;
@@ -84,7 +85,7 @@ public class Game {
             }
 
             if (player.hasCollided()) {
-                for(int i = 0; i < 20; i++){
+                for(int i = 0; i < 25; i++){
                     this.moveBarrels();
                     Thread.sleep(10);
                 }
@@ -96,6 +97,7 @@ public class Game {
                 Score.increaseScore(player);
                 System.out.println("increasing score");
                 player.setWillScore(false);
+                YouWin_GameOver.youWin(true);
             }
 
 
