@@ -45,7 +45,7 @@ public class Game {
         this.ladders = new LadderFactory(platforms).createLadders();
     }
 
-    public void start() throws InterruptedException, FileNotFoundException, JavaLayerException {
+    public void start() throws InterruptedException, FileNotFoundException {
 
         Integer counter = 60;
         Rectangle timerGFX = new Rectangle(10, 10, 50, 15);
@@ -93,7 +93,6 @@ public class Game {
             } else if (player.shouldScore()) {
                 Score.increaseScore(player);
                 player.setWillScore(false);
-                YouWin_GameOver.youWin(true);
             }
 
 
