@@ -1,7 +1,6 @@
 package org.academiadecodigo.bootcamp;
 
 
-import javazoom.jl.decoder.JavaLayerException;
 import org.academiadecodigo.bootcamp.GameObjects.*;
 import org.academiadecodigo.bootcamp.GameOver.GameOver;
 import org.academiadecodigo.bootcamp.GameOver.YouWin_GameOver;
@@ -9,9 +8,6 @@ import org.academiadecodigo.bootcamp.ScoreCounter.Score;
 import org.academiadecodigo.bootcamp.Sound.Bgm;
 import org.academiadecodigo.bootcamp.clock.GameTimer;
 import org.academiadecodigo.bootcamp.keyboard.MarioKeyboardHandler;
-import org.academiadecodigo.simplegraphics.graphics.Color;
-import org.academiadecodigo.simplegraphics.graphics.Rectangle;
-import org.academiadecodigo.simplegraphics.graphics.Text;
 
 import java.io.FileNotFoundException;
 
@@ -29,7 +25,6 @@ public class Game {
     private static final int JUMP_HEIGHT = -20;
     long timeCreation = System.currentTimeMillis();
 
-    private boolean gameOver = false;
 
     MarioKeyboardHandler handler;
 

@@ -10,12 +10,11 @@ import org.academiadecodigo.simplegraphics.graphics.Text;
 
 public class Score {
     private static int score = 0;
-    private static Rectangle scoreGFX = new Rectangle(150,10,150,15);
-    private static Text scoreText = new Text(scoreGFX.getX()+5,10,"Score: "+ score);
+    private static Text scoreText = new Text(240,10,"Score: "+ score);
 
 
     public static void showScore(){
-        scoreGFX.draw();
+
         scoreText.setColor(Color.WHITE);
         scoreText.draw();
     }
@@ -24,10 +23,6 @@ public class Score {
 
         score += 100;
         Bgm.overBarrel.play(true);
-        if (score % 1500==0) {
-            //player.gainedLife(true);
-        }
-        System.out.println("score changed to =" + score);
         scoreText.setText("Score: "+ score);
         showScore();
 
@@ -35,22 +30,5 @@ public class Score {
             player.gainedLives();
 
     }
-
-    public void setScore(int score) {
-        this.score = score;
-    }
-
-    /*public void checkJumpedOverObject(PlayerTestScore player){
-        if(!player.isOnLadder()){
-
-        }
-
-    }*/
-
-
-
-
-
-
 
 }
