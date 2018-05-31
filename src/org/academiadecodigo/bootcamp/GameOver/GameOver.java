@@ -9,29 +9,34 @@ public class GameOver {
 
     private static boolean isGameOver = false;
 
-
-    /*public static boolean isGameOver() {
-        return isGameOver;
-    }*/
-
     public static void setGameOver(boolean gameOver) {
         isGameOver = gameOver;
 
-        if(isGameOver){
+        /*if(isGameOver){
 
             Rectangle gameOverGFX = new Rectangle(0, 0, 500,500);
             gameOverGFX.setColor(Color.WHITE);
             gameOverGFX.fill();
-            //gameOverGFX.draw();
             Text gameOverText = new Text(255,255,"This Game is over you butter fingers");
             gameOverText.draw();
             Bgm.bgm.stop();
             Bgm.lost.play(true);
 
-        }
+        }*/
     }
 
-    public static boolean isIsGameOver() {
+    public static void youLost () {
+        Rectangle gameOverGFX = new Rectangle(0, 0, 500, 500);
+        gameOverGFX.setColor(Color.WHITE);
+        gameOverGFX.fill();
+        Text gameOverText = new Text(255, 255, "This Game is over you butter fingers");
+        gameOverText.draw();
+        Bgm.bgm.stop();
+        Bgm.youLost.start();
+        isGameOver = true;
+    }
+
+   public static boolean isItGameOver() {
         return isGameOver;
     }
 }

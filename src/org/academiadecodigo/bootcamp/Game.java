@@ -4,6 +4,7 @@ package org.academiadecodigo.bootcamp;
 import javazoom.jl.decoder.JavaLayerException;
 import org.academiadecodigo.bootcamp.GameObjects.*;
 import org.academiadecodigo.bootcamp.GameOver.GameOver;
+import org.academiadecodigo.bootcamp.GameOver.YouWin_GameOver;
 import org.academiadecodigo.bootcamp.ScoreCounter.Score;
 import org.academiadecodigo.bootcamp.Sound.Bgm;
 import org.academiadecodigo.bootcamp.keyboard.MarioKeyboardHandler;
@@ -30,15 +31,13 @@ public class Game {
     MarioKeyboardHandler handler;
 
 
-
     public Game() throws InterruptedException {
 
 
-
         Field field = new Field();
-        this.player = new Player(10, field.getWIDTH() - 280, 3);
+        this.player = new Player(Field.getPadding(), Field.getHEIGHT() - Player.getPlayerwidth(), 3);
         this.handler = new MarioKeyboardHandler(this.player);
-        this.vilain = new Vilain(40,40);
+        this.vilain = new Vilain(40, 40);
         this.barrels = new Barrel[MAX_BARRELS];
 
 
@@ -46,7 +45,7 @@ public class Game {
         this.ladders = new LadderFactory(platforms).createLadders();
     }
 
-    public void start() throws InterruptedException, FileNotFoundException, JavaLayerException {
+    public void start() throws InterruptedException, FileNotFoundException {
 
         Integer counter = 60;
         Rectangle timerGFX = new Rectangle(10, 10, 50, 15);
@@ -57,7 +56,7 @@ public class Game {
         Score.showScore();
         Bgm.bgm.start();
 
-        while (!GameOver.isIsGameOver()) {
+        while (!GameOver.isItGameOver()) {
 
             if (System.currentTimeMillis() - time >= 1000) {
                 counter--;
@@ -66,7 +65,7 @@ public class Game {
                 time = System.currentTimeMillis();
 
 
-                if (counter == 0 /*|| player.getLivesCounter() == 0*/) {
+                if (counter == 0) {
 
                     gameOver = true;
                 }
@@ -74,8 +73,8 @@ public class Game {
 
             createBarrels();
 
+            if (!player.abovePlatform(platforms) &&  !player.isOnLadder()) {
 
-            if (!player.abovePlatform(platforms)) {
                 playerFall();
             }
 
@@ -84,12 +83,11 @@ public class Game {
             }
 
             if (player.hasCollided()) {
-                for(int i = 0; i < 20; i++){
+                for(int i = 0; i < 25; i++){
                     this.moveBarrels();
                     Thread.sleep(10);
                 }
                 player.lostLives();
-                System.out.println("lost 1 live");
                 player.setHasCollided(false);
                 player.setWillScore(false);
             } else if (player.shouldScore()) {
@@ -101,6 +99,9 @@ public class Game {
 
             this.moveBarrels();
             checkCollision();
+            this.player.setOnLadder(false);
+            checkLadders();
+            System.out.println(this.player.isOnLadder());
             Thread.sleep(10);
 
         }
@@ -152,18 +153,10 @@ public class Game {
                     break;
 
                 }
-
-                if (a.getY() == Field.getHEIGHT()) {
+                if (a.getY() == Field.getHEIGHT() - 50) {
                     a.move(0, -Field.getHEIGHT());
                 }
             }
-        }
-
-
-        for (Ladder l : ladders) {
-            if (!this.player.getBox().collides(l.getBox())) {
-                this.player.setOnLadder(false);
-            } else this.player.setOnLadder(true);
         }
     }
 
@@ -177,6 +170,14 @@ public class Game {
                     b.move(1, 0);
                 }
 
+            }
+        }
+    }
+
+    private void checkLadders() {
+        for (Ladder l : ladders) {
+            if (this.player.getBox().collides(l.getBox())) {
+                this.player.setOnLadder(true);
             }
         }
     }

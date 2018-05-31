@@ -19,11 +19,11 @@ public class Ladder {
     public Ladder(int x, int y, int length) {
 
         this.x = x;
-        this.y = y;
+        this.y = (y - 5) ;
         this.length = length;
-        this.ladder = new Rectangle(x, y, LADDER_WIDTH, length);
+        this.ladder = new Rectangle(this.x, this.y, LADDER_WIDTH, length);
         this.ladder.draw();
-        this.box = new LadderCollisionBox(x, y, LADDER_WIDTH, length);
+        this.box = new LadderCollisionBox(this.x, this.y, LADDER_WIDTH, length);
 
     }
 
