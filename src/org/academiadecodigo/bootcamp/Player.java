@@ -2,6 +2,7 @@ package org.academiadecodigo.bootcamp;
 
 import org.academiadecodigo.bootcamp.Collision.CollisionBox;
 import org.academiadecodigo.bootcamp.Collision.PlatformCollisionBox;
+import org.academiadecodigo.bootcamp.GameObjects.Field;
 import org.academiadecodigo.bootcamp.GameObjects.Platform;
 import org.academiadecodigo.bootcamp.ScoreCounter.Score;
 import org.academiadecodigo.bootcamp.lifeCounter.Lives;
@@ -46,6 +47,7 @@ public class Player implements Movable {
     }
 
     public void move(int x, int y) {
+
 
         if (this.isJumping) {
             this.mario.translate(x, y);
@@ -158,6 +160,10 @@ public class Player implements Movable {
     public void lostLives(){
         life.lostLife();
 
+    }
+
+    public void gainedLives(){
+        life.gainedLife(true);
     }
 
 
