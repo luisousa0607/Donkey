@@ -1,7 +1,10 @@
 package org.academiadecodigo.bootcamp.GameObjects;
 
 import org.academiadecodigo.bootcamp.Collision.PlatformCollisionBox;
+import org.academiadecodigo.simplegraphics.graphics.Color;
 import org.academiadecodigo.simplegraphics.graphics.Line;
+
+import java.awt.*;
 
 
 public class Platform {
@@ -21,6 +24,7 @@ public class Platform {
         this.line = new Line(x1, y1, x2, y2);
         this.m = ((((double) y1) - (double)y2) / ( (double)x1 - (double)x2));
         this.createCollisionBox();
+        this.line.setColor(Color.RED);
         this.line.draw();
 
     }

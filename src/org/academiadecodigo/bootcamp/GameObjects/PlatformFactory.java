@@ -13,7 +13,7 @@ public class PlatformFactory {
     public Platform[] createPlatform() {
 
 
-        this.platformHeightDifference = (Field.getHEIGHT()-playerHeight - Field.getPadding() - MAX_PLATFORMS*(jumpHeight))/
+        this.platformHeightDifference = (Field.getHEIGHT()-Vilain.getHeight() - Field.getPadding() - MAX_PLATFORMS*(jumpHeight))/
                 (MAX_PLATFORMS-1);
 
         Platform[] platforms = new Platform[MAX_PLATFORMS];

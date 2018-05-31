@@ -1,14 +1,18 @@
 package org.academiadecodigo.bootcamp.GameOver;
 
 import org.academiadecodigo.bootcamp.GameObjects.Field;
+import org.academiadecodigo.bootcamp.GameObjects.Prize;
+import org.academiadecodigo.bootcamp.Player;
 import org.academiadecodigo.simplegraphics.graphics.Color;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 import org.academiadecodigo.simplegraphics.graphics.Text;
 
 public class YouWin_GameOver {
 
-     public static void youWin (boolean gameOver) {
+     public static void youWin (Player player) {
         GameOver.setGameOver(true);
+         Prize.delete();
+         player.setPicture("resources/Mario/Mario8.png");
 
 
             Rectangle youWinGFX = new Rectangle(0, 0, 100,25);

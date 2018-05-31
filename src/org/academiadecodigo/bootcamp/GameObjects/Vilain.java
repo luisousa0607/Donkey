@@ -8,16 +8,18 @@ public class Vilain extends GameObject {
 
     private Picture vilain;
     private int x = 40;
-    private int y = 40;
+    private int y = 30;
+    private static int heigth;
     //private int h;
     //private int w;
 
-        public Vilain(int x, int y/*, int h, int w*/) {
-            this.x = x;
-            this.y = y;
-            //this.h = h;
+        public Vilain() {
             this.vilain = new Picture(x, y, "resources/DonkeyKong/DonkeyKong1.png");
             this.vilain.draw();
+            this.heigth = vilain.getHeight()+15;
         }
 
+        public static int getHeight(){
+            return heigth;
+        }
 }

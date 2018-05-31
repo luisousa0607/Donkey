@@ -7,21 +7,31 @@ import org.academiadecodigo.simplegraphics.pictures.Picture;
 
 public class Prize extends GameObject  {
 
-    private Picture prize;
-    private int x = 250;
-    private int y = 250;
+    private static Picture prize;
+    private int x;
+    private int y;
     private int h;
     private int w;
-    private CollisionBox box;
+    private static CollisionBox box;
 
-    public Prize(int x, int y/*, int h, int w*/) {
-        this.x = x;
-        this.y = y;
-        this.h = h;
-        this.prize = new Picture (x, y, "resources/Accesories/beer.png");
+    public Prize() {
+        this.x = Field.getWIDTH()/2;
+        this.y = Field.getPadding()+ 30;
+        this.prize = new Picture (Field.getWIDTH()/2, Field.getPadding()+ 30, "resources/Accesories/beer.png");
+        this.h = prize.getHeight();
+        this.w = prize.getWidth();
+
         this.prize.draw();
         this.box = new CollisionBox(x,y,h,w);
 
+    }
+
+    public static CollisionBox getBox(){
+        return box;
+    }
+
+    public static void delete(){
+        prize.delete();
     }
 
 }

@@ -7,6 +7,7 @@ import org.academiadecodigo.bootcamp.GameOver.GameOver;
 import org.academiadecodigo.bootcamp.GameOver.YouWin_GameOver;
 import org.academiadecodigo.bootcamp.ScoreCounter.Score;
 import org.academiadecodigo.bootcamp.Sound.Bgm;
+import org.academiadecodigo.bootcamp.clock.GameTimer;
 import org.academiadecodigo.bootcamp.keyboard.MarioKeyboardHandler;
 import org.academiadecodigo.simplegraphics.graphics.Color;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
@@ -39,9 +40,9 @@ public class Game {
         Field field = new Field();
         this.player = new Player(Field.getPadding(), Field.getHEIGHT() - Player.getPlayerwidth()-20, 3);
         this.handler = new MarioKeyboardHandler(this.player);
-        this.vilain = new Vilain(40, 40);
+        this.vilain = new Vilain();
         this.barrels = new Barrel[MAX_BARRELS];
-        this.prize = new Prize(250,40);
+        this.prize = new Prize();
 
 
         this.platforms = new PlatformFactory().createPlatform();
@@ -50,11 +51,7 @@ public class Game {
 
     public void start() throws InterruptedException, FileNotFoundException {
 
-        Integer counter = 60;
-        Rectangle timerGFX = new Rectangle(10, 10, 50, 15);
-        timerGFX.draw();
-        Text text = new Text((timerGFX.getWidth() / 2) + 3, (timerGFX.getHeight() / 2) + 3, counter.toString());
-        text.draw();
+        GameTimer timer = new GameTimer();
         long time = System.currentTimeMillis();
         Score.showScore();
         Bgm.bgm.start();
@@ -62,16 +59,8 @@ public class Game {
         while (!GameOver.isItGameOver()) {
 
             if (System.currentTimeMillis() - time >= 1000) {
-                counter--;
-                text.setText(counter.toString());
-                text.draw();
+                timer.showTime();
                 time = System.currentTimeMillis();
-
-
-                if (counter == 0) {
-
-                    gameOver = true;
-                }
             }
 
             createBarrels();
@@ -104,7 +93,6 @@ public class Game {
             checkCollision();
             this.player.setOnLadder(false);
             checkLadders();
-            System.out.println(this.player.isOnLadder());
             Thread.sleep(10);
 
         }
@@ -150,7 +138,6 @@ public class Game {
         for (Barrel a : barrels) {
             if (a != null) {
                 if (this.player.getBox().collides(a.getBox())) {
-                    this.player.setColorRed();
                     player.setHasCollided(true);
                     System.out.println("collided");
                     break;
@@ -160,6 +147,9 @@ public class Game {
                     a.move(0, -Field.getHEIGHT());
                 }
             }
+        }
+        if(this.player.getBox().collides(Prize.getBox())){
+            YouWin_GameOver.youWin(this.player);
         }
     }
 
