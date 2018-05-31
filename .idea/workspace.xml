@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7f451fed-6cdb-414c-86ea-6fa381f39cad" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Game.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Game.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/Field.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/Field.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/PlatformFactory.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/PlatformFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Player.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Player.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,8 +17,8 @@
       <file leaf-file-name="Game.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-6">
-              <caret line="115" column="12" lean-forward="false" selection-start-line="115" selection-start-column="12" selection-end-line="115" selection-end-column="12" />
+            <state relative-caret-position="399">
+              <caret line="142" column="48" lean-forward="false" selection-start-line="142" selection-start-column="48" selection-end-line="142" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -33,7 +29,10 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
               <caret line="19" column="23" lean-forward="false" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
-              <folding />
+              <folding>
+                <marker date="1527777373131" expanded="false" signature="1041:1052" ph=" { " />
+                <marker date="1527777373131" expanded="false" signature="1071:1077" ph=" }" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -61,11 +60,10 @@
       <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="166" column="16" lean-forward="false" selection-start-line="166" selection-start-column="16" selection-end-line="166" selection-end-column="16" />
+            <state relative-caret-position="647">
+              <caret line="167" column="16" lean-forward="false" selection-start-line="167" selection-start-column="16" selection-end-line="167" selection-end-column="16" />
               <folding>
-                <element signature="e#3896#3897#0" expanded="true" />
-                <element signature="e#3930#3931#0" expanded="true" />
+                <marker date="1527777373135" expanded="true" signature="4436:4442" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -95,7 +93,7 @@
         <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/Field.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="393">
-              <caret line="40" column="35" lean-forward="true" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
+              <caret line="40" column="35" lean-forward="false" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#573#574#0" expanded="true" />
@@ -326,7 +324,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4397000" />
+    <option name="totallyTimeSpent" value="4504000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="977" extended-state="6" />
@@ -463,8 +461,7 @@
         <state relative-caret-position="2010">
           <caret line="146" column="24" lean-forward="true" selection-start-line="146" selection-start-column="24" selection-end-line="146" selection-end-column="24" />
           <folding>
-            <element signature="e#3896#3897#0" expanded="true" />
-            <element signature="e#3930#3931#0" expanded="true" />
+            <marker date="1527777373135" expanded="true" signature="4436:4442" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -521,8 +518,7 @@
         <state relative-caret-position="2010">
           <caret line="146" column="24" lean-forward="false" selection-start-line="146" selection-start-column="24" selection-end-line="146" selection-end-column="24" />
           <folding>
-            <element signature="e#3896#3897#0" expanded="true" />
-            <element signature="e#3930#3931#0" expanded="true" />
+            <marker date="1527777373135" expanded="true" signature="4436:4442" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -560,7 +556,7 @@
     <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/Field.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="393">
-          <caret line="40" column="35" lean-forward="true" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
+          <caret line="40" column="35" lean-forward="false" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#573#574#0" expanded="true" />
@@ -581,11 +577,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="166" column="16" lean-forward="false" selection-start-line="166" selection-start-column="16" selection-end-line="166" selection-end-column="16" />
+        <state relative-caret-position="647">
+          <caret line="167" column="16" lean-forward="false" selection-start-line="167" selection-start-column="16" selection-end-line="167" selection-end-column="16" />
           <folding>
-            <element signature="e#3896#3897#0" expanded="true" />
-            <element signature="e#3930#3931#0" expanded="true" />
+            <marker date="1527777373135" expanded="true" signature="4436:4442" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -602,14 +597,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="19" column="23" lean-forward="false" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
-          <folding />
+          <folding>
+            <marker date="1527777373131" expanded="false" signature="1041:1052" ph=" { " />
+            <marker date="1527777373131" expanded="false" signature="1071:1077" ph=" }" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6">
-          <caret line="115" column="12" lean-forward="false" selection-start-line="115" selection-start-column="12" selection-end-line="115" selection-end-column="12" />
+        <state relative-caret-position="399">
+          <caret line="142" column="48" lean-forward="false" selection-start-line="142" selection-start-column="48" selection-end-line="142" selection-end-column="48" />
           <folding />
         </state>
       </provider>
