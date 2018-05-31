@@ -65,7 +65,7 @@ public class Game {
 
             createBarrels();
 
-            checkCollision();
+            //checkCollision();
 
             if (!player.abovePlatform(platforms)) {
                 playerFall();
@@ -77,17 +77,22 @@ public class Game {
 
             if (player.hasCollided()) {
                 player.lostLives();
+                for(int i = 0; i < 20; i++){
+                    this.moveBarrels();
+                    Thread.sleep(10);
+                }
+                System.out.println("lost 1 live");
                 player.setHasCollided(false);
                 player.setWillScore(false);
             } else if (player.shouldScore()) {
                 Score.increaseScore(player);
                 System.out.println("increasing score");
                 player.setWillScore(false);
-                player.setHasCollided(false);
             }
 
 
             this.moveBarrels();
+            checkCollision();
             Thread.sleep(10);
 
         }
@@ -95,40 +100,24 @@ public class Game {
 
     // poderia ficar no player? o método jumpUp, fall
     private void playerJump() throws InterruptedException {
-        for (int i = 0; i < 60; i++) {
+        for (int i = 0; i < 40; i++) {
             checkCollision();
-            this.player.jumpUp();
+            player.jumpUp();
             checkJumpedOver();
-            this.moveBarrels();
+            moveBarrels();
             Thread.sleep(10);
         }
     }
 
     private void playerFall() throws InterruptedException {
-        System.out.println("player falling");
-        while (!this.player.abovePlatform(platforms)) {
-            this.player.fall();
+        while (!player.abovePlatform(platforms)) {
+            player.fall();
             checkJumpedOver();
-            this.moveBarrels();
+            moveBarrels();
             checkCollision();
             Thread.sleep(10);
         }
 
-        /*if (!player.hasCollided()) {
-            if (player.shouldScore()) {
-                Score.increaseScore(player);
-                System.out.println("increasing score");
-                player.setWillScore(false);
-                player.setHasCollided(false);
-            }
-
-
-        }
-        if (player.hasCollided()) {
-            player.lostLives();
-
-            player.setHasCollided(false);
-        }*/
         this.player.setJumping(false);
     }
 
@@ -152,7 +141,6 @@ public class Game {
                 if (this.player.getBox().collides(a.getBox())) {
                     this.player.setColorRed();
                     player.setHasCollided(true);
-                    System.out.println("has collided");
                     break;
 
                 }
@@ -180,6 +168,7 @@ public class Game {
                 } else {
                     b.move(1, 0);
                 }
+
             }
         }
     }
@@ -189,8 +178,8 @@ public class Game {
             for (Barrel b : this.barrels) {
                 if (b != null) {
                     if (player.getBox().checkJumpOver(b)) {
-                        System.out.println("jumped over and should scored");
                         player.setWillScore(true);
+                        System.out.println("shouldScore");
                         break;
 
                     }

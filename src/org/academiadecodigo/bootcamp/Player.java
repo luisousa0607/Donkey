@@ -2,6 +2,7 @@ package org.academiadecodigo.bootcamp;
 
 import org.academiadecodigo.bootcamp.Collision.CollisionBox;
 import org.academiadecodigo.bootcamp.Collision.PlatformCollisionBox;
+import org.academiadecodigo.bootcamp.GameObjects.Field;
 import org.academiadecodigo.bootcamp.GameObjects.Platform;
 import org.academiadecodigo.bootcamp.ScoreCounter.Score;
 import org.academiadecodigo.bootcamp.lifeCounter.Lives;
@@ -41,17 +42,25 @@ public class Player implements Movable {
         this.mario.draw();
         this.box = new CollisionBox(x, y, this.mario.getWidth(), this.mario.getHeight());
         this.direction = 1;
-        this.life =new Lives(lives);
+        this.life = new Lives(lives);
 
     }
 
     public void move(int x, int y) {
 
         if (this.isJumping) {
-            this.mario.translate(x, y);
-            this.box.setBox(x, y);
-            return;
-        } else {
+            if (!Field.canMove(direction, this.getBox().getX() + x)) {
+                this.mario.translate(0, y);
+                this.box.setBox(0, y);
+                return;
+            } else {
+                this.mario.translate(x, y);
+                this.box.setBox(x, y);
+                return;
+            }
+        }
+
+        if (Field.canMove(direction, this.getBox().getX() + x)) {
 
             if (m > 0) {
                 this.mario.translate(x, -1 * direction);
@@ -145,7 +154,7 @@ public class Player implements Movable {
         return willScore;
     }
 
-    public void setHasCollided (boolean b){
+    public void setHasCollided(boolean b) {
         hasCollided = b;
 
     }
@@ -155,7 +164,7 @@ public class Player implements Movable {
         return hasCollided;
     }
 
-    public void lostLives(){
+    public void lostLives() {
         life.lostLife();
 
     }

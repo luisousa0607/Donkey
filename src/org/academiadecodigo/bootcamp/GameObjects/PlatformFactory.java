@@ -19,9 +19,9 @@ public class PlatformFactory {
         Platform[] platforms = new Platform[MAX_PLATFORMS];
 
         platforms[0]=new Platform(
-                Field.getPadding() + playerWidth,
+                Field.getPadding() ,
                 Field.getHEIGHT(),
-                Field.getWIDTH() - playerWidth,
+                Field.getWIDTH() ,
                 Field.getHEIGHT()
         );
 
