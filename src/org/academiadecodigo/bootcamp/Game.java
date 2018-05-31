@@ -75,7 +75,7 @@ public class Game {
 
             createBarrels();
 
-            if (!player.abovePlatform(platforms) && !player.isOnLadder()) {
+            if (!player.abovePlatform(platforms) &&  !player.isOnLadder()) {
 
                 playerFall();
             }
@@ -90,7 +90,6 @@ public class Game {
                     Thread.sleep(10);
                 }
                 player.lostLives();
-                System.out.println("lost 1 live");
                 player.setHasCollided(false);
                 player.setWillScore(false);
             } else if (player.shouldScore()) {
@@ -101,6 +100,8 @@ public class Game {
 
             this.moveBarrels();
             checkCollision();
+            this.player.setOnLadder(false);
+            checkLadders();
             System.out.println(this.player.isOnLadder());
             Thread.sleep(10);
 
@@ -123,6 +124,7 @@ public class Game {
             player.fall();
             moveBarrels();
             checkCollision();
+
             Thread.sleep(10);
         }
 
@@ -149,20 +151,11 @@ public class Game {
                 if (this.player.getBox().collides(a.getBox())) {
                     this.player.setColorRed();
                     player.setHasCollided(true);
-                    System.out.println("collided");
                     break;
-
                 }
-
-                if (a.getY() == Field.getHEIGHT()) {
+                if (a.getY() == Field.getHEIGHT() - 50) {
                     a.move(0, -Field.getHEIGHT());
                 }
-            }
-        }
-
-        for (Ladder l : ladders) {
-            if (this.player.getBox().collides(l.getBox())) {
-                this.player.setOnLadder(true);
             }
         }
     }
@@ -181,13 +174,20 @@ public class Game {
         }
     }
 
+    private void checkLadders() {
+        for (Ladder l : ladders) {
+            if (this.player.getBox().collides(l.getBox())) {
+                this.player.setOnLadder(true);
+            }
+        }
+    }
+
     private void checkJumpedOver() throws InterruptedException {
         if (!player.isOnLadder()) {
             for (Barrel b : this.barrels) {
                 if (b != null) {
                     if (player.getBox().checkJumpOver(b)) {
                         player.setWillScore(true);
-                        System.out.println("shouldScore");
                         break;
 
                     }

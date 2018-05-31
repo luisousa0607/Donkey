@@ -48,7 +48,7 @@ public class Player implements Movable {
 
     public void move(int x, int y) {
 
-        if (this.isOnLadder()) {
+        if (this.isOnLadder() && !this.isJumping) {
             this.mario.translate(x, y * SPEED);
             this.box.setBox(x, y * SPEED);
             return;

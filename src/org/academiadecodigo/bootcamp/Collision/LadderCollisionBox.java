@@ -13,12 +13,12 @@ public class LadderCollisionBox implements Collidable {
 
     public LadderCollisionBox(int x, int y, int width, int height) {
 
-        this.box = new Rectangle(x, y, width, height);
+        this.box = new Rectangle(x, y, width, height );
         this.box.draw();
 
         this.bottom = new Point[2];
-        bottom[0] = new Point(x, y + height);
-        bottom[1] = new Point(x + width, y + height);
+        bottom[0] = new Point(x, y + height );
+        bottom[1] = new Point(x + width, y + height );
     }
 
     public void setBox(double x, double y) {
@@ -33,22 +33,22 @@ public class LadderCollisionBox implements Collidable {
 
     public boolean collides(CollisionBox otherBox) {
 
-        if (this.getX() > (otherBox.getX())*2 && this.getX() < (otherBox.getX() + otherBox.getWidth())*2
+        if (this.getX() > (otherBox.getX()) && this.getX() < (otherBox.getX() + otherBox.getWidth())
                 && this.getY() > otherBox.getY() && this.getY() < otherBox.getY() + otherBox.getHeight()) {
             return true;
         }
 
-        if (this.getX() + this.getWidth() > otherBox.getX()*2 && this.getX() + this.getWidth() < (otherBox.getX() + otherBox.getWidth())*2
+        if (this.getX() + this.getWidth() > otherBox.getX() && this.getX() + this.getWidth() < (otherBox.getX() + otherBox.getWidth())
                 && this.getY() > otherBox.getY() && this.getY() < otherBox.getY() + otherBox.getHeight()) {
             return true;
         }
 
-        if (this.getX() > otherBox.getX()*2 && this.getX() < (otherBox.getX() + otherBox.getWidth())*2
+        if (this.getX() > otherBox.getX() && this.getX() < (otherBox.getX() + otherBox.getWidth())
                 && this.getY() + this.getHeight() > otherBox.getY() && this.getY() + this.getHeight() < otherBox.getY() + otherBox.getHeight()) {
             return true;
         }
 
-        if (this.getX() + this.getWidth() > otherBox.getX()*2 && this.getX() + this.getWidth() < (otherBox.getX() + otherBox.getWidth())*2
+        if (this.getX() + this.getWidth() > otherBox.getX() && this.getX() + this.getWidth() < (otherBox.getX() + otherBox.getWidth())
                 && this.getY() + this.getHeight() > otherBox.getY() && this.getY() + this.getHeight() < otherBox.getY() + otherBox.getHeight()) {
             return true;
         }
