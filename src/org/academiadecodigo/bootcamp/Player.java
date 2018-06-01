@@ -66,12 +66,14 @@ public class Player implements Movable {
             }
         }
 
-        if (Field.canMove(direction, this.getBox().getX() + x)) {
+        if (Field.canMove(direction, this.getBox().getX() + x) ) {
             if (m > 0) {
+
                 this.mario.translate(x, -y * direction);
                 this.box.setBox(x, -y * direction);
                 return;
             } else if (m < 0) {
+
                 this.mario.translate(x, y * direction);
                 this.box.setBox(x, y * direction);
                 return;

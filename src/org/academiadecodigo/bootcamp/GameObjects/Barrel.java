@@ -42,9 +42,7 @@ public class Barrel extends GameObject implements Movable, Scorable {
     public boolean abovePlatform(Platform[] platforms) {
 
         for (Platform p : platforms) {
-            p.createCollisionBox();
-            PlatformCollisionBox platform = p.getBox();
-            if (this.getBox().abovePlatform(platform.getTop())) {
+            if (this.getBox().abovePlatform(p.getBox().getTop())) {
                 this.setDirection(p.getDirection());
                 return false;
             }

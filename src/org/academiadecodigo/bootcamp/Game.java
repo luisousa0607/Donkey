@@ -98,7 +98,6 @@ public class Game {
         }
     }
 
-    // poderia ficar no player? o método jumpUp, fall
     private void playerJump() throws InterruptedException {
         for (int i = 0; i < 40; i++) {
             checkCollision();

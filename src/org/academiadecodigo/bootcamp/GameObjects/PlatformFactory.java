@@ -4,12 +4,17 @@ import org.academiadecodigo.bootcamp.Player;
 
 public class PlatformFactory {
 
-    private static final int MAX_PLATFORMS = 8;
+    private int MAX_PLATFORMS;
     private int playerWidth = Player.getPlayerwidth();
     private int jumpHeight = Player.getPlayerwidth() -10;
     private static int platformHeightDifference;
 
     public Platform[] createPlatform() {
+
+        MAX_PLATFORMS = (int) (Math.random()*3 + 6);
+        if(MAX_PLATFORMS%2 != 0){
+            MAX_PLATFORMS += 1;
+        }
 
 
         this.platformHeightDifference = (Field.getHEIGHT()-Vilain.getHeight() - Field.getPadding() - MAX_PLATFORMS*(jumpHeight))/

@@ -34,10 +34,6 @@ public class Platform {
          return this.box;
     }
 
-    public void setM(int m) {
-        this.m *= m;
-    }
-
     public double getM() {
         return this.m;
     }
