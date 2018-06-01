@@ -128,6 +128,8 @@ public class Game {
 
         if (System.currentTimeMillis() - timeCreation >= 3000) {
 
+            System.out.println(Math.random()*3000+300);
+
 
             if (barrelCounter < barrels.length)
                 barrels[barrelCounter++] = new Barrel();
