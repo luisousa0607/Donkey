@@ -20,7 +20,7 @@ public class Player implements Movable {
 
     private Picture mario;
     private Keyboard keyboard;
-    private static final int SPEED = 10;
+    private static final int SPEED = 5;
     private boolean isJumping;
     private double m;
     private boolean Collided;
@@ -31,6 +31,8 @@ public class Player implements Movable {
     private boolean willScore;
     private boolean hasCollided;
     private Lives life;
+    private boolean walking;
+    private boolean climbAnim;
 
     public Player(int x, int y, int lives) {
 
@@ -43,6 +45,8 @@ public class Player implements Movable {
         this.box = new CollisionBox(x, y, this.mario.getWidth(), this.mario.getHeight());
         this.direction = 1;
         this.life = new Lives(lives);
+        this.walking = false;
+        this.climbAnim = false;
 
     }
 
@@ -97,18 +101,18 @@ public class Player implements Movable {
 
     public void fall() {
 
-        if(isJumping)
-        this.move(direction, 1);
+        if (isJumping)
+            this.move(direction, 1);
 
         else
-            this.move(0,1);
+            this.move(0, 1);
     }
 
     public void setM(double m) {
         this.m = m;
     }
 
-    public double getM(){
+    public double getM() {
         return this.m;
     }
 
@@ -132,8 +136,6 @@ public class Player implements Movable {
         return false;
     }
 
-
-
     public void setOnLadder(boolean onLadder) {
         this.onLadder = onLadder;
     }
@@ -156,10 +158,21 @@ public class Player implements Movable {
 
     public void setDirection(int direction) {
 
-        if(direction > 0){
-            this.mario.load("resources/Mario/Mario2.png");
-        }else
+        if (direction > 0) {
+            if (walking) {
+                this.mario.load("resources/Mario/Mario2.png");
+                this.walking = false;
+            } else {
+                this.mario.load("resources/Mario/Mario4.png");
+                this.walking = true;
+            }
+        } else if (walking) {
             this.mario.load("resources/Mario/Mario1.png");
+            this.walking = false;
+        } else {
+            this.mario.load("resources/Mario/Mario3.png");
+            this.walking = true;
+        }
 
         this.direction = direction;
     }
@@ -188,7 +201,7 @@ public class Player implements Movable {
 
     }
 
-    public int getDirection(){
+    public int getDirection() {
         return this.direction;
     }
 
@@ -196,9 +209,27 @@ public class Player implements Movable {
         life.gainedLife(true);
     }
 
-    public void setPicture(String picture){
+    public void setPicture(String picture) {
         mario.load(picture);
     }
 
+    public boolean isClimbAnim(){
+        return this.climbAnim;
+    }
+
+    public void setClimbAnim(boolean value){
+        this.climbAnim = value;
+    }
+
+    public void climbingAnimation(){
+        if(this.climbAnim) {
+            this.setPicture("resources/Mario/Mario5.png");
+            this.setClimbAnim(false);
+        }
+        else {
+            this.setPicture("resources/Mario/Mario6.png");
+            this.setClimbAnim(true);
+        }
+    }
 
 }

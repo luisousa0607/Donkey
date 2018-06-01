@@ -48,13 +48,16 @@ public class MarioKeyboardHandler implements org.academiadecodigo.simplegraphics
                 break;
             }
             case KeyboardEvent.KEY_SPACE: {
-                if (!this.player.isOnLadder())
-                    this.player.setJumping(true);
+                //if (!this.player.isOnLadder())
+                this.player.setJumping(true);
                 break;
             }
 
             case KeyboardEvent.KEY_UP: {
                 if (this.player.isOnLadder()) {
+
+                    this.player.climbingAnimation();
+
                     this.player.move(0, -1);
 
                 }
@@ -63,6 +66,9 @@ public class MarioKeyboardHandler implements org.academiadecodigo.simplegraphics
 
             case KeyboardEvent.KEY_DOWN: {
                 if (this.player.isOnLadder()) {
+
+                    this.player.climbingAnimation();
+
                     this.player.move(0, 1);
                 }
                 break;
