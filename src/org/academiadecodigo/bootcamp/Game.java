@@ -31,10 +31,8 @@ public class Game {
 
     public Game() throws InterruptedException {
 
-
         Field field = new Field();
-        this.player = new Player(Field.getPadding(), Field.getHEIGHT() - Player.getPlayerwidth()-20, 3);
-        this.handler = new MarioKeyboardHandler(this.player);
+
         this.vilain = new Vilain();
         this.barrels = new Barrel[MAX_BARRELS];
         this.prize = new Prize();
@@ -42,6 +40,8 @@ public class Game {
 
         this.platforms = new PlatformFactory().createPlatform();
         this.ladders = new LadderFactory(platforms).createLadders();
+        this.player = new Player(Field.getPadding(), Field.getHEIGHT() - Player.getPlayerwidth()-20, 3);
+        this.handler = new MarioKeyboardHandler(this.player);
     }
 
     public void start() throws InterruptedException, FileNotFoundException {
@@ -122,18 +122,12 @@ public class Game {
 
         this.player.setJumping(false);
 
-        if(this.player.getDirection() > 0){
-            this.player.setPicture("resources/Mario/Mario2.png");
-        }
-        else this.player.setPicture("resources/Mario/Mario1.png");
-
-
     }
 
     private void createBarrels() throws InterruptedException {
 
 
-        if (System.currentTimeMillis() - timeCreation >= 5000) {
+        if (System.currentTimeMillis() - timeCreation >= 3000) {
 
 
             if (barrelCounter < barrels.length)

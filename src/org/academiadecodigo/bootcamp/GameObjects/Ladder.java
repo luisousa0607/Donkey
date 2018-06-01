@@ -2,10 +2,7 @@ package org.academiadecodigo.bootcamp.GameObjects;
 
 
 import org.academiadecodigo.bootcamp.Collision.CollisionBox;
-import org.academiadecodigo.bootcamp.Collision.LadderCollisionBox;
-import org.academiadecodigo.bootcamp.Interface.Collidable;
 import org.academiadecodigo.simplegraphics.graphics.Canvas;
-import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 import org.academiadecodigo.simplegraphics.pictures.Picture;
 
 public class Ladder {
@@ -16,7 +13,7 @@ public class Ladder {
     private int y;
     private int length;
     private static final int LADDER_WIDTH = 20;
-    private LadderCollisionBox box;
+    private CollisionBox box;
 
     public Ladder(int x, int y, int length) {
 
@@ -29,13 +26,10 @@ public class Ladder {
         //this.ladder = new Rectangle(this.x, this.y, LADDER_WIDTH, length);
 
         this.ladder.draw();
-        this.box = new LadderCollisionBox(this.x, this.y, LADDER_WIDTH, length);
+        this.box = new CollisionBox(this.x + (LADDER_WIDTH/2), this.y, LADDER_WIDTH, length);
         this.ladder.grow(2,length/2-12);
         translateIMG(x,y);
 
-
-        //this.translateIMG(x,y);
-        //this.ladder.draw();
 
     }
 
@@ -50,11 +44,12 @@ public class Ladder {
 
     public void createCollisionBox() {
 
-        this.box = new LadderCollisionBox(x, y, LADDER_WIDTH, length);
+        this.box = new CollisionBox(x, y, LADDER_WIDTH, length);
+
 
     }
 
-    public LadderCollisionBox getBox() {
+    public CollisionBox getBox() {
         return this.box;
     }
 }
