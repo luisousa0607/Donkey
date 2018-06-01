@@ -2,24 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dabdbb7e-da74-42da-888b-e65e94906cea" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Music/loseLife.wav" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/Music/bgm.mp3" afterPath="$PROJECT_DIR$/resources/Music/bgm.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Collision/CollisionBox.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Collision/CollisionBox.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Game.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Game.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/Barrel.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/Barrel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/Field.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/Field.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/Ladder.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/Ladder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/LadderFactory.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/LadderFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/Platform.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/Platform.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/PlatformFactory.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/PlatformFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/Vilain.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/Vilain.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameOver/GameOver.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameOver/GameOver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameOver/YouWin_GameOver.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameOver/YouWin_GameOver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Player.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Player.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Sound/Bgm.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Sound/Bgm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/clock/GameTimer.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/clock/GameTimer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/lifeCounter/Lives.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/lifeCounter/Lives.java" />
     </list>
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,24 +17,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Game.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="142" column="45" lean-forward="true" selection-start-line="142" selection-start-column="45" selection-end-line="142" selection-end-column="45" />
+            <state relative-caret-position="248">
+              <caret line="142" column="45" lean-forward="false" selection-start-line="142" selection-start-column="45" selection-end-line="142" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PlatformFactory.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/PlatformFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="53" lean-forward="false" selection-start-line="7" selection-start-column="53" selection-end-line="7" selection-end-column="53" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -104,16 +77,16 @@
                 <element signature="e#5165#5166#0" expanded="true" />
                 <element signature="e#5422#5423#0" expanded="true" />
                 <element signature="e#5506#5507#0" expanded="true" />
-                <marker date="1527814190244" expanded="false" signature="5197:5208" ph=" { " />
-                <marker date="1527814190244" expanded="false" signature="5230:5236" ph=" }" />
-                <marker date="1527814190244" expanded="false" signature="5267:5278" ph=" { " />
-                <marker date="1527814190244" expanded="false" signature="5300:5306" ph=" }" />
-                <marker date="1527814190244" expanded="false" signature="5350:5361" ph=" { " />
-                <marker date="1527814190244" expanded="false" signature="5381:5387" ph=" }" />
-                <marker date="1527814190244" expanded="false" signature="5422:5432" ph=" { " />
-                <marker date="1527814190244" expanded="false" signature="5454:5460" ph=" }" />
-                <marker date="1527814190244" expanded="false" signature="5506:5516" ph=" { " />
-                <marker date="1527814190244" expanded="false" signature="5539:5545" ph=" }" />
+                <marker date="1527817267860" expanded="false" signature="5197:5208" ph=" { " />
+                <marker date="1527817267860" expanded="false" signature="5230:5236" ph=" }" />
+                <marker date="1527817267860" expanded="false" signature="5267:5278" ph=" { " />
+                <marker date="1527817267860" expanded="false" signature="5300:5306" ph=" }" />
+                <marker date="1527817267860" expanded="false" signature="5350:5361" ph=" { " />
+                <marker date="1527817267860" expanded="false" signature="5381:5387" ph=" }" />
+                <marker date="1527817267860" expanded="false" signature="5422:5432" ph=" { " />
+                <marker date="1527817267860" expanded="false" signature="5454:5460" ph=" }" />
+                <marker date="1527817267860" expanded="false" signature="5506:5516" ph=" { " />
+                <marker date="1527817267860" expanded="false" signature="5539:5545" ph=" }" />
               </folding>
             </state>
           </provider>
@@ -166,7 +139,7 @@
         <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/Barrel.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="257">
-              <caret line="32" column="20" lean-forward="true" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+              <caret line="32" column="20" lean-forward="false" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
               <folding>
                 <element signature="e#1741#1742#0" expanded="true" />
                 <element signature="e#1783#1784#0" expanded="true" />
@@ -179,15 +152,110 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Ladder.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Ladder.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/Ladder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="26" column="86" lean-forward="false" selection-start-line="26" selection-start-column="86" selection-end-line="26" selection-end-column="86" />
+            <state relative-caret-position="173">
+              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding>
-                <marker date="1527817165562" expanded="false" signature="1016:1027" ph=" { " />
-                <marker date="1527817165562" expanded="false" signature="1043:1049" ph=" }" />
+                <marker date="1527817267859" expanded="false" signature="1016:1027" ph=" { " />
+                <marker date="1527817267859" expanded="false" signature="1043:1049" ph=" }" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JAVA/org.academiadecodigo.bootcamp" pinned="false" current-in-tab="false">
+        <entry file="uml://JAVA/org.academiadecodigo.bootcamp">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>JAVA</ID>
+              <OriginalElement>org.academiadecodigo.bootcamp</OriginalElement>
+              <nodes>
+                <node x="545.0" y="0.0">org.academiadecodigo.bootcamp.Interface.Scorable</node>
+                <node x="242.0" y="1010.0">org.academiadecodigo.bootcamp.GameObjects.LadderFactory</node>
+                <node x="482.0" y="1010.0">org.academiadecodigo.bootcamp.GameOver.YouWin_GameOver</node>
+                <node x="0.0" y="80.0">org.academiadecodigo.bootcamp.Player</node>
+                <node x="418.0" y="891.0">org.academiadecodigo.bootcamp.ScoreCounter.Score</node>
+                <node x="0.0" y="1010.0">org.academiadecodigo.bootcamp.GameOver.GameOver</node>
+                <node x="291.0" y="728.0">org.academiadecodigo.bootcamp.GameObjects.Field</node>
+                <node x="825.0" y="891.0">org.academiadecodigo.bootcamp.Collision.Point</node>
+                <node x="0.0" y="891.0">org.academiadecodigo.bootcamp.clock.GameTimer</node>
+                <node x="625.0" y="891.0">org.academiadecodigo.bootcamp.lifeCounter.Lives</node>
+                <node x="0.0" y="565.0">org.academiadecodigo.bootcamp.Collision.CollisionBox</node>
+                <node x="493.0" y="485.0">org.academiadecodigo.bootcamp.GameObjects.Platform</node>
+                <node x="234.0" y="485.0">org.academiadecodigo.bootcamp.Sound.Bgm</node>
+                <node x="736.0" y="728.0">org.academiadecodigo.bootcamp.keyboard.MarioKeyboardHandler</node>
+                <node x="513.0" y="728.0">org.academiadecodigo.bootcamp.Collision.PlatformCollisionBox</node>
+                <node x="0.0" y="728.0">org.academiadecodigo.bootcamp.GameObjects.PlatformFactory</node>
+                <node x="746.25" y="80.0">org.academiadecodigo.bootcamp.GameObjects.Prize</node>
+                <node x="696.0" y="1010.0">org.academiadecodigo.bootcamp.Test</node>
+                <node x="770.25" y="0.0">org.academiadecodigo.bootcamp.GameObjects.GameObject</node>
+                <node x="939.25" y="102.0">org.academiadecodigo.bootcamp.GameObjects.Vilain</node>
+                <node x="46.5" y="0.0">org.academiadecodigo.bootcamp.Interface.Movable</node>
+                <node x="239.0" y="0.0">org.academiadecodigo.bootcamp.Game</node>
+                <node x="553.25" y="80.0">org.academiadecodigo.bootcamp.GameObjects.Barrel</node>
+                <node x="40.0" y="485.0">org.academiadecodigo.bootcamp.Interface.Collidable</node>
+                <node x="210.0" y="891.0">org.academiadecodigo.bootcamp.Sound.SoundPlayer</node>
+                <node x="763.0" y="485.0">org.academiadecodigo.bootcamp.GameObjects.Ladder</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="org.academiadecodigo.bootcamp.GameObjects.Vilain" target="org.academiadecodigo.bootcamp.GameObjects.GameObject">
+                  <point x="0.0" y="-59.0" />
+                  <point x="1013.25" y="55.0" />
+                  <point x="874.4166666666666" y="55.0" />
+                  <point x="41.66666666666666" y="15.0" />
+                </edge>
+                <edge source="org.academiadecodigo.bootcamp.GameObjects.Barrel" target="org.academiadecodigo.bootcamp.GameObjects.GameObject">
+                  <point x="43.25" y="-81.0" />
+                  <point x="683.0" y="55.0" />
+                  <point x="791.0833333333334" y="55.0" />
+                  <point x="-41.66666666666666" y="15.0" />
+                </edge>
+                <edge source="org.academiadecodigo.bootcamp.Player" target="org.academiadecodigo.bootcamp.Interface.Movable">
+                  <point x="0.0" y="-180.0" />
+                  <point x="0.0" y="15.0" />
+                </edge>
+                <edge source="org.academiadecodigo.bootcamp.GameObjects.Prize" target="org.academiadecodigo.bootcamp.GameObjects.GameObject">
+                  <point x="0.0" y="-81.0" />
+                  <point x="0.0" y="15.0" />
+                </edge>
+                <edge source="org.academiadecodigo.bootcamp.GameObjects.Barrel" target="org.academiadecodigo.bootcamp.Interface.Scorable">
+                  <point x="-43.25" y="-81.0" />
+                  <point x="0.0" y="15.0" />
+                </edge>
+                <edge source="org.academiadecodigo.bootcamp.Collision.CollisionBox" target="org.academiadecodigo.bootcamp.Interface.Collidable">
+                  <point x="0.0" y="-59.0" />
+                  <point x="0.0" y="15.0" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="1.0" x="-259.0" y="150.0" />
+              <SelectedNodes>
+                <node>org.academiadecodigo.bootcamp.Collision.PlatformCollisionBox</node>
+                <node>org.academiadecodigo.bootcamp.GameObjects.PlatformFactory</node>
+                <node>org.academiadecodigo.bootcamp.Interface.Scorable</node>
+                <node>org.academiadecodigo.bootcamp.GameObjects.LadderFactory</node>
+                <node>org.academiadecodigo.bootcamp.GameOver.YouWin_GameOver</node>
+                <node>org.academiadecodigo.bootcamp.Player</node>
+                <node>org.academiadecodigo.bootcamp.GameObjects.Prize</node>
+                <node>org.academiadecodigo.bootcamp.GameObjects.GameObject</node>
+                <node>org.academiadecodigo.bootcamp.GameObjects.Vilain</node>
+                <node>org.academiadecodigo.bootcamp.GameOver.GameOver</node>
+                <node>org.academiadecodigo.bootcamp.Interface.Movable</node>
+                <node>org.academiadecodigo.bootcamp.clock.GameTimer</node>
+                <node>org.academiadecodigo.bootcamp.GameObjects.Barrel</node>
+                <node>org.academiadecodigo.bootcamp.Collision.CollisionBox</node>
+                <node>org.academiadecodigo.bootcamp.Interface.Collidable</node>
+                <node>org.academiadecodigo.bootcamp.GameObjects.Platform</node>
+                <node>org.academiadecodigo.bootcamp.keyboard.MarioKeyboardHandler</node>
+                <node>org.academiadecodigo.bootcamp.Sound.SoundPlayer</node>
+              </SelectedNodes>
+              <Categories>
+                <Category>Fields</Category>
+              </Categories>
+              <SCOPE>All</SCOPE>
+              <VISIBILITY>private</VISIBILITY>
             </state>
           </provider>
         </entry>
@@ -231,6 +299,11 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="23" />
+    <option name="width" value="1920" />
+    <option name="height" value="977" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -278,20 +351,6 @@
               <item name="Donkey" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="bootcamp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Donkey" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Donkey" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="bootcamp" type="462c0819:PsiDirectoryNode" />
-              <item name="Collision" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Donkey" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Donkey" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="bootcamp" type="462c0819:PsiDirectoryNode" />
-              <item name="GameObjects" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -430,7 +489,7 @@
       <updated>1527710612555</updated>
       <workItem from="1527710613805" duration="77000" />
       <workItem from="1527803702124" duration="862000" />
-      <workItem from="1527805129351" duration="11974000" />
+      <workItem from="1527805129351" duration="12332000" />
     </task>
     <task id="LOCAL-00001" summary="Ruben's Log - Fixed ladder sizes">
       <created>1527804183246</created>
@@ -443,10 +502,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24970000" />
+    <option name="totallyTimeSpent" value="25328000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="977" extended-state="0" />
+    <frame x="1" y="23" width="1920" height="977" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -457,7 +516,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37458563" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.03756906" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291262" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32993197" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -549,72 +608,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Collision/PlatformCollisionBox.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-51">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/keyboard/MarioKeyboardHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="31" column="50" lean-forward="true" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-117">
-          <caret line="53" column="19" lean-forward="true" selection-start-line="53" selection-start-column="19" selection-end-line="53" selection-end-column="19" />
-          <folding>
-            <element signature="e#3049#3050#0" expanded="true" />
-            <element signature="e#3089#3090#0" expanded="true" />
-            <element signature="e#3257#3258#0" expanded="true" />
-            <element signature="e#3283#3284#0" expanded="true" />
-            <element signature="e#3311#3312#0" expanded="true" />
-            <element signature="e#3340#3341#0" expanded="true" />
-            <element signature="e#3385#3386#0" expanded="true" />
-            <element signature="e#3423#3424#0" expanded="true" />
-            <element signature="e#3460#3461#0" expanded="true" />
-            <element signature="e#3497#3498#0" expanded="true" />
-            <element signature="e#3882#3883#0" expanded="true" />
-            <element signature="e#3922#3923#0" expanded="true" />
-            <element signature="e#3957#3958#0" expanded="true" />
-            <element signature="e#3993#3994#0" expanded="true" />
-            <element signature="e#4022#4023#0" expanded="true" />
-            <element signature="e#4050#4051#0" expanded="true" />
-            <element signature="e#4086#4087#0" expanded="true" />
-            <element signature="e#4117#4118#0" expanded="true" />
-            <element signature="e#4159#4160#0" expanded="true" />
-            <element signature="e#4193#4194#0" expanded="true" />
-            <element signature="e#4860#4861#0" expanded="true" />
-            <element signature="e#4889#4890#0" expanded="true" />
-            <element signature="e#4925#4926#0" expanded="true" />
-            <element signature="e#4957#4958#0" expanded="true" />
-            <element signature="e#5002#5003#0" expanded="true" />
-            <element signature="e#5033#5034#0" expanded="true" />
-            <element signature="e#5069#5070#0" expanded="true" />
-            <element signature="e#5103#5104#0" expanded="true" />
-            <element signature="e#5134#5135#0" expanded="true" />
-            <element signature="e#5165#5166#0" expanded="true" />
-            <element signature="e#5422#5423#0" expanded="true" />
-            <element signature="e#5506#5507#0" expanded="true" />
-            <marker date="1527814190244" expanded="false" signature="5197:5208" ph=" { " />
-            <marker date="1527814190244" expanded="false" signature="5230:5236" ph=" }" />
-            <marker date="1527814190244" expanded="false" signature="5267:5278" ph=" { " />
-            <marker date="1527814190244" expanded="false" signature="5300:5306" ph=" }" />
-            <marker date="1527814190244" expanded="false" signature="5350:5361" ph=" { " />
-            <marker date="1527814190244" expanded="false" signature="5381:5387" ph=" }" />
-            <marker date="1527814190244" expanded="false" signature="5422:5432" ph=" { " />
-            <marker date="1527814190244" expanded="false" signature="5454:5460" ph=" }" />
-            <marker date="1527814190244" expanded="false" signature="5506:5516" ph=" { " />
-            <marker date="1527814190244" expanded="false" signature="5539:5545" ph=" }" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Game.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
@@ -722,16 +715,16 @@
             <element signature="e#5165#5166#0" expanded="true" />
             <element signature="e#5422#5423#0" expanded="true" />
             <element signature="e#5506#5507#0" expanded="true" />
-            <marker date="1527814190244" expanded="false" signature="5197:5208" ph=" { " />
-            <marker date="1527814190244" expanded="false" signature="5230:5236" ph=" }" />
-            <marker date="1527814190244" expanded="false" signature="5267:5278" ph=" { " />
-            <marker date="1527814190244" expanded="false" signature="5300:5306" ph=" }" />
-            <marker date="1527814190244" expanded="false" signature="5350:5361" ph=" { " />
-            <marker date="1527814190244" expanded="false" signature="5381:5387" ph=" }" />
-            <marker date="1527814190244" expanded="false" signature="5422:5432" ph=" { " />
-            <marker date="1527814190244" expanded="false" signature="5454:5460" ph=" }" />
-            <marker date="1527814190244" expanded="false" signature="5506:5516" ph=" { " />
-            <marker date="1527814190244" expanded="false" signature="5539:5545" ph=" }" />
+            <marker date="1527817267860" expanded="false" signature="5197:5208" ph=" { " />
+            <marker date="1527817267860" expanded="false" signature="5230:5236" ph=" }" />
+            <marker date="1527817267860" expanded="false" signature="5267:5278" ph=" { " />
+            <marker date="1527817267860" expanded="false" signature="5300:5306" ph=" }" />
+            <marker date="1527817267860" expanded="false" signature="5350:5361" ph=" { " />
+            <marker date="1527817267860" expanded="false" signature="5381:5387" ph=" }" />
+            <marker date="1527817267860" expanded="false" signature="5422:5432" ph=" { " />
+            <marker date="1527817267860" expanded="false" signature="5454:5460" ph=" }" />
+            <marker date="1527817267860" expanded="false" signature="5506:5516" ph=" { " />
+            <marker date="1527817267860" expanded="false" signature="5539:5545" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -807,16 +800,16 @@
             <element signature="e#5165#5166#0" expanded="true" />
             <element signature="e#5422#5423#0" expanded="true" />
             <element signature="e#5506#5507#0" expanded="true" />
-            <marker date="1527814190244" expanded="false" signature="5197:5208" ph=" { " />
-            <marker date="1527814190244" expanded="false" signature="5230:5236" ph=" }" />
-            <marker date="1527814190244" expanded="false" signature="5267:5278" ph=" { " />
-            <marker date="1527814190244" expanded="false" signature="5300:5306" ph=" }" />
-            <marker date="1527814190244" expanded="false" signature="5350:5361" ph=" { " />
-            <marker date="1527814190244" expanded="false" signature="5381:5387" ph=" }" />
-            <marker date="1527814190244" expanded="false" signature="5422:5432" ph=" { " />
-            <marker date="1527814190244" expanded="false" signature="5454:5460" ph=" }" />
-            <marker date="1527814190244" expanded="false" signature="5506:5516" ph=" { " />
-            <marker date="1527814190244" expanded="false" signature="5539:5545" ph=" }" />
+            <marker date="1527817267860" expanded="false" signature="5197:5208" ph=" { " />
+            <marker date="1527817267860" expanded="false" signature="5230:5236" ph=" }" />
+            <marker date="1527817267860" expanded="false" signature="5267:5278" ph=" { " />
+            <marker date="1527817267860" expanded="false" signature="5300:5306" ph=" }" />
+            <marker date="1527817267860" expanded="false" signature="5350:5361" ph=" { " />
+            <marker date="1527817267860" expanded="false" signature="5381:5387" ph=" }" />
+            <marker date="1527817267860" expanded="false" signature="5422:5432" ph=" { " />
+            <marker date="1527817267860" expanded="false" signature="5454:5460" ph=" }" />
+            <marker date="1527817267860" expanded="false" signature="5506:5516" ph=" { " />
+            <marker date="1527817267860" expanded="false" signature="5539:5545" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -1001,7 +994,7 @@
     <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/Barrel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="257">
-          <caret line="32" column="20" lean-forward="true" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+          <caret line="32" column="20" lean-forward="false" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
           <folding>
             <element signature="e#1741#1742#0" expanded="true" />
             <element signature="e#1783#1784#0" expanded="true" />
@@ -1050,16 +1043,16 @@
             <element signature="e#5165#5166#0" expanded="true" />
             <element signature="e#5422#5423#0" expanded="true" />
             <element signature="e#5506#5507#0" expanded="true" />
-            <marker date="1527814190244" expanded="false" signature="5197:5208" ph=" { " />
-            <marker date="1527814190244" expanded="false" signature="5230:5236" ph=" }" />
-            <marker date="1527814190244" expanded="false" signature="5267:5278" ph=" { " />
-            <marker date="1527814190244" expanded="false" signature="5300:5306" ph=" }" />
-            <marker date="1527814190244" expanded="false" signature="5350:5361" ph=" { " />
-            <marker date="1527814190244" expanded="false" signature="5381:5387" ph=" }" />
-            <marker date="1527814190244" expanded="false" signature="5422:5432" ph=" { " />
-            <marker date="1527814190244" expanded="false" signature="5454:5460" ph=" }" />
-            <marker date="1527814190244" expanded="false" signature="5506:5516" ph=" { " />
-            <marker date="1527814190244" expanded="false" signature="5539:5545" ph=" }" />
+            <marker date="1527817267860" expanded="false" signature="5197:5208" ph=" { " />
+            <marker date="1527817267860" expanded="false" signature="5230:5236" ph=" }" />
+            <marker date="1527817267860" expanded="false" signature="5267:5278" ph=" { " />
+            <marker date="1527817267860" expanded="false" signature="5300:5306" ph=" }" />
+            <marker date="1527817267860" expanded="false" signature="5350:5361" ph=" { " />
+            <marker date="1527817267860" expanded="false" signature="5381:5387" ph=" }" />
+            <marker date="1527817267860" expanded="false" signature="5422:5432" ph=" { " />
+            <marker date="1527817267860" expanded="false" signature="5454:5460" ph=" }" />
+            <marker date="1527817267860" expanded="false" signature="5506:5516" ph=" { " />
+            <marker date="1527817267860" expanded="false" signature="5539:5545" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -1069,16 +1062,6 @@
         <state relative-caret-position="309">
           <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="142" column="45" lean-forward="true" selection-start-line="142" selection-start-column="45" selection-end-line="142" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1101,13 +1084,167 @@
         </state>
       </provider>
     </entry>
+    <entry file="uml://MODULES/mdl-Donkey">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>MODULES</ID>
+          <OriginalElement>mdl-Donkey</OriginalElement>
+          <nodes>
+            <node x="" y="">mdl-Donkey</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="67.5" y="15.0" />
+          <SelectedNodes />
+          <Categories />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement />
+          <nodes>
+            <node x="" y="">com</node>
+            <node x="" y="">images</node>
+            <node x="" y="">netscape</node>
+            <node x="" y="">oracle</node>
+            <node x="" y="">org</node>
+            <node x="" y="">DonkeyKong</node>
+            <node x="" y="">toolbarButtonGraphics</node>
+            <node x="" y="">sun</node>
+            <node x="" y="">Mario</node>
+            <node x="" y="">Accesories</node>
+            <node x="" y="">META-INF</node>
+            <node x="" y="">jdk</node>
+            <node x="" y="">apple</node>
+            <node x="" y="">javazoom</node>
+            <node x="" y="">java</node>
+            <node x="" y="">javax</node>
+            <node x="" y="">Music</node>
+            <node x="" y="">javafx</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="236.5" y="240.5" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/Ladder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="26" column="86" lean-forward="false" selection-start-line="26" selection-start-column="86" selection-end-line="26" selection-end-column="86" />
+        <state relative-caret-position="173">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
-            <marker date="1527817165562" expanded="false" signature="1016:1027" ph=" { " />
-            <marker date="1527817165562" expanded="false" signature="1043:1049" ph=" }" />
+            <marker date="1527817267859" expanded="false" signature="1016:1027" ph=" { " />
+            <marker date="1527817267859" expanded="false" signature="1043:1049" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/org.academiadecodigo.bootcamp">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>org.academiadecodigo.bootcamp</OriginalElement>
+          <nodes>
+            <node x="545.0" y="0.0">org.academiadecodigo.bootcamp.Interface.Scorable</node>
+            <node x="242.0" y="1010.0">org.academiadecodigo.bootcamp.GameObjects.LadderFactory</node>
+            <node x="482.0" y="1010.0">org.academiadecodigo.bootcamp.GameOver.YouWin_GameOver</node>
+            <node x="0.0" y="80.0">org.academiadecodigo.bootcamp.Player</node>
+            <node x="418.0" y="891.0">org.academiadecodigo.bootcamp.ScoreCounter.Score</node>
+            <node x="0.0" y="1010.0">org.academiadecodigo.bootcamp.GameOver.GameOver</node>
+            <node x="291.0" y="728.0">org.academiadecodigo.bootcamp.GameObjects.Field</node>
+            <node x="825.0" y="891.0">org.academiadecodigo.bootcamp.Collision.Point</node>
+            <node x="0.0" y="891.0">org.academiadecodigo.bootcamp.clock.GameTimer</node>
+            <node x="625.0" y="891.0">org.academiadecodigo.bootcamp.lifeCounter.Lives</node>
+            <node x="0.0" y="565.0">org.academiadecodigo.bootcamp.Collision.CollisionBox</node>
+            <node x="493.0" y="485.0">org.academiadecodigo.bootcamp.GameObjects.Platform</node>
+            <node x="234.0" y="485.0">org.academiadecodigo.bootcamp.Sound.Bgm</node>
+            <node x="736.0" y="728.0">org.academiadecodigo.bootcamp.keyboard.MarioKeyboardHandler</node>
+            <node x="513.0" y="728.0">org.academiadecodigo.bootcamp.Collision.PlatformCollisionBox</node>
+            <node x="0.0" y="728.0">org.academiadecodigo.bootcamp.GameObjects.PlatformFactory</node>
+            <node x="746.25" y="80.0">org.academiadecodigo.bootcamp.GameObjects.Prize</node>
+            <node x="696.0" y="1010.0">org.academiadecodigo.bootcamp.Test</node>
+            <node x="770.25" y="0.0">org.academiadecodigo.bootcamp.GameObjects.GameObject</node>
+            <node x="939.25" y="102.0">org.academiadecodigo.bootcamp.GameObjects.Vilain</node>
+            <node x="46.5" y="0.0">org.academiadecodigo.bootcamp.Interface.Movable</node>
+            <node x="239.0" y="0.0">org.academiadecodigo.bootcamp.Game</node>
+            <node x="553.25" y="80.0">org.academiadecodigo.bootcamp.GameObjects.Barrel</node>
+            <node x="40.0" y="485.0">org.academiadecodigo.bootcamp.Interface.Collidable</node>
+            <node x="210.0" y="891.0">org.academiadecodigo.bootcamp.Sound.SoundPlayer</node>
+            <node x="763.0" y="485.0">org.academiadecodigo.bootcamp.GameObjects.Ladder</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="org.academiadecodigo.bootcamp.GameObjects.Vilain" target="org.academiadecodigo.bootcamp.GameObjects.GameObject">
+              <point x="0.0" y="-59.0" />
+              <point x="1013.25" y="55.0" />
+              <point x="874.4166666666666" y="55.0" />
+              <point x="41.66666666666666" y="15.0" />
+            </edge>
+            <edge source="org.academiadecodigo.bootcamp.GameObjects.Barrel" target="org.academiadecodigo.bootcamp.GameObjects.GameObject">
+              <point x="43.25" y="-81.0" />
+              <point x="683.0" y="55.0" />
+              <point x="791.0833333333334" y="55.0" />
+              <point x="-41.66666666666666" y="15.0" />
+            </edge>
+            <edge source="org.academiadecodigo.bootcamp.Player" target="org.academiadecodigo.bootcamp.Interface.Movable">
+              <point x="0.0" y="-180.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="org.academiadecodigo.bootcamp.GameObjects.Prize" target="org.academiadecodigo.bootcamp.GameObjects.GameObject">
+              <point x="0.0" y="-81.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="org.academiadecodigo.bootcamp.GameObjects.Barrel" target="org.academiadecodigo.bootcamp.Interface.Scorable">
+              <point x="-43.25" y="-81.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="org.academiadecodigo.bootcamp.Collision.CollisionBox" target="org.academiadecodigo.bootcamp.Interface.Collidable">
+              <point x="0.0" y="-59.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="-259.0" y="150.0" />
+          <SelectedNodes>
+            <node>org.academiadecodigo.bootcamp.Collision.PlatformCollisionBox</node>
+            <node>org.academiadecodigo.bootcamp.GameObjects.PlatformFactory</node>
+            <node>org.academiadecodigo.bootcamp.Interface.Scorable</node>
+            <node>org.academiadecodigo.bootcamp.GameObjects.LadderFactory</node>
+            <node>org.academiadecodigo.bootcamp.GameOver.YouWin_GameOver</node>
+            <node>org.academiadecodigo.bootcamp.Player</node>
+            <node>org.academiadecodigo.bootcamp.GameObjects.Prize</node>
+            <node>org.academiadecodigo.bootcamp.GameObjects.GameObject</node>
+            <node>org.academiadecodigo.bootcamp.GameObjects.Vilain</node>
+            <node>org.academiadecodigo.bootcamp.GameOver.GameOver</node>
+            <node>org.academiadecodigo.bootcamp.Interface.Movable</node>
+            <node>org.academiadecodigo.bootcamp.clock.GameTimer</node>
+            <node>org.academiadecodigo.bootcamp.GameObjects.Barrel</node>
+            <node>org.academiadecodigo.bootcamp.Collision.CollisionBox</node>
+            <node>org.academiadecodigo.bootcamp.Interface.Collidable</node>
+            <node>org.academiadecodigo.bootcamp.GameObjects.Platform</node>
+            <node>org.academiadecodigo.bootcamp.keyboard.MarioKeyboardHandler</node>
+            <node>org.academiadecodigo.bootcamp.Sound.SoundPlayer</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Fields</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="142" column="45" lean-forward="false" selection-start-line="142" selection-start-column="45" selection-end-line="142" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
