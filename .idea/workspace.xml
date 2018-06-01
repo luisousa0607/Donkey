@@ -1,21 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d10fbc8f-97a8-4752-a8e0-642674575f88" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Collision/CollisionBox.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Collision/CollisionBox.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Game.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Game.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/Barrel.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/Barrel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/Field.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/Field.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/Ladder.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/Ladder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/LadderFactory.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/LadderFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/Platform.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/Platform.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/PlatformFactory.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/PlatformFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/Vilain.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/Vilain.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameOver/GameOver.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameOver/GameOver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameOver/YouWin_GameOver.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameOver/YouWin_GameOver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Player.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Player.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Sound/Bgm.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Sound/Bgm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/lifeCounter/Lives.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/lifeCounter/Lives.java" />
+    <list default="true" id="53f95d0c-5358-450b-a8ba-247bdb7c08dd" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/Music/bgm.mp3" afterPath="$PROJECT_DIR$/resources/Music/bgm.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,7 +16,7 @@
       <file leaf-file-name="Game.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2520">
+            <state relative-caret-position="2519">
               <caret line="168" column="0" lean-forward="false" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -133,7 +121,6 @@
         <option value="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/Barrel.java" />
         <option value="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/lifeCounter/Lives.java" />
         <option value="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Collision/CollisionBox.java" />
-        <option value="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Game.java" />
         <option value="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/Ladder.java" />
         <option value="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/LadderFactory.java" />
         <option value="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameObjects/Platform.java" />
@@ -143,6 +130,7 @@
         <option value="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/GameOver/YouWin_GameOver.java" />
         <option value="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Sound/Bgm.java" />
         <option value="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Player.java" />
+        <option value="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Game.java" />
       </list>
     </option>
   </component>
@@ -349,11 +337,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21090000" />
+    <option name="totallyTimeSpent" value="21219000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="332" y="24" width="1441" height="977" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -368,7 +355,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2494639" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2494639" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32993197" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -873,7 +860,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2520">
+        <state relative-caret-position="2519">
           <caret line="168" column="0" lean-forward="false" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
