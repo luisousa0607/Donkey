@@ -167,6 +167,7 @@ public class Game {
 
             }
         }
+
     }
 
     private void checkLadders() {

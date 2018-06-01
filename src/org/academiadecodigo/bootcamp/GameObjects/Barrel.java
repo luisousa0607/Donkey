@@ -5,6 +5,7 @@ import org.academiadecodigo.bootcamp.Collision.CollisionBox;
 import org.academiadecodigo.bootcamp.Collision.PlatformCollisionBox;
 import org.academiadecodigo.bootcamp.Interface.Collidable;
 import org.academiadecodigo.bootcamp.Interface.Scorable;
+import org.academiadecodigo.bootcamp.Player;
 import org.academiadecodigo.simplegraphics.graphics.Ellipse;
 import org.academiadecodigo.simplegraphics.graphics.Movable;
 import org.academiadecodigo.simplegraphics.pictures.Picture;
@@ -20,8 +21,8 @@ public class Barrel extends GameObject implements Movable, Scorable {
 
     public Barrel() {
 
-        this.barrel = new Picture(450, 10, "resources/Accesories/Batata1.png");
-        this.box = new CollisionBox(450, 10, BARREL_SIZE, BARREL_SIZE);
+        this.barrel = new Picture(Field.getWIDTH()- Player.getPlayerwidth()*3, Field.getPadding(), "resources/Accesories/Batata1.png");
+        this.box = new CollisionBox(Field.getWIDTH()-Player.getPlayerwidth()*3, Field.getPadding(), BARREL_SIZE, BARREL_SIZE);
         this.barrel.draw();
         this.direction = 0;
     }
