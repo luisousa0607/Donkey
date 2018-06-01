@@ -32,7 +32,6 @@ public class Game {
     public Game() throws InterruptedException {
 
         Field field = new Field();
-
         this.vilain = new Vilain();
         this.barrels = new Barrel[MAX_BARRELS];
         this.prize = new Prize();

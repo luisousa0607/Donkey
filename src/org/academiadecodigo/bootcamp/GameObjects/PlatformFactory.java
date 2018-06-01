@@ -24,8 +24,16 @@ public class PlatformFactory {
                 Field.getWIDTH() ,
                 Field.getHEIGHT()
         );
+        platforms [1]=new Platform(
+                Field.getPadding() + playerWidth + 10,
+                Field.getHEIGHT()-jumpHeight*2,
+                Field.getWIDTH(),
+                Field.getHEIGHT() - (2) * (platformHeightDifference + jumpHeight));
+        // platforms[i].setM(1);
+        platforms[1].setDirection(-1);
 
-        for (int i = 1; i < platforms.length-1 ; i++) {
+
+        for (int i = 2; i < platforms.length-1 ; i++) {
 
             if (i % 2 == 0) {
                platforms[i] = new Platform(
