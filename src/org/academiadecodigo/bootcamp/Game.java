@@ -76,8 +76,7 @@ public class Game {
             }
 
             if (player.hasCollided()) {
-                System.out.println("hascol");
-                for (int i = 0; i < Barrel.getBarrelSize() + 5; i++) {
+                for (int i = 0; i < Barrel.getBarrelSize() + 15; i++) {
                     this.moveBarrels();
                     Thread.sleep(10);
                 }
@@ -86,7 +85,6 @@ public class Game {
                 player.setWillScore(false);
             } else if (player.shouldScore()) {
                 Score.increaseScore(player);
-                System.out.println("increasing score");
                 player.setWillScore(false);
             }
 
@@ -128,7 +126,6 @@ public class Game {
 
         if (System.currentTimeMillis() - timeCreation >= 3000) {
 
-
             if (barrelCounter < barrels.length)
                 barrels[barrelCounter++] = new Barrel();
 
@@ -141,7 +138,6 @@ public class Game {
         for (Barrel a : barrels) {
             if (a != null) {
                 if (this.player.getBox().collides(a.getBox())) {
-                    System.out.println("collided");
                     player.setHasCollided(true);
                     break;
 

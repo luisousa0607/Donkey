@@ -18,11 +18,9 @@ import org.academiadecodigo.simplegraphics.pictures.Picture;
 public class Player implements Movable {
 
     private Picture mario;
-    private Keyboard keyboard;
     private static final int SPEED = 7;
     private boolean isJumping;
     private double m;
-    private boolean Collided;
     private CollisionBox box;
     private boolean onLadder;
     private int direction;
@@ -38,7 +36,6 @@ public class Player implements Movable {
         this.m = 0;
         this.isJumping = false;
         this.onLadder = false;
-        this.Collided = false;
         this.mario = new Picture(x, y, "resources/Mario/Mario2.png");
         this.mario.draw();
         this.box = new CollisionBox(x, y, this.mario.getWidth(), this.mario.getHeight());
@@ -99,10 +96,6 @@ public class Player implements Movable {
 
     public void setM(double m) {
         this.m = m;
-    }
-
-    public double getM() {
-        return this.m;
     }
 
     public void setJumping(boolean value) {
@@ -197,21 +190,13 @@ public class Player implements Movable {
         mario.load(picture);
     }
 
-    public boolean isClimbAnim() {
-        return this.climbAnim;
-    }
-
-    public void setClimbAnim(boolean value) {
-        this.climbAnim = value;
-    }
-
     public void climbingAnimation() {
         if (this.climbAnim) {
             this.setPicture("resources/Mario/Mario5.png");
-            this.setClimbAnim(false);
+            this.climbAnim = false;
         } else {
             this.setPicture("resources/Mario/Mario6.png");
-            this.setClimbAnim(true);
+            this.climbAnim = true;
         }
     }
 
