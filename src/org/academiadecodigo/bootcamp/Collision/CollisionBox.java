@@ -36,27 +36,24 @@ public class CollisionBox implements Collidable {
 
     public boolean collides(Collidable otherBox) {
 
-        if (this.getX() > otherBox.getX() && this.getX() < otherBox.getX() + otherBox.getWidth()
-                && this.getY() > otherBox.getY() && this.getY() < otherBox.getY() + otherBox.getHeight()) {
+        if (this.getX() >= otherBox.getX() && this.getX() <= otherBox.getX() + otherBox.getWidth()
+                && this.getY() >= otherBox.getY() && this.getY() <= otherBox.getY() + otherBox.getHeight()) {
             return true;
         }
 
-        if (this.getX() + this.getWidth() > otherBox.getX() && this.getX() + this.getWidth() < otherBox.getX() + otherBox.getWidth()
-                && this.getY() > otherBox.getY() && this.getY() < otherBox.getY() + otherBox.getHeight()) {
+        if (this.getX() + this.getWidth() >= otherBox.getX() && this.getX() + this.getWidth() <= otherBox.getX() + otherBox.getWidth()
+                && this.getY() >= otherBox.getY() && this.getY() <= otherBox.getY() + otherBox.getHeight()) {
             return true;
         }
 
-        if (this.getX() > otherBox.getX() && this.getX() < otherBox.getX() + otherBox.getWidth()
-                && this.getY() + this.getHeight() > otherBox.getY() && this.getY() + this.getHeight() < otherBox.getY() + otherBox.getHeight()) {
+        if (this.getX() >= otherBox.getX() && this.getX() <= otherBox.getX() + otherBox.getWidth()
+                && this.getY() + this.getHeight() >= otherBox.getY() && this.getY() + this.getHeight() <= otherBox.getY() + otherBox.getHeight()) {
             return true;
         }
 
-        if (this.getX() + this.getWidth() > otherBox.getX() && this.getX() + this.getWidth() < otherBox.getX() + otherBox.getWidth()
-                && this.getY() + this.getHeight() > otherBox.getY() && this.getY() + this.getHeight() < otherBox.getY() + otherBox.getHeight()) {
-            return true;
-        }
+        return (this.getX() + this.getWidth() >= otherBox.getX() && this.getX() + this.getWidth() <= otherBox.getX() + otherBox.getWidth()
+                && this.getY() + this.getHeight() >= otherBox.getY() && this.getY() + this.getHeight() <= otherBox.getY() + otherBox.getHeight());
 
-        return false;
     }
 
     public boolean abovePlatform(Point[] platform) {

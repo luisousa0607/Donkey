@@ -21,8 +21,8 @@ public class Barrel extends GameObject implements Movable, Scorable {
 
     public Barrel() {
 
-        this.barrel = new Picture(Field.getWIDTH()- Player.getPlayerwidth()*3, Field.getPadding(), "resources/Accesories/Batata1.png");
-        this.box = new CollisionBox(Field.getWIDTH()-Player.getPlayerwidth()*3, Field.getPadding(), BARREL_SIZE, BARREL_SIZE);
+        this.barrel = new Picture(Field.getPadding(), Field.getPadding(), "resources/Accesories/Batata1.png");
+        this.box = new CollisionBox(Field.getPadding(), Field.getPadding(), BARREL_SIZE, BARREL_SIZE);
         this.barrel.draw();
         this.direction = 0;
     }

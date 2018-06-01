@@ -21,7 +21,7 @@ public class Game {
     private Platform[] platforms;
     int barrelCounter = 0;
 
-    private static final int MAX_BARRELS = 10;
+    private static final int MAX_BARRELS = 15;
     private static final int JUMP_HEIGHT = -20;
     long timeCreation = System.currentTimeMillis();
 
@@ -39,7 +39,7 @@ public class Game {
 
         this.platforms = new PlatformFactory().createPlatform();
         this.ladders = new LadderFactory(platforms).createLadders();
-        this.player = new Player(Field.getPadding(), Field.getHEIGHT() - Player.getPlayerwidth()-20, 3);
+        this.player = new Player(Field.getPadding(), Field.getHEIGHT() - Player.getPlayerwidth() - 20, 3);
         this.handler = new MarioKeyboardHandler(this.player);
     }
 
@@ -59,25 +59,24 @@ public class Game {
 
             createBarrels();
 
-            if (!player.abovePlatform(platforms) &&  !player.isOnLadder()) {
+            if (!player.abovePlatform(platforms) && !player.isOnLadder()) {
 
                 playerFall();
             }
 
             if (player.getIsJumping()) {
 
-                if(this.player.getDirection() > 0){
+                if (this.player.getDirection() > 0) {
                     this.player.setPicture("resources/Mario/Mario4.png");
-                }else{
+                } else {
                     this.player.setPicture("resources/Mario/Mario3.png");
                 }
-
 
                 this.playerJump();
             }
 
             if (player.hasCollided()) {
-                for(int i = 0; i < Barrel.getBarrelSize() +5 ; i++){
+                for (int i = 0; i < Barrel.getBarrelSize() + 15; i++) {
                     this.moveBarrels();
                     Thread.sleep(10);
                 }
@@ -86,13 +85,12 @@ public class Game {
                 player.setWillScore(false);
             } else if (player.shouldScore()) {
                 Score.increaseScore(player);
-                System.out.println("increasing score");
                 player.setWillScore(false);
             }
 
-
-            this.moveBarrels();
             checkCollision();
+            this.moveBarrels();
+
             this.player.setOnLadder(false);
             checkLadders();
             Thread.sleep(10);
@@ -128,7 +126,6 @@ public class Game {
 
         if (System.currentTimeMillis() - timeCreation >= 3000) {
 
-
             if (barrelCounter < barrels.length)
                 barrels[barrelCounter++] = new Barrel();
 
@@ -146,16 +143,16 @@ public class Game {
 
                 }
                 if (a.getY() == Field.getHEIGHT() - 50) {
-                    a.move(0, -Field.getHEIGHT());
+                    a.move(-5, -Field.getHEIGHT());
                 }
             }
         }
-        if(this.player.getBox().collides(Prize.getBox())){
+        if (this.player.getBox().collides(Prize.getBox())) {
             YouWin_GameOver.youWin(this.player);
         }
     }
 
-    private void moveBarrels() {
+    private void moveBarrels() throws InterruptedException {
         for (Barrel b : this.barrels) {
 
             if (b != null) {
@@ -168,6 +165,7 @@ public class Game {
             }
         }
 
+        this.checkCollision();
     }
 
     private void checkLadders() {
