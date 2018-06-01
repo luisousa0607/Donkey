@@ -21,7 +21,7 @@ public class Game {
     private Platform[] platforms;
     int barrelCounter = 0;
 
-    private static final int MAX_BARRELS = 20;
+    private static final int MAX_BARRELS = 15;
     private static final int JUMP_HEIGHT = -20;
     long timeCreation = System.currentTimeMillis();
 
@@ -72,12 +72,12 @@ public class Game {
                     this.player.setPicture("resources/Mario/Mario3.png");
                 }
 
-
                 this.playerJump();
             }
 
             if (player.hasCollided()) {
-                for (int i = 0; i < 25; i++) {
+                System.out.println("hascol");
+                for (int i = 0; i < Barrel.getBarrelSize() + 5; i++) {
                     this.moveBarrels();
                     Thread.sleep(10);
                 }
@@ -90,9 +90,9 @@ public class Game {
                 player.setWillScore(false);
             }
 
-
-            this.moveBarrels();
             checkCollision();
+            this.moveBarrels();
+
             this.player.setOnLadder(false);
             checkLadders();
             Thread.sleep(10);
@@ -105,6 +105,7 @@ public class Game {
         for (int i = 0; i < 40; i++) {
             checkCollision();
             player.jumpUp();
+            checkJumpedOver();
             moveBarrels();
             Thread.sleep(10);
         }
@@ -113,7 +114,6 @@ public class Game {
     private void playerFall() throws InterruptedException {
         while (!player.abovePlatform(platforms)) {
             player.fall();
-            checkJumpedOver();
             moveBarrels();
             checkCollision();
             Thread.sleep(10);
@@ -141,8 +141,8 @@ public class Game {
         for (Barrel a : barrels) {
             if (a != null) {
                 if (this.player.getBox().collides(a.getBox())) {
-                    player.setHasCollided(true);
                     System.out.println("collided");
+                    player.setHasCollided(true);
                     break;
 
                 }
@@ -156,7 +156,7 @@ public class Game {
         }
     }
 
-    private void moveBarrels() {
+    private void moveBarrels() throws InterruptedException {
         for (Barrel b : this.barrels) {
 
             if (b != null) {
@@ -168,6 +168,8 @@ public class Game {
 
             }
         }
+
+        this.checkCollision();
     }
 
     private void checkLadders() {
@@ -184,7 +186,6 @@ public class Game {
                 if (b != null) {
                     if (player.getBox().checkJumpOver(b)) {
                         player.setWillScore(true);
-                        System.out.println("shouldScore");
                         break;
 
                     }

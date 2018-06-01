@@ -17,7 +17,6 @@ import org.academiadecodigo.simplegraphics.pictures.Picture;
 
 public class Player implements Movable {
 
-
     private Picture mario;
     private Keyboard keyboard;
     private static final int SPEED = 7;
@@ -58,8 +57,7 @@ public class Player implements Movable {
             return;
         }
 
-
-        if (this.isJumping ) {
+        if (this.isJumping) {
             if (!Field.canMove(direction, this.getBox().getX() + x)) {
                 this.mario.translate(0, y);
                 this.box.setBox(0, y);
@@ -72,7 +70,6 @@ public class Player implements Movable {
         }
 
         if (Field.canMove(direction, this.getBox().getX() + x)) {
-
             if (m > 0) {
                 this.mario.translate(x, -y * direction);
                 this.box.setBox(x, -y * direction);
@@ -86,21 +83,16 @@ public class Player implements Movable {
                 this.box.setBox(x, y);
             }
         }
-
         this.setOnLadder(false);
     }
 
-
-    public void jumpUp()  {
-
+    public void jumpUp() {
         this.move(direction, -1);
     }
 
     public void fall() {
-
         if (isJumping)
             this.move(direction, 1);
-
         else
             this.move(0, 1);
     }
@@ -170,7 +162,6 @@ public class Player implements Movable {
             this.mario.load("resources/Mario/Mario3.png");
             this.walking = true;
         }
-
         this.direction = direction;
     }
 
@@ -179,23 +170,19 @@ public class Player implements Movable {
     }
 
     public boolean shouldScore() {
-
         return willScore;
     }
 
     public void setHasCollided(boolean b) {
         hasCollided = b;
-
     }
 
     public boolean hasCollided() {
-
         return hasCollided;
     }
 
     public void lostLives() {
         life.lostLife();
-
     }
 
     public int getDirection() {

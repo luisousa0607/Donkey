@@ -9,8 +9,8 @@ public class Field {
 
 
     private Rectangle canvas;
-    private static final int HEIGHT = 500;
-    private static final int WIDTH = 800;
+    private static final int HEIGHT = 750;
+    private static final int WIDTH = 900;
     private static final int PADDING = 10;
 
 
