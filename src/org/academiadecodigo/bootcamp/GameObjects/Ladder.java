@@ -26,7 +26,7 @@ public class Ladder {
         //this.ladder = new Rectangle(this.x, this.y, LADDER_WIDTH, length);
 
         this.ladder.draw();
-        this.box = new CollisionBox(this.x + (LADDER_WIDTH/2), this.y, LADDER_WIDTH, length);
+        this.box = new CollisionBox(this.x + (LADDER_WIDTH/2), this.y , LADDER_WIDTH, length);
         this.ladder.grow(2,length/2-12);
         translateIMG(x,y);
 

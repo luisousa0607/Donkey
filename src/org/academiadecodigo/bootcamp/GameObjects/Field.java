@@ -10,13 +10,13 @@ public class Field {
 
     private Rectangle canvas;
     private static final int HEIGHT = 500;
-    private static final int WIDTH = 500;
+    private static final int WIDTH = 800;
     private static final int PADDING = 10;
 
 
     public Field() {
 
-        this.canvas = new Rectangle(PADDING, PADDING, HEIGHT, WIDTH);
+        this.canvas = new Rectangle(PADDING, PADDING, WIDTH, HEIGHT);
 
         canvas.setColor(Color.BLACK);
         canvas.draw();

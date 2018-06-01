@@ -20,7 +20,7 @@ public class Player implements Movable {
 
     private Picture mario;
     private Keyboard keyboard;
-    private static final int SPEED = 5;
+    private static final int SPEED = 7;
     private boolean isJumping;
     private double m;
     private boolean Collided;
@@ -59,7 +59,7 @@ public class Player implements Movable {
         }
 
 
-        if (this.isJumping) {
+        if (this.isJumping ) {
             if (!Field.canMove(direction, this.getBox().getX() + x)) {
                 this.mario.translate(0, y);
                 this.box.setBox(0, y);
@@ -91,12 +91,9 @@ public class Player implements Movable {
     }
 
 
-    public void jumpUp() throws InterruptedException {
-
+    public void jumpUp()  {
 
         this.move(direction, -1);
-
-
     }
 
     public void fall() {
@@ -213,20 +210,19 @@ public class Player implements Movable {
         mario.load(picture);
     }
 
-    public boolean isClimbAnim(){
+    public boolean isClimbAnim() {
         return this.climbAnim;
     }
 
-    public void setClimbAnim(boolean value){
+    public void setClimbAnim(boolean value) {
         this.climbAnim = value;
     }
 
-    public void climbingAnimation(){
-        if(this.climbAnim) {
+    public void climbingAnimation() {
+        if (this.climbAnim) {
             this.setPicture("resources/Mario/Mario5.png");
             this.setClimbAnim(false);
-        }
-        else {
+        } else {
             this.setPicture("resources/Mario/Mario6.png");
             this.setClimbAnim(true);
         }
