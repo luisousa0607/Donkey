@@ -51,7 +51,6 @@ public class Player implements Movable {
         if (this.isOnLadder() && !this.isJumping) {
             this.mario.translate(x, y * SPEED);
             this.box.setBox(x, y * SPEED);
-            System.out.println(1);
             return;
         }
 
@@ -60,12 +59,10 @@ public class Player implements Movable {
             if (!Field.canMove(direction, this.getBox().getX() + x)) {
                 this.mario.translate(0, y);
                 this.box.setBox(0, y);
-                System.out.println(2);
                 return;
             } else {
                 this.mario.translate(x, y);
                 this.box.setBox(x, y);
-                System.out.println(3);
                 return;
             }
         }
@@ -75,17 +72,14 @@ public class Player implements Movable {
             if (m > 0) {
                 this.mario.translate(x, -y * direction);
                 this.box.setBox(x, -y * direction);
-                System.out.println(4);
                 return;
             } else if (m < 0) {
                 this.mario.translate(x, y * direction);
                 this.box.setBox(x, y * direction);
-                System.out.println(5);
                 return;
             } else {
                 this.mario.translate(x, y);
                 this.box.setBox(x, y);
-                System.out.println(6);
             }
         }
 

@@ -8,7 +8,6 @@ public class PlatformFactory {
     private int playerWidth = Player.getPlayerwidth();
     private int jumpHeight = Player.getPlayerwidth() -10;
     private static int platformHeightDifference;
-    private int playerHeight = playerWidth;
 
     public Platform[] createPlatform() {
 
@@ -29,7 +28,6 @@ public class PlatformFactory {
                 Field.getHEIGHT()-jumpHeight*2,
                 Field.getWIDTH(),
                 Field.getHEIGHT() - (2) * (platformHeightDifference + jumpHeight));
-        // platforms[i].setM(1);
         platforms[1].setDirection(-1);
 
 
@@ -43,7 +41,6 @@ public class PlatformFactory {
 
                         Field.getWIDTH() - playerWidth -10,
                        Field.getHEIGHT()-jumpHeight*(i+1)-platformHeightDifference*i);
-               //platforms[i].setM(-1);
                platforms[i].setDirection(1);
 
             }else {
@@ -53,7 +50,6 @@ public class PlatformFactory {
                         Field.getHEIGHT()-jumpHeight*(i+1)-platformHeightDifference*i,
                         Field.getWIDTH(),
                         Field.getHEIGHT() - (i + 1) * (platformHeightDifference) -(i)* jumpHeight);
-               // platforms[i].setM(1);
                 platforms[i].setDirection(-1);
             }
 
@@ -70,7 +66,4 @@ public class PlatformFactory {
         return platforms;
     }
 
-    public static int getHeightDifference(){
-        return platformHeightDifference;
-    }
 }

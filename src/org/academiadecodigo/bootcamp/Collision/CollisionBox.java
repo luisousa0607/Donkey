@@ -19,9 +19,6 @@ public class CollisionBox implements Collidable {
     public CollisionBox(int x, int y, int width, int height) {
 
         this.box = new Rectangle(x, y, width, height);
-        this.box.setColor(Color.WHITE);
-        this.box.draw();
-
         this.bottom = new Point[2];
         bottom[0] = new Point(x, y + height);
         bottom[1] = new Point(x + width, y + height);

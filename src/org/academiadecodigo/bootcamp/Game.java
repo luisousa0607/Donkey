@@ -78,7 +78,7 @@ public class Game {
             }
 
             if (player.hasCollided()) {
-                for(int i = 0; i < 25/*barrelWidth+5*/; i++){
+                for(int i = 0; i < Barrel.getBarrelSize() +5 ; i++){
                     this.moveBarrels();
                     Thread.sleep(10);
                 }
@@ -106,6 +106,7 @@ public class Game {
         for (int i = 0; i < 40; i++) {
             checkCollision();
             player.jumpUp();
+            checkJumpedOver();
             moveBarrels();
             Thread.sleep(10);
         }
@@ -114,7 +115,7 @@ public class Game {
     private void playerFall() throws InterruptedException {
         while (!player.abovePlatform(platforms)) {
             player.fall();
-            checkJumpedOver();
+            //checkJumpedOver();
             moveBarrels();
             checkCollision();
             Thread.sleep(10);
@@ -149,7 +150,6 @@ public class Game {
             if (a != null) {
                 if (this.player.getBox().collides(a.getBox())) {
                     player.setHasCollided(true);
-                    System.out.println("collided");
                     break;
 
                 }
@@ -191,7 +191,6 @@ public class Game {
                 if (b != null) {
                     if (player.getBox().checkJumpOver(b)) {
                         player.setWillScore(true);
-                        System.out.println("shouldScore");
                         break;
 
                     }

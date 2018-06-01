@@ -67,4 +67,7 @@ public class Barrel extends GameObject implements Movable, Scorable {
     public void translate(double v, double v1) {
 
     }
+    public static int getBarrelSize(){
+        return BARREL_SIZE;
+    }
 }

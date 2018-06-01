@@ -21,56 +21,6 @@ public class LadderCollisionBox implements Collidable {
         bottom[1] = new Point(x + width, y + height );
     }
 
-    public void setBox(double x, double y) {
-
-        this.box.translate(x, y);
-
-        bottom[0].setPosition((int) x, (int) y);
-        bottom[1].setPosition((int) x, (int) y);
-
-    }
-
-
-    public boolean collides(CollisionBox otherBox) {
-
-        if (this.getX() > (otherBox.getX()) && this.getX() < (otherBox.getX() + otherBox.getWidth())
-                && this.getY() > otherBox.getY() && this.getY() < otherBox.getY() + otherBox.getHeight()) {
-            return true;
-        }
-
-        if (this.getX() + this.getWidth() > otherBox.getX() && this.getX() + this.getWidth() < (otherBox.getX() + otherBox.getWidth())
-                && this.getY() > otherBox.getY() && this.getY() < otherBox.getY() + otherBox.getHeight()) {
-            return true;
-        }
-
-        if (this.getX() > otherBox.getX() && this.getX() < (otherBox.getX() + otherBox.getWidth())
-                && this.getY() + this.getHeight() > otherBox.getY() && this.getY() + this.getHeight() < otherBox.getY() + otherBox.getHeight()) {
-            return true;
-        }
-
-        if (this.getX() + this.getWidth() > otherBox.getX() && this.getX() + this.getWidth() < (otherBox.getX() + otherBox.getWidth())
-                && this.getY() + this.getHeight() > otherBox.getY() && this.getY() + this.getHeight() < otherBox.getY() + otherBox.getHeight()) {
-            return true;
-        }
-
-        return false;
-    }
-
-    public boolean abovePlatform(Point[] platform) {
-        for (Point a : bottom) {
-            for (Point b : platform) {
-                if (a.compare(b)) {
-                    return true;
-                }
-            }
-        }
-        return false;
-    }
-
-    public Rectangle getBox() {
-        return this.box;
-    }
-
     public int getWidth() {
         return this.box.getWidth();
     }
@@ -85,11 +35,6 @@ public class LadderCollisionBox implements Collidable {
 
     public int getY() {
         return this.box.getY();
-    }
-
-    public Point[] getBottom() {
-
-        return this.bottom;
     }
 
 }

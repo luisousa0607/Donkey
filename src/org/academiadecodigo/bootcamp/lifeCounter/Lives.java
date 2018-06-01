@@ -2,6 +2,7 @@ package org.academiadecodigo.bootcamp.lifeCounter;
 
 
 import org.academiadecodigo.bootcamp.GameOver.GameOver;
+import org.academiadecodigo.bootcamp.Sound.Bgm;
 import org.academiadecodigo.simplegraphics.graphics.Color;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 import org.academiadecodigo.simplegraphics.graphics.Text;
@@ -27,6 +28,7 @@ public  class Lives {
             this.lives--;
             livesText.setText("Lives: "+this.lives);
             livesText.draw();
+        Bgm.loseLife.play(true);
 
         if (lives == 0){
             GameOver.youLost();
