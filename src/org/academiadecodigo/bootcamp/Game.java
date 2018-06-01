@@ -8,6 +8,7 @@ import org.academiadecodigo.bootcamp.ScoreCounter.Score;
 import org.academiadecodigo.bootcamp.Sound.Bgm;
 import org.academiadecodigo.bootcamp.clock.GameTimer;
 import org.academiadecodigo.bootcamp.keyboard.MarioKeyboardHandler;
+import org.academiadecodigo.simplegraphics.pictures.Picture;
 
 import java.io.FileNotFoundException;
 
@@ -31,6 +32,13 @@ public class Game {
 
     public Game() throws InterruptedException {
 
+        Picture splash = new Picture(-10,-10,"FranciscoKongSplash.png");
+        splash.grow(180,110);
+        splash.translate(((-splash.getWidth()/2)+Field.getWIDTH()/2)+170,((-splash.getHeight()/2)+Field.getHEIGHT()/2)+100);
+        splash.draw();
+        Thread.sleep(5000);
+        splash.delete();
+
         Field field = new Field();
         this.vilain = new Vilain();
         this.barrels = new Barrel[MAX_BARRELS];
@@ -44,6 +52,8 @@ public class Game {
     }
 
     public void start() throws InterruptedException, FileNotFoundException {
+
+
 
         GameTimer timer = new GameTimer();
         long time = System.currentTimeMillis();

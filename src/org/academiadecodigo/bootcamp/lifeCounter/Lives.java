@@ -37,7 +37,7 @@ public class Lives {
         }
     }
 
-    public void gainedLife(boolean gainedLife) {
+    public void gainedLife() {
         this.lives++;
         livesText.setText("Lives: " + this.lives);
         livesText.draw();
