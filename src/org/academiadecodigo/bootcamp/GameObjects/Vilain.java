@@ -11,19 +11,16 @@ public class Vilain extends GameObject {
     private int x = 40;
     private int y = 30;
     private static int heigth;
-    //private int h;
-    //private int w;
 
+    public Vilain() {
+        this.vilain = new Picture(x, y, "resources/DonkeyKong/Francisco.png");
+        this.vilain.grow(-15,-15);
+        this.vilain.translate(-15,-18);
+        this.vilain.draw();
+        this.heigth = vilain.getHeight()+15;
+    }
 
-        public Vilain() {
-            this.vilain = new Picture(x, y, "resources/DonkeyKong/Francisco.png");
-            this.vilain.grow(-15,-15);
-            this.vilain.translate(-15,-18);
-            this.vilain.draw();
-            this.heigth = vilain.getHeight()+15;
-        }
-
-        public static int getHeight(){
+    public static int getHeight(){
             return heigth;
         }
 }

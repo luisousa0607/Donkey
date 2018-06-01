@@ -18,8 +18,10 @@ public class GameOver {
         isGameOver = true;
 
         Rectangle youWinGFX = new Rectangle(0, 0, 100,25);
+
         youWinGFX.translate(Field.getWIDTH()/2 - youWinGFX.getWidth()/2,
                     Field.getHEIGHT()/2 - youWinGFX.getHeight()/2);
+
         youWinGFX.setColor(Color.YELLOW);
         youWinGFX.fill();
         Text gameOverText = new Text(0,0,"YOU LOST");
@@ -33,7 +35,6 @@ public class GameOver {
          Bgm.lost.play(true);
 
         gameOverText.draw();
-
     }
 
    public static boolean isItGameOver() {

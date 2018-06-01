@@ -37,8 +37,6 @@ public class PlatformFactory {
                platforms[i] = new Platform(
                        Field.getPadding(),
                        Field.getHEIGHT()-(i+1)*(platformHeightDifference) -(i)* (jumpHeight),
-
-
                         Field.getWIDTH() - playerWidth -10,
                        Field.getHEIGHT()-jumpHeight*(i+1)-platformHeightDifference*i);
                platforms[i].setDirection(1);

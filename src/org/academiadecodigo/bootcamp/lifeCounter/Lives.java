@@ -1,6 +1,7 @@
 package org.academiadecodigo.bootcamp.lifeCounter;
 
 
+import org.academiadecodigo.bootcamp.GameObjects.Field;
 import org.academiadecodigo.bootcamp.GameOver.GameOver;
 import org.academiadecodigo.bootcamp.Sound.Bgm;
 import org.academiadecodigo.simplegraphics.graphics.Color;
@@ -18,7 +19,7 @@ public  class Lives {
     }
 
     public void getLives() {
-        livesText = new Text(403,10,"Lives: "+ lives);
+        livesText = new Text(Field.getWIDTH()-100,Field.getPadding(),"Lives: "+ lives);
         livesText.setColor(Color.WHITE);
         livesText.draw();
     }

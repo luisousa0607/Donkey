@@ -8,15 +8,12 @@ import java.awt.*;
 
 
 public class Platform {
-
     private double m;
     private PlatformCollisionBox box;
     private Line line;
     private int direction;
     private int x1;
     private int y1;
-
-
 
     public Platform(int x1, int y1, int x2, int y2) {
         this.x1=x1;
@@ -26,17 +23,13 @@ public class Platform {
         this.createCollisionBox();
         this.line.setColor(Color.RED);
         this.line.draw();
-
     }
 
     public void createCollisionBox() {
-
         this.box = new PlatformCollisionBox(x1, y1, this.line.getWidth(), this.line.getHeight(), this.m);
-
     }
 
     public PlatformCollisionBox getBox() {
-
          this.box.createBox(x1, y1, this.line.getWidth(), this.line.getHeight(), this.m);
          return this.box;
     }

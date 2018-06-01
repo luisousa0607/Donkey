@@ -90,11 +90,6 @@ public class CollisionBox implements Collidable {
         return this.box.getY();
     }
 
-    public Point[] getBottom() {
-
-        return this.bottom;
-    }
-
     public boolean checkJumpOver(Barrel object) {
 
         for (int i = 0; i < bottom.length; i++) {
