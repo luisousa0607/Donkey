@@ -115,7 +115,6 @@ public class Game {
     private void playerFall() throws InterruptedException {
         while (!player.abovePlatform(platforms)) {
             player.fall();
-            //checkJumpedOver();
             moveBarrels();
             checkCollision();
             Thread.sleep(10);
